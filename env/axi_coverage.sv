@@ -8,7 +8,7 @@ class axi_coverage;
 
     covergroup write_cov;
 
-        cp_awburst : coverpoint m_trans.burst_kind_e {
+        cp_awburst : coverpoint m_trans.AWBURST {
             bins fixed = {2'b00};
             bins incr  = {2'b01};
             bins wrap  = {2'b10};
@@ -22,27 +22,55 @@ class axi_coverage;
             bins max_burst    = {[8'd128 : 8'd255]};
         }
 
+        cp_awsize : coverpoint m_trans.AWSIZE {
+            bins size_2 = {3'd2};
+            bins size_3 = {3'd3};
+        }
+
         cp_awid : coverpoint m_trans.AWID {
-            bins id[] = {[0 : 15]};
+            bins min_id      = {16'h0000};
+            bins max_id      = {16'hFFFF};
+            bins mid_ids[14] = {[16'h0001 : 16'hFFFE]};
         }
 
         cp_trans_kind_m : coverpoint m_trans.kind_e {
             //bins idle  = {axi_m_agent_pkg::IDLE};
             bins write = {axi_m_agent_pkg::WRITE};
-            bins read  = {axi_m_agent_pkg::READ};
+            //bins read  = {axi_m_agent_pkg::READ};
         }
 
         cp_wid : coverpoint m_trans.WID {
-            bins id[] = {[0:15]};
+            bins min_id      = {16'h0000};
+            bins max_id      = {16'hFFFF};
+            bins mid_ids[14] = {[16'h0001 : 16'hFFFE]};
         }
 
-        cp_bid : coverpoint s_trans.BID {
-            bins id[] = {[0:15]};
+        cp_bid : coverpoint m_trans.BID {
+            bins min_id      = {16'h0000};
+            bins max_id      = {16'hFFFF};
+            bins mid_ids[14] = {[16'h0001 : 16'hFFFE]};
         }
 
-        ID_CP : cross cp_awid, cp_wid, cp_bid;
+        cp_wstrb : coverpoint m_trans.WSTRB {
+            bins no_byte     = {4'h0};
+            bins single_byte = {4'h8,4'hc,4'he};
+            bins all_bytes   = {4'hF};
+            bins default_bin = default; 
+        }
 
-        BURST_CP : cross cp_awburst, cp_awlen;
+        ID_CP : cross cp_awid, cp_wid;
+
+        ID_CP1 : cross cp_wid, cp_bid;
+
+        BURST_LEN_SIZE_CP : cross cp_awburst, cp_awlen {
+            ignore_bins invalid_wrap = binsof(cp_awburst.wrap) && 
+                                       (binsof(cp_awlen.medium_burst) || binsof(cp_awlen.long_burst) || binsof(cp_awlen.max_burst));
+
+            ignore_bins invalid_fixed = binsof(cp_awburst.fixed) &&
+                                        (binsof(cp_awlen.medium_burst) || binsof(cp_awlen.long_burst) || binsof(cp_awlen.max_burst));
+        }
+
+        STRB_CP : cross cp_awburst, cp_wstrb;
     endgroup
 
     covergroup read_cov;
@@ -61,8 +89,21 @@ class axi_coverage;
             bins max_burst    = {[8'd128 : 8'd255]};
         }
 
+        cp_arsize : coverpoint m_trans.ARSIZE {
+            bins size_2 = {3'd2};
+            bins size_3 = {3'd3};
+        }
+
         cp_arid : coverpoint m_trans.ARID {
-            bins id[] = {[0 : 15]};
+            bins min_id      = {16'h0000};
+            bins max_id      = {16'hFFFF};
+            bins mid_ids[14] = {[16'h0001 : 16'hFFFE]};
+        }
+
+        cp_rid : coverpoint s_trans.RID {
+            bins min_id      = {16'h0000};
+            bins max_id      = {16'hFFFF};
+            bins mid_ids[14] = {[16'h0001 : 16'hFFFE]};
         }
 
         cp_wrap_len : coverpoint m_trans.AWLEN {
@@ -73,18 +114,20 @@ class axi_coverage;
         }
 
         cp_trans_kind_s : coverpoint m_trans.kind_e {
-            bins idle  = {axi_m_agent_pkg::IDLE};
-            bins write = {axi_m_agent_pkg::WRITE};
+            //bins idle  = {axi_m_agent_pkg::IDLE};
+            //bins write = {axi_m_agent_pkg::WRITE};
             bins read  = {axi_m_agent_pkg::READ};
-        }
-
-        cp_rid : coverpoint m_trans.RID {
-            bins id[] = {[0:15]};
         }
 
         IC_CP : cross cp_arid, cp_rid;
 
-        BURST_S_CP : cross cp_arburst, cp_arlen;
+        BURST_LEN_SIZE_CP : cross cp_arburst, cp_arlen{
+            ignore_bins invalid_wrap = binsof(cp_arburst.wrap) && 
+                                       (binsof(cp_arlen.medium_burst) || binsof(cp_arlen.long_burst) || binsof(cp_arlen.max_burst));
+
+            ignore_bins invalid_fixed = binsof(cp_arburst.fixed) &&
+                                        (binsof(cp_arlen.medium_burst) || binsof(cp_arlen.long_burst) || binsof(cp_arlen.max_burst));
+        }
 
     endgroup
 

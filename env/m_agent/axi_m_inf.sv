@@ -26,7 +26,7 @@ interface axi_m_inf #(int ADDR_WIDTH=32,DATA_WIDTH=32) (input bit ACLK);
     logic [(`ID-1):0]          BID;
     logic [(`RESP-1):0]        BRESP;
     logic                      BVALID;
-    logic                      BREADY=1;
+    logic                      BREADY;
 
     //Read address channel signal
     logic [(`ID-1):0]          ARID;
@@ -43,7 +43,7 @@ interface axi_m_inf #(int ADDR_WIDTH=32,DATA_WIDTH=32) (input bit ACLK);
     logic [(`RESP-1):0]        RRESP;
     logic                      RLAST;
     logic                      RVALID;
-    logic                      RREADY=1;
+    logic                      RREADY;
 
     //Driver clocking block
 

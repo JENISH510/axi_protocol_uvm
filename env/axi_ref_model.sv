@@ -28,9 +28,9 @@ class axi_ref_model extends uvm_component;
         if(req.kind_e == axi_s_agent_pkg::WRITE) begin
             base_addr        = req.AWADDR;
             addr             = base_addr;
-            wrap_lower_limit = (int'(base_addr / ((1 << req.AWSIZE) * (req.AWLEN + 1))))
-                               * ((1 << req.AWSIZE) * (req.AWLEN + 1));
-            wrap_upper_limit = wrap_lower_limit + ((1 << req.AWSIZE) * (req.AWLEN + 1));
+            //wrap_lower_limit = (int'(base_addr / ((1 << req.AWSIZE) * (req.AWLEN + 1))))
+            //                   * ((1 << req.AWSIZE) * (req.AWLEN + 1));
+            //wrap_upper_limit = wrap_lower_limit + ((1 << req.AWSIZE) * (req.AWLEN + 1));
 
             for(int i = 0; i < req.WDATA.size(); i++) begin
                 case(req.AWBURST)
@@ -44,14 +44,15 @@ class axi_ref_model extends uvm_component;
                     end
                     2'b10: begin
                         addr = base_addr + i * (1 << req.AWSIZE);
-                        if(addr >= wrap_upper_limit)
-                            addr = wrap_lower_limit + (addr - wrap_upper_limit);
+                        //if(addr >= wrap_upper_limit)
+                        //    addr = wrap_lower_limit + (addr - wrap_upper_limit);
                         mem[addr] = req.WDATA[i];
                     end
                     default: addr = base_addr;
                 endcase
                 abc++;
                 $display("abc : %0d", abc);
+            $display("ref model mem : %p",addr);
             end
         end
         else if(req.kind_e == axi_s_agent_pkg::READ) begin
@@ -93,6 +94,7 @@ class axi_ref_model extends uvm_component;
                         read.RID = read.ARID;
                         xyz++;
                         $display("xyz : %0d", xyz);
+                    //$display("ref model r mem:%0p ",addr);
                     end
 
                     read_q.delete(i);

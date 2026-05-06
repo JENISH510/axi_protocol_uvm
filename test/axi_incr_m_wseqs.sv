@@ -29,8 +29,8 @@ class axi_incr_m_wseqs #(int ADDR_WIDTH=32, DATA_WIDTH=32) extends axi_base_m_se
                 burst_kind_e == axi_m_agent_pkg::INCR;
                 
                 //AWID         == seq_awid;
-                AWADDR inside {[0:10000]};
-                //AWLEN        == 8'd3; 
+                //AWADDR inside {[0:10000]};
+                //AWLEN        == 8'd255; 
                 AWSIZE       == 8'd2; 
             });
             finish_item(m_seq_item_h);
@@ -47,12 +47,12 @@ class axi_incr_m_wseqs #(int ADDR_WIDTH=32, DATA_WIDTH=32) extends axi_base_m_se
                 
                 //ARID         == seq_arid;    
                 ARADDR       == saved_addr;
-                //ARLEN        == 8'd3; 
+                //ARLEN        == 8'd255; 
                 ARSIZE       == 8'd2; 
             });
             finish_item(m_seq_item_h);
         end
-      resp(150);
+      resp(200);
     endtask
 
 endclass

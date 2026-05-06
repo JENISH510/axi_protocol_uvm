@@ -26,6 +26,7 @@ class axi_m_drv #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends uvm_driver #(axi_m_se
         begin
             forever begin
                 seq_item_port.get(req);
+                $display("AWLEN IN M DRV:%0d",req.AWLEN);
                 cnt++;
                 $display("cnt : %0d", cnt);
 

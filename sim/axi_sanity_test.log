@@ -1,0 +1,273 @@
+# vsim -coverage -voptargs="+acc" axi_tb_top -c -do "coverage save -onexit -directive -cvg -codeall axi_sanity_test.ucdb; run -all; exit" "+UVM_TESTNAME=axi_sanity_test" -l axi_sanity_test.log 
+# Start time: 16:22:48 on May 06,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# //  Questa Sim-64
+# //  Version 2023.4 linux_x86_64 Oct  9 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.axi_s_inf(fast)
+# Loading work.axi_m_inf(fast)
+# Loading mtiUvm.uvm_pkg(fast)
+# Loading work.axi_s_agent_pkg(fast)
+# Loading work.axi_m_agent_pkg(fast)
+# Loading work.axi_env_pkg(fast)
+# Loading work.axi_test_pkg(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.axi_tb_top(fast)
+# Loading work.axi_m_inf(fast__2)
+# Loading work.axi_s_inf(fast__2)
+# ** Warning: (vsim-8441) Clocking block output s_vif.s_drv_cb.RDATA is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /axi_s_agent_pkg::axi_s_drv #(32, 32) File: ../env/s_agent/axi_s_drv.sv Line: 113
+# ** Warning: (vsim-8441) Clocking block output s_vif.s_drv_cb.RVALID is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /axi_s_agent_pkg::axi_s_drv #(32, 32) File: ../env/s_agent/axi_s_drv.sv Line: 115
+# ** Warning: (vsim-8441) Clocking block output s_vif.s_drv_cb.RLAST is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /axi_s_agent_pkg::axi_s_drv #(32, 32) File: ../env/s_agent/axi_s_drv.sv Line: 116
+# ** Warning: (vsim-8441) Clocking block output s_vif.s_drv_cb.RDATA is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /axi_s_agent_pkg::axi_s_drv #(32, 32) File: ../env/s_agent/axi_s_drv.sv Line: 113
+# ** Warning: (vsim-8441) Clocking block output s_vif.s_drv_cb.RLAST is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /axi_s_agent_pkg::axi_s_drv #(32, 32) File: ../env/s_agent/axi_s_drv.sv Line: 116
+# ** Warning: (vsim-8441) Clocking block output s_vif.s_drv_cb.RVALID is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /axi_s_agent_pkg::axi_s_drv #(32, 32) File: ../env/s_agent/axi_s_drv.sv Line: 115
+# ** Warning: (vsim-8441) Clocking block output s_vif.s_drv_cb.RVALID is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /axi_s_agent_pkg::axi_s_drv #(32, 32) File: ../env/s_agent/axi_s_drv.sv Line: 115
+# ** Warning: (vsim-8441) Clocking block output s_vif.s_drv_cb.RLAST is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /axi_s_agent_pkg::axi_s_drv #(32, 32) File: ../env/s_agent/axi_s_drv.sv Line: 116
+# ** Warning: (vsim-8441) Clocking block output m_vif.m_drv_cb.WID is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /axi_m_agent_pkg::axi_m_drv #(32, 32) File: ../env/m_agent/axi_m_drv.sv Line: 96
+# ** Warning: (vsim-8441) Clocking block output m_vif.m_drv_cb.WID is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /axi_m_agent_pkg::axi_m_drv #(32, 32) File: ../env/m_agent/axi_m_drv.sv Line: 96
+# ** Warning: (vsim-8441) Clocking block output m_vif.m_drv_cb.WLAST is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /axi_m_agent_pkg::axi_m_drv #(32, 32) File: ../env/m_agent/axi_m_drv.sv Line: 101
+# ** Warning: (vsim-8441) Clocking block output m_vif.m_drv_cb.WLAST is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /axi_m_agent_pkg::axi_m_drv #(32, 32) File: ../env/m_agent/axi_m_drv.sv Line: 101
+# ** Warning: (vsim-8441) Clocking block output m_vif.m_drv_cb.WLAST is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /axi_m_agent_pkg::axi_m_drv #(32, 32) File: ../env/m_agent/axi_m_drv.sv Line: 101
+# ** Warning: (vsim-8441) Clocking block output m_vif.m_drv_cb.WLAST is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /axi_m_agent_pkg::axi_m_drv #(32, 32) File: ../env/m_agent/axi_m_drv.sv Line: 101
+# Loading /tools/mentor/questa/2023.4/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so
+# coverage save -onexit -directive -cvg -codeall axi_sanity_test.ucdb
+#  run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test axi_sanity_test...
+# ** Warning: (vsim-8474) A higher value '8' is found in bin 'single_byte' of Coverpoint 'cp_wstrb'. It is invalid and will be ignored.
+#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec463f4 File: ../env/axi_coverage.sv Line: 56
+# ** Warning: (vsim-8474) A higher value '12' is found in bin 'single_byte' of Coverpoint 'cp_wstrb'. It is invalid and will be ignored.
+#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec463f4 File: ../env/axi_coverage.sv Line: 56
+# ** Warning: (vsim-8474) A higher value '14' is found in bin 'single_byte' of Coverpoint 'cp_wstrb'. It is invalid and will be ignored.
+#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec463f4 File: ../env/axi_coverage.sv Line: 56
+# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'single_byte' in Coverpoint 'cp_wstrb' of Covergroup instance '\/axi_env_pkg::axi_coverage::write_cov ' has converged to empty list. The bin will be taken out of coverage calculation.
+#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8474) A higher value '15' is found in bin 'all_bytes' of Coverpoint 'cp_wstrb'. It is invalid and will be ignored.
+#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec463f4 File: ../env/axi_coverage.sv Line: 57
+# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'all_bytes' in Coverpoint 'cp_wstrb' of Covergroup instance '\/axi_env_pkg::axi_coverage::write_cov ' has converged to empty list. The bin will be taken out of coverage calculation.
+#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# UVM_INFO ../env/s_agent/axi_s_seqr.sv(25) @ 0: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_seqr_h [Data in s seqr] Data got in slave seqr
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# --------------------------------------------------------------------------------
+# Name                             Type                                Size  Value
+# --------------------------------------------------------------------------------
+# uvm_test_top                     axi_sanity_test                     -     @479 
+#   env_h                          axi_env                             -     @491 
+#     m_uvc_h                      uvm_agent                           -     @513 
+#       m_agent_h[0]               uvm_agent                           -     @693 
+#         m_drv_h                  uvm_driver #(REQ,RSP)               -     @814 
+#           rsp_port               uvm_analysis_port                   -     @829 
+#           seq_item_port          uvm_seq_item_pull_port              -     @821 
+#         m_mon_h                  axi_m_mon#(ADDR_WIDTH, DATA_WIDTH)  -     @837 
+#           s_port                 uvm_analysis_port                   -     @844 
+#         m_seqr_h                 uvm_sequencer                       -     @705 
+#           rsp_export             uvm_analysis_export                 -     @712 
+#           seq_item_export        uvm_seq_item_pull_imp               -     @806 
+#           arbitration_queue      array                               0     -    
+#           lock_queue             array                               0     -    
+#           num_last_reqs          integral                            32    'd1  
+#           num_last_rsps          integral                            32    'd1  
+#     ref_model_h                  axi_ref_model                       -     @558 
+#       mon_imp                    uvm_analysis_imp                    -     @565 
+#       sb_imp                     uvm_analysis_port                   -     @573 
+#     s_uvc_h                      uvm_agent                           -     @520 
+#       s_agent_h[0]               uvm_agent                           -     @860 
+#         s_drv_h                  uvm_driver #(REQ,RSP)               -     @1036
+#           rsp_port               uvm_analysis_port                   -     @1051
+#           seq_item_port          uvm_seq_item_pull_port              -     @1043
+#         s_mon_h                  axi_s_mon#(ADDR_WIDTH, DATA_WIDTH)  -     @1059
+#           s_port                 uvm_analysis_port                   -     @1066
+#         s_seqr_h                 uvm_sequencer                       -     @872 
+#           item_collected_export  uvm_analysis_export                 -     @981 
+#           item_req_fifo          uvm_tlm_analysis_fifo #(T)          -     @989 
+#             analysis_export      uvm_analysis_imp                    -     @1028
+#             get_ap               uvm_analysis_port                   -     @1020
+#             get_peek_export      uvm_get_peek_imp                    -     @1004
+#             put_ap               uvm_analysis_port                   -     @1012
+#             put_export           uvm_put_imp                         -     @996 
+#           rsp_export             uvm_analysis_export                 -     @879 
+#           seq_item_export        uvm_seq_item_pull_imp               -     @973 
+#           arbitration_queue      array                               0     -    
+#           lock_queue             array                               0     -    
+#           num_last_reqs          integral                            32    'd1  
+#           num_last_rsps          integral                            32    'd1  
+#     sb_h                         axi_sb                              -     @527 
+#       anl_imp_m                  uvm_analysis_imp_m                  -     @534 
+#       anl_imp_ref                uvm_analysis_imp_ref                -     @542 
+#     vseqr_h                      axi_virtual_seqr                    -     @581 
+#       rsp_export                 uvm_analysis_export                 -     @588 
+#       seq_item_export            uvm_seq_item_pull_imp               -     @682 
+#       arbitration_queue          array                               0     -    
+#       lock_queue                 array                               0     -    
+#       num_last_reqs              integral                            32    'd1  
+#       num_last_rsps              integral                            32    'd1  
+# --------------------------------------------------------------------------------
+# 
+# UVM_INFO ../env/axi_sb.sv(65) @ 0: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/m_agent/axi_m_mon.sv(29) @ 0: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_mon_h [M MON RUN PHASE before] Inside master mon run phase
+# UVM_INFO ../env/m_agent/axi_m_mon.sv(36) @ 0: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_mon_h [M MON run PHASE after] Inside master mon
+# UVM_INFO ../env/m_agent/axi_m_mon.sv(41) @ 0: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_mon_h [M MON write addr PHASE before] Inside master mon
+# UVM_INFO ../env/m_agent/axi_m_mon.sv(61) @ 0: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_mon_h [M MON write data PHASE before] Inside master mon
+# UVM_INFO ../env/m_agent/axi_m_mon.sv(86) @ 0: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_mon_h [M MON read addr PHASE before] Inside master mon
+# UVM_INFO ../env/m_agent/axi_m_mon.sv(108) @ 0: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_mon_h [M MON read data PHASE before] Inside master mon
+# Before AW CHANNEL
+# Before W CHANNEL
+# Before AR CHANNEL
+# Before R CHANNEL
+# AWLEN IN M DRV:3
+# cnt : 1
+# AWLEN IN M DRV:154
+# cnt : 2
+# WID: 48469 , AWID : 48469
+# burst in s mon : 1
+# awid in s mon : bd55 , awaddr : 17f
+#                   15wlast : 0
+# WID: 48469 , AWID : 48469
+# INIDE_SLAVE_MON_CTR=1
+# arid in s mon : 60203
+#                   25wlast : 0
+# WID: 48469 , AWID : 48469
+# m mon ar id : eb2b
+#                   35wlast : 0
+# WID: 48469 , AWID : 48469
+# abc : 1
+# ref model mem : 391
+# abc : 2
+# ref model mem : 399
+# abc : 3
+# ref model mem : 407
+# abc : 4
+# ref model mem : 415
+# xyz : 1
+# xyz : 2
+# xyz : 3
+# xyz : 4
+#                   45wlast : 1
+#                   45later wlast : 1
+# AFFTER W CHANNEL
+# req kind_e : WRITE
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 45: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# s seqs arid : 60203
+# INIDE_SLAVE_SEQ_CTR=1
+# match arid : eb2b , rid : eb2b
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 45: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: e1000000 , len : 3 , last:0 , valid : 1
+# m mon rid : eb2b
+# rd data in s drv: 5ade4b3 , len : 3 , last:0 , valid : 1
+# m mon rid : eb2b
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 65: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# rd data in s drv: 55d992b7 , len : 3 , last:0 , valid : 1
+# m mon rid : eb2b
+# rd data in s drv: edb2c52b , len : 3 , last:1 , valid : 1
+# req kind : READ
+# m mon rid : eb2b
+# UVM_INFO ../env/axi_sb.sv(67) @ 85: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(65) @ 85: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 165: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# 
+##############################################################
+#                                                            #
+#   PPPPPPPP    AAA     SSSSSS    SSSSSS                     #
+#   PP     PP  A   A   SS        SS                          #
+#   PPPPPPPP   AAAAA    SSSSS     SSSSS                      #
+#   PP         A   A        SS         SS                    #
+#   PP         A   A   SSSSSS    SSSSSS                      #
+#                                                            #
+##############################################################
+# 
+# UVM_INFO ../env/axi_sb.sv(116) @ 165: uvm_test_top.env_h.sb_h [SCOREBOARD_SUMMARY] 
+# === FINAL RESULTS ===
+# Total Pass = 1
+# Total Fail = 0
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   19
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Data in s seqr]     1
+# [ID MATCH]     2
+# [IN V SEQS]     1
+# [M MON RUN PHASE before]     1
+# [M MON read addr PHASE before]     1
+# [M MON read data PHASE before]     1
+# [M MON run PHASE after]     1
+# [M MON write addr PHASE before]     1
+# [M MON write data PHASE before]     1
+# [Questa UVM]     2
+# [RNTST]     1
+# [SCOREBOARD_SUMMARY]     1
+# [TEST_DONE]     1
+# [UVMTOP]     1
+# [after event in sb]     1
+# [before event in sb]     2
+# ** Note: $finish    : /tools/mentor/questa/2023.4/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 165 ns  Iteration: 53  Instance: /axi_tb_top
+# Saving coverage database on exit...
+# End time: 16:22:49 on May 06,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 20

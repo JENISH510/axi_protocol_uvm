@@ -17,7 +17,7 @@ class axi_incr_vseqs extends axi_base_vseqs;
         super.body();
       	//fork
       	//s_seqs_h.start(s_seqr_h);
-      `uvm_do_on_with(m_wseqs_h,m_seqr_h,{no_of_trans == 150;})
+      `uvm_do_on_with(m_wseqs_h,m_seqr_h,{no_of_trans == 200;})
         //join_any
     endtask
 
@@ -51,7 +51,7 @@ class axi_incr_test extends axi_base_test;
 
         phase.drop_objection(this);
 
-      phase.phase_done.set_drain_time(this, 25000ns);
+      phase.phase_done.set_drain_time(this, 50000ns);
     endtask
 
 endclass

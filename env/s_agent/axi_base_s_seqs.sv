@@ -41,9 +41,9 @@ class axi_base_s_seqs #(int ADDR_WIDTH = 32, DATA_WIDTH = 32)
                 base_addr = req.AWADDR;
                 addr      = base_addr;
 
-                wrap_lower_limit = (int'(base_addr / ((1 << req.AWSIZE) * (req.AWLEN + 1))))
-                                   * ((1 << req.AWSIZE) * (req.AWLEN + 1));
-                wrap_upper_limit = wrap_lower_limit + ((1 << req.AWSIZE) * (req.AWLEN + 1));
+                //wrap_lower_limit = (int'(base_addr / ((1 << req.AWSIZE) * (req.AWLEN + 1))))
+                //                   * ((1 << req.AWSIZE) * (req.AWLEN + 1));
+                //wrap_upper_limit = wrap_lower_limit + ((1 << req.AWSIZE) * (req.AWLEN + 1));
 
                 for (int beat = 0; beat < req.WDATA.size(); beat++) begin
                     case (req.AWBURST)
@@ -59,9 +59,9 @@ class axi_base_s_seqs #(int ADDR_WIDTH = 32, DATA_WIDTH = 32)
 
                         2'b10: begin
                             addr = base_addr + beat * (1 << req.AWSIZE);
-                            if (addr >= wrap_upper_limit) begin
-                                addr = wrap_lower_limit + (addr - wrap_upper_limit);
-                            end
+                            //if (addr >= wrap_upper_limit) begin
+                            //    addr = wrap_lower_limit + (addr - wrap_upper_limit);
+                            //end
                             mem[addr] = req.WDATA[beat];
                         end
 

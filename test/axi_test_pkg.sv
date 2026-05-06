@@ -10,7 +10,7 @@ package axi_test_pkg;
     import axi_s_agent_pkg::*;  
     import axi_env_pkg::*;
 
-    bit [3:0] shared_addr_q[$];   // shared queue
+    bit [3:0] shared_addr_q[$];   
     `include "axi_base_test.sv"
 
     `include "axi_fixed_m_wseqs.sv"
@@ -22,6 +22,17 @@ package axi_test_pkg;
 	`include "axi_incr_m_wseqs.sv"
 	`include "axi_incr_test.sv"
 
+    `include "axi_sanity_m_wseqs.sv"
+    `include "axi_sanity_test.sv"
+
+    `include "axi_b2b_m_wseqs.sv"
+    `include "axi_b2b_test.sv"
+
+    `include "axi_random_m_wseqs.sv"
+    `include "axi_random_test.sv"
+
+    `include "axi_corner_m_wseqs.sv"
+    `include "axi_corner_test.sv"
 endpackage
 
 `endif
