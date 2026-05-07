@@ -33,10 +33,23 @@ class axi_coverage;
             bins mid_ids[14] = {[16'h0001 : 16'hFFFE]};
         }
 
+        cp_awaddr : coverpoint m_trans.AWADDR {
+            bins min_addr   = {32'h0000_0000};
+            bins max_addr   = {32'hFFFF_FFFF};
+            bins low_range  = {[32'h0000_0001 : 32'h0000_FFFF]};
+            bins mid_range  = {[32'h0001_0000 : 32'hEFFF_FFFF]};
+            bins high_range = {[32'hF000_0000 : 32'hFFFE_FFFF]};
+        }
+
+        cp_wdata : coverpoint m_trans.WDATA {
+            bins all_zeros   = {32'h0000_0000};
+            bins all_ones    = {32'hFFFF_FFFF};
+            bins toggle_01   = {32'h5555_5555, 32'hAAAA_AAAA};
+            bins other_data[4] = {[32'h0000_0001 : 32'hFFFE_FFFF]};
+        }
+
         cp_trans_kind_m : coverpoint m_trans.kind_e {
-            //bins idle  = {axi_m_agent_pkg::IDLE};
             bins write = {axi_m_agent_pkg::WRITE};
-            //bins read  = {axi_m_agent_pkg::READ};
         }
 
         cp_wid : coverpoint m_trans.WID {
@@ -58,19 +71,31 @@ class axi_coverage;
             bins default_bin = default; 
         }
 
-        ID_CP : cross cp_awid, cp_wid;
+        //ID_CP : cross cp_awid, cp_wid;
+        //ID_CP1 : cross cp_wid, cp_bid;
 
-        ID_CP1 : cross cp_wid, cp_bid;
+        ADDR_DATA_CP  : cross cp_awaddr, cp_wdata;
+        
+        ADDR_BURST_CP : cross cp_awaddr, cp_awburst;
+        
+        DATA_BURST_CP : cross cp_wdata, cp_awburst;
 
         BURST_LEN_SIZE_CP : cross cp_awburst, cp_awlen {
             ignore_bins invalid_wrap = binsof(cp_awburst.wrap) && 
-                                       (binsof(cp_awlen.medium_burst) || binsof(cp_awlen.long_burst) || binsof(cp_awlen.max_burst));
+                                       (binsof(cp_awlen.medium_burst) || binsof(cp_awlen.long_burst) || binsof(cp_awlen.max_burst)) || binsof(cp_awlen.single);
 
             ignore_bins invalid_fixed = binsof(cp_awburst.fixed) &&
                                         (binsof(cp_awlen.medium_burst) || binsof(cp_awlen.long_burst) || binsof(cp_awlen.max_burst));
         }
 
-        STRB_CP : cross cp_awburst, cp_wstrb;
+        STRB_CP : cross cp_awburst, cp_wstrb {
+            ignore_bins invalid_wrap = binsof(cp_awburst.wrap) &&
+                                       (binsof(cp_wstrb.no_byte) || binsof(cp_wstrb.single_byte));
+
+            ignore_bins invalid_incr = binsof(cp_awburst.wrap) &&
+                                       binsof(cp_wstrb.no_byte);
+        }
+
     endgroup
 
     covergroup read_cov;
@@ -100,6 +125,21 @@ class axi_coverage;
             bins mid_ids[14] = {[16'h0001 : 16'hFFFE]};
         }
 
+        cp_araddr : coverpoint m_trans.ARADDR {
+            bins min_addr   = {32'h0000_0000};
+            bins max_addr   = {32'hFFFF_FFFF};
+            bins low_range  = {[32'h0000_0001 : 32'h0000_FFFF]};
+            bins mid_range  = {[32'h0001_0000 : 32'hEFFF_FFFF]};
+            bins high_range = {[32'hF000_0000 : 32'hFFFE_FFFF]};
+        }
+
+        cp_rdata : coverpoint m_trans.RDATA {
+            bins all_zeros   = {32'h0000_0000};
+            bins all_ones    = {32'hFFFF_FFFF};
+            bins toggle_01   = {32'h5555_5555, 32'hAAAA_AAAA};
+            bins other_data[4] = {[32'h0000_0001 : 32'hFFFE_FFFF]};
+        }
+
         cp_rid : coverpoint s_trans.RID {
             bins min_id      = {16'h0000};
             bins max_id      = {16'hFFFF};
@@ -114,12 +154,16 @@ class axi_coverage;
         }
 
         cp_trans_kind_s : coverpoint m_trans.kind_e {
-            //bins idle  = {axi_m_agent_pkg::IDLE};
-            //bins write = {axi_m_agent_pkg::WRITE};
             bins read  = {axi_m_agent_pkg::READ};
         }
 
-        IC_CP : cross cp_arid, cp_rid;
+        //IC_CP : cross cp_arid, cp_rid;
+
+        ADDR_DATA_CP  : cross cp_araddr, cp_rdata;
+        
+        ADDR_BURST_CP : cross cp_araddr, cp_arburst;
+        
+        DATA_BURST_CP : cross cp_rdata, cp_arburst;
 
         BURST_LEN_SIZE_CP : cross cp_arburst, cp_arlen{
             ignore_bins invalid_wrap = binsof(cp_arburst.wrap) && 
@@ -151,5 +195,3 @@ class axi_coverage;
 endclass
 
 `endif
-
-

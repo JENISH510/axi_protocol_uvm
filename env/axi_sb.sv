@@ -49,8 +49,19 @@ class axi_sb extends uvm_scoreboard;
     endfunction
 
     function void write_ref(axi_s_seq_item req);
+        int ma,mi;
         if (req.kind_e == axi_s_agent_pkg::READ) begin
             cov.read_func(req);
+            /*if(req.ARID || req.RID)begin
+                $display("BOTH ARID : %0h , RID : %0h MATCH",req.ARID,req.RID);
+                ma++;
+                $display("match id in sb : %0d",ma);
+            end
+            else begin
+                $display("BOTH ARID : %0h , RID : %0h MISMATCH",req.ARID,req.RID);
+                mi++;
+                $display("mismatch id in sb : %0d",mi);
+            end*/
             exp_q[req.RID].push_back(req);
             // ->data_get;
         end

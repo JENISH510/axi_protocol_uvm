@@ -26,7 +26,7 @@ class axi_sanity_m_wseqs #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends axi_base_m_s
                 
                 burst_kind_e == axi_m_agent_pkg::INCR;
                 
-                //AWID         == seq_awid;
+                AWID         == 16'hffff;
                 AWADDR inside {[0:1000]};
                 AWLEN        == 8'd3; 
                 AWSIZE       == 8'd3; 
@@ -42,7 +42,8 @@ class axi_sanity_m_wseqs #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends axi_base_m_s
                 
                 burst_kind_e == axi_s_agent_pkg::INCR;
                 
-                //ARID         == seq_arid;    
+                //ARID         == seq_arid;
+                ARID         == 16'hffff;
                 ARADDR       == saved_addr;
                 ARLEN        == 8'd3; 
                 //ARLEN        == saved_len;

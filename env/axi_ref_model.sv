@@ -80,7 +80,7 @@ class axi_ref_model extends uvm_component;
                                 addr += 1;
                             end
                             2'b01: begin
-                                read.RDATA.push_back(mem[addr]);
+                                read.RDATA.push_back('0);
                                 addr += (1 << read.ARSIZE);
                             end
                             2'b10: begin

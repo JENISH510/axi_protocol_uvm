@@ -94,17 +94,17 @@ class axi_m_drv #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends uvm_driver #(axi_m_se
 
             for (int i = 0; i <= w_trans.AWLEN; i++) begin
                 m_vif.m_drv_cb.WID    <= w_trans.AWID;
-                $display("WID: %0d , AWID : %0d", m_vif.m_drv_cb.WID, w_trans.AWID);
+                //$display("WID: %0d , AWID : %0d", m_vif.m_drv_cb.WID, w_trans.AWID);
                 m_vif.m_drv_cb.WDATA  <= w_trans.WDATA[i];
                 m_vif.m_drv_cb.WSTRB  <= w_trans.WSTRB[i];
                 m_vif.m_drv_cb.WVALID <= 1'b1;
                 m_vif.m_drv_cb.WLAST  <= (i == w_trans.AWLEN);
 
                 @(m_vif.m_drv_cb iff m_vif.m_drv_cb.WREADY);
-                $display($time,"wlast : %0d",m_vif.m_drv_cb.WLAST);
+                //$display($time,"wlast : %0d",m_vif.m_drv_cb.WLAST);
             end
           if(wr_data_q.size() == 0)begin
-            $display($time,"later wlast : %0d",m_vif.m_drv_cb.WLAST);
+            //$display($time,"later wlast : %0d",m_vif.m_drv_cb.WLAST);
             m_vif.m_drv_cb.WVALID <= 1'b0;
             m_vif.m_drv_cb.WLAST <= 1'b0;
           end

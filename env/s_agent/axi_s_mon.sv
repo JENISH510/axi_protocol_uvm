@@ -47,11 +47,11 @@ class axi_s_mon#(int ADDR_WIDTH=32, DATA_WIDTH=32) extends uvm_monitor;
 			aw_trans.AWLEN   = s_vif.s_mon_cb.AWLEN;
 			aw_trans.AWSIZE  = s_vif.s_mon_cb.AWSIZE;
 			aw_trans.AWBURST = s_vif.s_mon_cb.AWBURST;
-            $display("burst in s mon : %p",aw_trans.AWBURST);
+            //$display("burst in s mon : %p",aw_trans.AWBURST);
 
+            //$display("awid in s mon : %0h , awaddr : %0h",aw_trans.AWID,aw_trans.AWADDR);
             get_id[aw_trans.AWID] = aw_trans;
             awid_q.push_back(aw_trans.AWID);
-            $display("awid in s mon : %0h , awaddr : %0h",aw_trans.AWID,aw_trans.AWADDR);
 		end
   	endtask
 

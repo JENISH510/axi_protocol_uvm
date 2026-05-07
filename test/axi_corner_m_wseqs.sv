@@ -26,7 +26,7 @@ class axi_corner_m_wseqs #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends axi_base_m_s
                 
                 burst_kind_e == axi_m_agent_pkg::INCR;
                 
-                AWID inside {[16'h0001 : 16'hFFFE],16'hFFFF};
+                AWID inside {16'hFFFF,[16'h0001 : 16'hFFFE]};
                 AWADDR inside {[0:1000]};
                 AWLEN inside {[0:255]}; 
                 AWSIZE       == 8'd3; 
@@ -43,6 +43,7 @@ class axi_corner_m_wseqs #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends axi_base_m_s
                 burst_kind_e == axi_s_agent_pkg::INCR;
                 
                 //ARID         == seq_arid;    
+                ARID inside {16'hFFFF,[16'h0001 : 16'hFFFE]};
                 ARADDR       == saved_addr;
                 ARLEN inside {[0:255]}; 
                 //ARLEN        == saved_len;
@@ -50,7 +51,7 @@ class axi_corner_m_wseqs #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends axi_base_m_s
             });
             finish_item(m_seq_item_h);
         end
-      resp(100);
+      resp(200);
     endtask
     
 endclass

@@ -50,7 +50,7 @@ class axi_random_m_wseqs #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends axi_base_m_s
             });
             finish_item(m_seq_item_h);
         end
-      resp(50);
+      resp(100);
     endtask
     
 endclass
