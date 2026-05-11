@@ -1,5 +1,5 @@
-# vsim -coverage -voptargs="+acc" axi_tb_top -c -do "coverage save -onexit -directive -cvg -codeall axi_cg.ucdb; run -all; exit" "+UVM_TESTNAME=axi_lower_test" 
-# Start time: 11:41:04 on May 11,2026
+# vsim -coverage -voptargs="+acc" axi_tb_top -c -do "coverage save -onexit -directive -cvg -codeall axi_lower_test.ucdb; run -all; exit" "+UVM_TESTNAME=axi_lower_test" -l axi_lower_test.log 
+# Start time: 11:23:47 on May 11,2026
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim-64
 # //  Version 2023.4 linux_x86_64 Oct  9 2023
@@ -52,7 +52,7 @@
 # or another expression.
 #    Time: 0 ns  Iteration: 0  Region: /axi_s_agent_pkg::axi_s_drv #(32, 32) File: ../env/s_agent/axi_s_drv.sv Line: 116
 # Loading /tools/mentor/questa/2023.4/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so
-# coverage save -onexit -directive -cvg -codeall axi_cg.ucdb
+# coverage save -onexit -directive -cvg -codeall axi_lower_test.ucdb
 #  run -all
 # ----------------------------------------------------------------
 # UVM-1.1d
@@ -166,7 +166,7 @@
 #       num_last_rsps              integral                            32    'd1  
 # --------------------------------------------------------------------------------
 # 
-# UVM_INFO ../env/axi_sb.sv(78) @ 0: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 0: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # UVM_INFO ../env/m_agent/axi_m_mon.sv(28) @ 0: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_mon_h [M MON RUN PHASE before] Inside master mon run phase
 # UVM_INFO ../env/m_agent/axi_m_mon.sv(36) @ 0: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_mon_h [M MON run PHASE after] Inside master mon
 # UVM_INFO ../env/m_agent/axi_m_mon.sv(41) @ 0: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_mon_h [M MON write addr PHASE before] Inside master mon
@@ -227,10 +227,9 @@
 # ref model mem : 3
 # AFFTER W CHANNEL
 # req kind : READ
-# RDATa IN SB : 1431655765 2863311530 4294967295
 # m mon rid : 0
-# UVM_INFO ../env/axi_sb.sv(80) @ 65: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(78) @ 65: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 65: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 65: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 65: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 0
@@ -257,7 +256,7 @@
 #                                                            #
 ##############################################################
 # 
-# UVM_INFO ../env/axi_sb.sv(129) @ 1085: uvm_test_top.env_h.sb_h [SCOREBOARD_SUMMARY] 
+# UVM_INFO ../env/axi_sb.sv(128) @ 1085: uvm_test_top.env_h.sb_h [SCOREBOARD_SUMMARY] 
 # === FINAL RESULTS ===
 # Total Pass = 1
 # Total Fail = 0
@@ -289,5 +288,5 @@
 # ** Note: $finish    : /tools/mentor/questa/2023.4/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 1085 ns  Iteration: 53  Instance: /axi_tb_top
 # Saving coverage database on exit...
-# End time: 11:41:06 on May 11,2026, Elapsed time: 0:00:02
+# End time: 11:23:49 on May 11,2026, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 24

@@ -28,6 +28,7 @@ regress:
 	vsim -coverage -voptargs=+acc axi_tb_top -c -do "coverage save -onexit -directive -cvg -codeall axi_random_test.ucdb; run -all; exit" +UVM_TESTNAME=axi_random_test -l axi_random_test.log
 	vsim -coverage -voptargs=+acc axi_tb_top -c -do "coverage save -onexit -directive -cvg -codeall axi_b2b_test.ucdb; run -all; exit" +UVM_TESTNAME=axi_b2b_test -l axi_b2b_test.log
 	vsim -coverage -voptargs=+acc axi_tb_top -c -do "coverage save -onexit -directive -cvg -codeall axi_corner_test.ucdb; run -all; exit" +UVM_TESTNAME=axi_corner_test -l axi_corner_test.log
-	vcover merge func_cov.ucdb axi_wrap_test.ucdb axi_incr_test.ucdb axi_fixed_test.ucdb axi_sanity_test.ucdb axi_random_test.ucdb axi_b2b_test.ucdb axi_corner_test.ucdb
+	vsim -coverage -voptargs=+acc axi_tb_top -c -do "coverage save -onexit -directive -cvg -codeall axi_lower_test.ucdb; run -all; exit" +UVM_TESTNAME=axi_lower_test -l axi_lower_test.log
+	vcover merge func_cov.ucdb axi_wrap_test.ucdb axi_incr_test.ucdb axi_fixed_test.ucdb axi_sanity_test.ucdb axi_random_test.ucdb axi_b2b_test.ucdb axi_corner_test.ucdb axi_lower_test.ucdb
 	vcover report -html -details -output func_cov func_cov.ucdb
-	rm axi_wrap_test.ucdb axi_incr_test.ucdb axi_fixed_test.ucdb axi_sanity_test.ucdb axi_random_test.ucdb axi_b2b_test.ucdb axi_corner_test.ucdb
+	rm axi_wrap_test.ucdb axi_incr_test.ucdb axi_fixed_test.ucdb axi_sanity_test.ucdb axi_random_test.ucdb axi_b2b_test.ucdb axi_corner_test.ucdb axi_lower_test.ucdb

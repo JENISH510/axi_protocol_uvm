@@ -100,13 +100,13 @@ class axi_coverage;
 
     covergroup read_cov;
 
-        cp_arburst : coverpoint m_trans.ARBURST {
+        cp_arburst : coverpoint s_trans.ARBURST {
             bins fixed = {2'b00};
             bins incr  = {2'b01};
             bins wrap  = {2'b10};
         }
 
-        cp_arlen : coverpoint m_trans.ARLEN {
+        cp_arlen : coverpoint s_trans.ARLEN {
             bins single       = {8'd0};
             bins short_burst  = {[8'd1   : 8'd15]};
             bins medium_burst = {[8'd16  : 8'd63]};
@@ -114,18 +114,18 @@ class axi_coverage;
             bins max_burst    = {[8'd128 : 8'd255]};
         }
 
-        cp_arsize : coverpoint m_trans.ARSIZE {
+        cp_arsize : coverpoint s_trans.ARSIZE {
             bins size_2 = {3'd2};
             bins size_3 = {3'd3};
         }
 
-        cp_arid : coverpoint m_trans.ARID {
+        cp_arid : coverpoint s_trans.ARID {
             bins min_id      = {16'h0000};
             bins max_id      = {16'hFFFF};
             bins mid_ids[14] = {[16'h0001 : 16'hFFFE]};
         }
 
-        cp_araddr : coverpoint m_trans.ARADDR {
+        cp_araddr : coverpoint s_trans.ARADDR {
             bins min_addr   = {32'h0000_0000};
             bins max_addr   = {32'hFFFF_FFFF};
             bins low_range  = {[32'h0000_0001 : 32'h0000_FFFF]};
@@ -133,7 +133,7 @@ class axi_coverage;
             bins high_range = {[32'hF000_0000 : 32'hFFFE_FFFF]};
         }
 
-        cp_rdata : coverpoint m_trans.RDATA {
+        cp_rdata : coverpoint s_trans.RDATA[0] {   
             bins all_zeros   = {32'h0000_0000};
             bins all_ones    = {32'hFFFF_FFFF};
             bins toggle_01   = {32'h5555_5555, 32'hAAAA_AAAA};
@@ -146,15 +146,15 @@ class axi_coverage;
             bins mid_ids[14] = {[16'h0001 : 16'hFFFE]};
         }
 
-        cp_wrap_len : coverpoint m_trans.AWLEN {
+        cp_wrap_len : coverpoint s_trans.ARLEN {   
             bins wrap_1  = {8'd1};
             bins wrap_3  = {8'd3};
             bins wrap_7  = {8'd7};
             bins wrap_15 = {8'd15};
         }
 
-        cp_trans_kind_s : coverpoint m_trans.kind_e {
-            bins read  = {axi_m_agent_pkg::READ};
+        cp_trans_kind_s : coverpoint s_trans.kind_e {
+            bins read  = {axi_s_agent_pkg::READ};
         }
 
         //IC_CP : cross cp_arid, cp_rid;

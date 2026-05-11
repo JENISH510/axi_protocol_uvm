@@ -33,6 +33,9 @@ package axi_test_pkg;
 
     `include "axi_corner_m_wseqs.sv"
     `include "axi_corner_test.sv"
+    
+    `include "axi_lower_m_wseqs.sv"
+    `include "axi_lower_test.sv"
 endpackage
 
 `endif

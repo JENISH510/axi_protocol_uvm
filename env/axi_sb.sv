@@ -42,6 +42,7 @@ class axi_sb extends uvm_scoreboard;
         if (req.kind_e == axi_m_agent_pkg::READ) begin
             $display("req kind : %s",req.kind_e);
             cov.write_func(req);
+            $display("RDATa IN SB : %0p",req.RDATA);
             act_q[req.RID].push_back(req);
             rid_q.push_back(req.RID);
             ->data_get;
@@ -52,6 +53,7 @@ class axi_sb extends uvm_scoreboard;
         int ma,mi;
         if (req.kind_e == axi_s_agent_pkg::READ) begin
             cov.read_func(req);
+            $display("AR ADDR IN SB : %0h",req.ARADDR);
             /*if(req.ARID || req.RID)begin
                 $display("BOTH ARID : %0h , RID : %0h MATCH",req.ARID,req.RID);
                 ma++;

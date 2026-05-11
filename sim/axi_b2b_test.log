@@ -1,6 +1,6 @@
 # vsim -coverage -voptargs="+acc" axi_tb_top -c -do "coverage save -onexit -directive -cvg -codeall axi_b2b_test.ucdb; run -all; exit" "+UVM_TESTNAME=axi_b2b_test" -l axi_b2b_test.log 
-# Start time: 14:36:54 on May 07,2026
-# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Start time: 11:23:40 on May 11,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim-64
 # //  Version 2023.4 linux_x86_64 Oct  9 2023
 # //
@@ -78,54 +78,36 @@
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
 # UVM_INFO @ 0: reporter [RNTST] Running test axi_b2b_test...
 # ** Warning: (vsim-8474) A higher value '4294967295' is found in bin 'all_ones' of Coverpoint 'cp_wdata'. It is invalid and will be ignored.
-#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec463ba File: ../env/axi_coverage.sv Line: 49
+#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648c File: ../env/axi_coverage.sv Line: 46
 # ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'all_ones' in Coverpoint 'cp_wdata' of Covergroup instance '\/axi_env_pkg::axi_coverage::write_cov ' has converged to empty list. The bin will be taken out of coverage calculation.
 #    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
 # ** Warning: (vsim-8474) A higher value '1431655765' is found in bin 'toggle_01' of Coverpoint 'cp_wdata'. It is invalid and will be ignored.
-#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec463ba File: ../env/axi_coverage.sv Line: 50
+#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648c File: ../env/axi_coverage.sv Line: 47
 # ** Warning: (vsim-8474) A higher value '2863311530' is found in bin 'toggle_01' of Coverpoint 'cp_wdata'. It is invalid and will be ignored.
-#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec463ba File: ../env/axi_coverage.sv Line: 50
+#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648c File: ../env/axi_coverage.sv Line: 47
 # ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'toggle_01' in Coverpoint 'cp_wdata' of Covergroup instance '\/axi_env_pkg::axi_coverage::write_cov ' has converged to empty list. The bin will be taken out of coverage calculation.
 #    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
-# ** Warning: (vsim-3881) ../env/axi_coverage.sv(51): Width conversion applied in bin 'other_data' for Coverpoint 'cp_wdata'. Value '1' changed to ' (maximum)' value.
+# ** Warning: (vsim-3881) ../env/axi_coverage.sv(48): Width conversion applied in bin 'other_data' for Coverpoint 'cp_wdata'. Value '1' changed to ' (maximum)' value.
 #    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
-# ** Warning: (vsim-3881) ../env/axi_coverage.sv(51): Width conversion applied in bin 'other_data' for Coverpoint 'cp_wdata'. Value '4294901759' changed to ' (maximum)' value.
+# ** Warning: (vsim-3881) ../env/axi_coverage.sv(48): Width conversion applied in bin 'other_data' for Coverpoint 'cp_wdata'. Value '4294901759' changed to ' (maximum)' value.
 #    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
 # ** Warning: (vsim-8475) The invalid value range [1 : 4294901759] is found in bin 'other_data' of Coverpoint 'cp_wdata'. It will be ignored.
-#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec463ba File: ../env/axi_coverage.sv Line: 51
+#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648c File: ../env/axi_coverage.sv Line: 48
 # ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with array bin 'other_data' in Coverpoint 'cp_wdata' of Covergroup instance '\/axi_env_pkg::axi_coverage::write_cov ' has converged to empty list. The bin will be taken out of coverage calculation.
 #    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
 # ** Warning: (vsim-8474) A higher value '8' is found in bin 'single_byte' of Coverpoint 'cp_wstrb'. It is invalid and will be ignored.
-#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec463ba File: ../env/axi_coverage.sv Line: 72
+#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648c File: ../env/axi_coverage.sv Line: 69
 # ** Warning: (vsim-8474) A higher value '12' is found in bin 'single_byte' of Coverpoint 'cp_wstrb'. It is invalid and will be ignored.
-#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec463ba File: ../env/axi_coverage.sv Line: 72
+#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648c File: ../env/axi_coverage.sv Line: 69
 # ** Warning: (vsim-8474) A higher value '14' is found in bin 'single_byte' of Coverpoint 'cp_wstrb'. It is invalid and will be ignored.
-#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec463ba File: ../env/axi_coverage.sv Line: 72
+#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648c File: ../env/axi_coverage.sv Line: 69
 # ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'single_byte' in Coverpoint 'cp_wstrb' of Covergroup instance '\/axi_env_pkg::axi_coverage::write_cov ' has converged to empty list. The bin will be taken out of coverage calculation.
 #    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
 # ** Warning: (vsim-8474) A higher value '15' is found in bin 'all_bytes' of Coverpoint 'cp_wstrb'. It is invalid and will be ignored.
-#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec463ba File: ../env/axi_coverage.sv Line: 73
+#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648c File: ../env/axi_coverage.sv Line: 70
 # ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'all_bytes' in Coverpoint 'cp_wstrb' of Covergroup instance '\/axi_env_pkg::axi_coverage::write_cov ' has converged to empty list. The bin will be taken out of coverage calculation.
 #    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
 # ** Warning: (vsim-8554) The expression 'binsof(cp_wstrb.single_byte)' inside the select expression of Bin 'invalid_wrap' of Cross 'STRB_CP' in Covergroup instance '\/axi_env_pkg::axi_coverage::write_cov ' is an empty user bin. The binsof expression will result in an empty set.
-#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
-# ** Warning: (vsim-8474) A higher value '4294967295' is found in bin 'all_ones' of Coverpoint 'cp_rdata'. It is invalid and will be ignored.
-#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec463ba File: ../env/axi_coverage.sv Line: 141
-# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'all_ones' in Coverpoint 'cp_rdata' of Covergroup instance '\/axi_env_pkg::axi_coverage::read_cov ' has converged to empty list. The bin will be taken out of coverage calculation.
-#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
-# ** Warning: (vsim-8474) A higher value '1431655765' is found in bin 'toggle_01' of Coverpoint 'cp_rdata'. It is invalid and will be ignored.
-#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec463ba File: ../env/axi_coverage.sv Line: 142
-# ** Warning: (vsim-8474) A higher value '2863311530' is found in bin 'toggle_01' of Coverpoint 'cp_rdata'. It is invalid and will be ignored.
-#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec463ba File: ../env/axi_coverage.sv Line: 142
-# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'toggle_01' in Coverpoint 'cp_rdata' of Covergroup instance '\/axi_env_pkg::axi_coverage::read_cov ' has converged to empty list. The bin will be taken out of coverage calculation.
-#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
-# ** Warning: (vsim-3881) ../env/axi_coverage.sv(143): Width conversion applied in bin 'other_data' for Coverpoint 'cp_rdata'. Value '1' changed to ' (maximum)' value.
-#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
-# ** Warning: (vsim-3881) ../env/axi_coverage.sv(143): Width conversion applied in bin 'other_data' for Coverpoint 'cp_rdata'. Value '4294901759' changed to ' (maximum)' value.
-#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
-# ** Warning: (vsim-8475) The invalid value range [1 : 4294901759] is found in bin 'other_data' of Coverpoint 'cp_rdata'. It will be ignored.
-#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec463ba File: ../env/axi_coverage.sv Line: 143
-# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with array bin 'other_data' in Coverpoint 'cp_rdata' of Covergroup instance '\/axi_env_pkg::axi_coverage::read_cov ' has converged to empty list. The bin will be taken out of coverage calculation.
 #    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
 # UVM_INFO ../env/s_agent/axi_s_seqr.sv(25) @ 0: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_seqr_h [Data in s seqr] Data got in slave seqr
 # UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
@@ -184,7 +166,7 @@
 #       num_last_rsps              integral                            32    'd1  
 # --------------------------------------------------------------------------------
 # 
-# UVM_INFO ../env/axi_sb.sv(76) @ 0: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 0: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # UVM_INFO ../env/m_agent/axi_m_mon.sv(28) @ 0: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_mon_h [M MON RUN PHASE before] Inside master mon run phase
 # UVM_INFO ../env/m_agent/axi_m_mon.sv(36) @ 0: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_mon_h [M MON run PHASE after] Inside master mon
 # UVM_INFO ../env/m_agent/axi_m_mon.sv(41) @ 0: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_mon_h [M MON write addr PHASE before] Inside master mon
@@ -796,6 +778,7 @@
 # xyz : 8
 # xyz : 9
 # xyz : 10
+# AR ADDR IN SB : 1d9
 # xyz : 11
 # xyz : 12
 # xyz : 13
@@ -806,6 +789,7 @@
 # xyz : 18
 # xyz : 19
 # xyz : 20
+# AR ADDR IN SB : 219
 # xyz : 21
 # xyz : 22
 # xyz : 23
@@ -813,6 +797,7 @@
 # xyz : 25
 # xyz : 26
 # xyz : 27
+# AR ADDR IN SB : 1e9
 # AFFTER W CHANNEL
 # m mon ar id : 7ade
 # match arid : 0 , rid : 0
@@ -838,6 +823,7 @@
 # xyz : 4
 # xyz : 5
 # xyz : 6
+# AR ADDR IN SB : 301
 # m mon ar id : 8859
 # m mon rid : 7a32
 # s seqs arid : 34905
@@ -900,6 +886,7 @@
 # xyz : 3
 # xyz : 4
 # xyz : 5
+# AR ADDR IN SB : 232
 # AFFTER W CHANNEL
 # m mon rid : 7a32
 # m mon ar id : e8a9
@@ -922,8 +909,8 @@
 # m mon ar id : aee1
 # req wid : 6816 , bid:6816
 # UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 495: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
-# UVM_INFO ../env/axi_sb.sv(78) @ 495: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 495: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 495: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 495: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 9 , last:0 , valid : 1
 # INIDE_SLAVE_MON_CTR=49
 # arid in s mon : 52972
@@ -975,8 +962,8 @@
 # req kind : READ
 # m mon rid : 45d4
 # m mon ar id : 7dd8
-# UVM_INFO ../env/axi_sb.sv(78) @ 595: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 595: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 595: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 595: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 6 , last:0 , valid : 1
 # INIDE_SLAVE_MON_CTR=59
 # arid in s mon : 36317
@@ -1013,8 +1000,8 @@
 # m mon ar id : 3bca
 # req kind : READ
 # m mon rid : c33b
-# UVM_INFO ../env/axi_sb.sv(78) @ 665: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 665: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 665: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 665: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 5 , last:0 , valid : 1
 # INIDE_SLAVE_MON_CTR=66
 # arid in s mon : 19842
@@ -1046,8 +1033,8 @@
 # m mon ar id : 4c28
 # req kind : READ
 # m mon rid : 8859
-# UVM_INFO ../env/axi_sb.sv(78) @ 725: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 725: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 725: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 725: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 4 , last:0 , valid : 1
 # INIDE_SLAVE_MON_CTR=72
 # arid in s mon : 25780
@@ -1074,11 +1061,12 @@
 # req kind : READ
 # m mon rid : 7108
 # m mon ar id : 2297
-# UVM_INFO ../env/axi_sb.sv(78) @ 775: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 775: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 775: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 775: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # INIDE_SLAVE_MON_CTR=77
 # arid in s mon : 53040
 # xyz : 1
+# AR ADDR IN SB : 239
 # m mon ar id : cf30
 # s seqs arid : 53040
 # INIDE_SLAVE_SEQ_CTR=6
@@ -1090,8 +1078,8 @@
 # m mon ar id : cd7d
 # req kind : READ
 # m mon rid : cf30
-# UVM_INFO ../env/axi_sb.sv(78) @ 795: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 795: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 795: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 795: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # INIDE_SLAVE_MON_CTR=79
 # arid in s mon : 56265
 # m mon ar id : dbc9
@@ -1146,6 +1134,7 @@
 # xyz : 2
 # xyz : 3
 # xyz : 4
+# AR ADDR IN SB : 23a
 # m mon ar id : 30bb
 # s seqs arid : 12475
 # INIDE_SLAVE_SEQ_CTR=7
@@ -1173,6 +1162,7 @@
 # xyz : 7
 # xyz : 8
 # xyz : 9
+# AR ADDR IN SB : 281
 # m mon ar id : e4c0
 # m mon rid : 30bb
 # s seqs arid : 58560
@@ -1185,8 +1175,8 @@
 # req kind : READ
 # m mon rid : 30bb
 # m mon ar id : 39e4
-# UVM_INFO ../env/axi_sb.sv(78) @ 1005: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 1005: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 1005: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 1005: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 8 , last:0 , valid : 1
 # INIDE_SLAVE_MON_CTR=100
 # arid in s mon : 19785
@@ -1209,8 +1199,8 @@
 # rd data in s drv: 0 , len : 8 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : e4c0
-# UVM_INFO ../env/axi_sb.sv(78) @ 1095: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 1095: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 1095: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 1095: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # abc : 1
 # ref model mem : 496
 # abc : 2
@@ -1409,6 +1399,7 @@
 # xyz : 2
 # xyz : 3
 # xyz : 4
+# AR ADDR IN SB : 1e8
 # xyz : 5
 # xyz : 6
 # xyz : 7
@@ -1420,7 +1411,9 @@
 # xyz : 13
 # xyz : 14
 # xyz : 15
+# AR ADDR IN SB : 288
 # xyz : 16
+# AR ADDR IN SB : 328
 # xyz : 17
 # xyz : 18
 # xyz : 19
@@ -1432,15 +1425,18 @@
 # xyz : 25
 # xyz : 26
 # xyz : 27
+# AR ADDR IN SB : 310
 # xyz : 28
 # xyz : 29
 # xyz : 30
 # xyz : 31
+# AR ADDR IN SB : 268
 # xyz : 32
 # xyz : 33
 # xyz : 34
 # xyz : 35
 # xyz : 36
+# AR ADDR IN SB : 2f8
 # xyz : 37
 # xyz : 38
 # xyz : 39
@@ -1451,10 +1447,12 @@
 # xyz : 44
 # xyz : 45
 # xyz : 46
+# AR ADDR IN SB : 228
 # xyz : 47
 # xyz : 48
 # xyz : 49
 # xyz : 50
+# AR ADDR IN SB : 398
 # xyz : 51
 # xyz : 52
 # xyz : 53
@@ -1466,6 +1464,7 @@
 # xyz : 59
 # xyz : 60
 # xyz : 61
+# AR ADDR IN SB : 350
 # xyz : 62
 # xyz : 63
 # xyz : 64
@@ -1475,6 +1474,7 @@
 # xyz : 68
 # xyz : 69
 # xyz : 70
+# AR ADDR IN SB : 290
 # AFFTER W CHANNEL
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1445: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
@@ -1529,8 +1529,8 @@
 # rd data in s drv: 0 , len : 3 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 897e
-# UVM_INFO ../env/axi_sb.sv(78) @ 1485: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 1485: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 1485: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 1485: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 10 , last:0 , valid : 1
 # m mon rid : 5209
 # rd data in s drv: 0 , len : 10 , last:0 , valid : 1
@@ -1554,13 +1554,13 @@
 # rd data in s drv: 0 , len : 10 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 5209
-# UVM_INFO ../env/axi_sb.sv(78) @ 1595: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 1595: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 1595: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 1595: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 0 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 6c2a
-# UVM_INFO ../env/axi_sb.sv(78) @ 1605: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 1605: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 1605: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 1605: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 10 , last:0 , valid : 1
 # m mon rid : d81e
 # rd data in s drv: 0 , len : 10 , last:0 , valid : 1
@@ -1584,8 +1584,8 @@
 # rd data in s drv: 0 , len : 10 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : d81e
-# UVM_INFO ../env/axi_sb.sv(78) @ 1715: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 1715: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 1715: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 1715: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 3 , last:0 , valid : 1
 # m mon rid : db1d
 # rd data in s drv: 0 , len : 3 , last:0 , valid : 1
@@ -1595,8 +1595,8 @@
 # rd data in s drv: 0 , len : 3 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : db1d
-# UVM_INFO ../env/axi_sb.sv(78) @ 1755: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 1755: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 1755: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 1755: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 4 , last:0 , valid : 1
 # m mon rid : ae2f
 # rd data in s drv: 0 , len : 4 , last:0 , valid : 1
@@ -1679,7 +1679,9 @@
 # xyz : 3
 # xyz : 4
 # xyz : 5
+# AR ADDR IN SB : d3
 # xyz : 6
+# AR ADDR IN SB : 18b
 # xyz : 7
 # xyz : 8
 # xyz : 9
@@ -1691,6 +1693,7 @@
 # xyz : 15
 # xyz : 16
 # xyz : 17
+# AR ADDR IN SB : e3
 # AFFTER W CHANNEL
 # m mon rid : ae2f
 # match arid : 0 , rid : 0
@@ -1710,8 +1713,8 @@
 # rd data in s drv: 0 , len : 4 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : ae2f
-# UVM_INFO ../env/axi_sb.sv(78) @ 1805: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 1805: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 1805: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 1805: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 9 , last:0 , valid : 1
 # m mon rid : 2297
 # req wid : 14337 , bid:14337
@@ -1735,8 +1738,8 @@
 # rd data in s drv: 0 , len : 9 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 2297
-# UVM_INFO ../env/axi_sb.sv(78) @ 1905: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 1905: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 1905: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 1905: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 3 , last:0 , valid : 1
 # m mon rid : 7a06
 # rd data in s drv: 0 , len : 3 , last:0 , valid : 1
@@ -1746,8 +1749,8 @@
 # rd data in s drv: 0 , len : 3 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 7a06
-# UVM_INFO ../env/axi_sb.sv(78) @ 1945: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 1945: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 1945: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 1945: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 10 , last:0 , valid : 1
 # m mon rid : 6b0e
 # rd data in s drv: 0 , len : 10 , last:0 , valid : 1
@@ -1771,8 +1774,8 @@
 # rd data in s drv: 0 , len : 10 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 6b0e
-# UVM_INFO ../env/axi_sb.sv(78) @ 2055: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 2055: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 2055: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 2055: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 8 , last:0 , valid : 1
 # m mon rid : 15d8
 # rd data in s drv: 0 , len : 8 , last:0 , valid : 1
@@ -1792,8 +1795,8 @@
 # rd data in s drv: 0 , len : 8 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 15d8
-# UVM_INFO ../env/axi_sb.sv(78) @ 2145: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 2145: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 2145: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 2145: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 4 , last:0 , valid : 1
 # abc : 1
 # ref model mem : 801
@@ -1877,6 +1880,7 @@
 # xyz : 8
 # xyz : 9
 # xyz : 10
+# AR ADDR IN SB : 319
 # xyz : 11
 # xyz : 12
 # xyz : 13
@@ -1884,6 +1888,7 @@
 # xyz : 15
 # xyz : 16
 # xyz : 17
+# AR ADDR IN SB : 349
 # xyz : 18
 # xyz : 19
 # xyz : 20
@@ -1893,6 +1898,7 @@
 # xyz : 24
 # xyz : 25
 # xyz : 26
+# AR ADDR IN SB : 3d1
 # AFFTER W CHANNEL
 # m mon rid : 1eeb
 # match arid : 0 , rid : 0
@@ -1920,13 +1926,13 @@
 # rd data in s drv: 0 , len : 4 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 1eeb
-# UVM_INFO ../env/axi_sb.sv(78) @ 2195: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 2195: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 2195: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 2195: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 0 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : b8d7
-# UVM_INFO ../env/axi_sb.sv(78) @ 2205: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 2205: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 2205: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 2205: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 10 , last:0 , valid : 1
 # m mon rid : 9f0d
 # rd data in s drv: 0 , len : 10 , last:0 , valid : 1
@@ -1950,8 +1956,8 @@
 # rd data in s drv: 0 , len : 10 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 9f0d
-# UVM_INFO ../env/axi_sb.sv(78) @ 2315: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 2315: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 2315: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 2315: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 9 , last:0 , valid : 1
 # m mon rid : 71fc
 # rd data in s drv: 0 , len : 9 , last:0 , valid : 1
@@ -1973,8 +1979,8 @@
 # rd data in s drv: 0 , len : 9 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 71fc
-# UVM_INFO ../env/axi_sb.sv(78) @ 2415: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 2415: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 2415: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 2415: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 6 , last:0 , valid : 1
 # m mon rid : 1556
 # rd data in s drv: 0 , len : 6 , last:0 , valid : 1
@@ -1990,8 +1996,8 @@
 # rd data in s drv: 0 , len : 6 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 1556
-# UVM_INFO ../env/axi_sb.sv(78) @ 2485: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 2485: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 2485: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 2485: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 8 , last:0 , valid : 1
 # m mon rid : d07b
 # rd data in s drv: 0 , len : 8 , last:0 , valid : 1
@@ -2011,8 +2017,8 @@
 # rd data in s drv: 0 , len : 8 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : d07b
-# UVM_INFO ../env/axi_sb.sv(78) @ 2575: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 2575: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 2575: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 2575: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # abc : 1
 # ref model mem : 970
 # abc : 2
@@ -2192,6 +2198,7 @@
 # xyz : 3
 # xyz : 4
 # xyz : 5
+# AR ADDR IN SB : 3c2
 # AFFTER W CHANNEL
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 3025: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
@@ -2212,8 +2219,8 @@
 # rd data in s drv: 0 , len : 4 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 5307
-# UVM_INFO ../env/axi_sb.sv(78) @ 3075: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 3075: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 3075: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 3075: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # abc : 1
 # ref model mem : 656
 # abc : 2
@@ -2456,6 +2463,7 @@
 # xyz : 7
 # xyz : 8
 # xyz : 9
+# AR ADDR IN SB : 27b
 # xyz : 10
 # xyz : 11
 # xyz : 12
@@ -2464,6 +2472,7 @@
 # xyz : 15
 # xyz : 16
 # xyz : 17
+# AR ADDR IN SB : 283
 # xyz : 18
 # xyz : 19
 # xyz : 20
@@ -2474,8 +2483,10 @@
 # xyz : 25
 # xyz : 26
 # xyz : 27
+# AR ADDR IN SB : 383
 # xyz : 28
 # xyz : 29
+# AR ADDR IN SB : 27b
 # xyz : 30
 # xyz : 31
 # xyz : 32
@@ -2485,6 +2496,7 @@
 # xyz : 36
 # xyz : 37
 # xyz : 38
+# AR ADDR IN SB : 2b3
 # AFFTER W CHANNEL
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 4165: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
@@ -2525,8 +2537,8 @@
 # rd data in s drv: 0 , len : 8 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : b5be
-# UVM_INFO ../env/axi_sb.sv(78) @ 4255: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 4255: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 4255: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 4255: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 7 , last:0 , valid : 1
 # m mon rid : f598
 # rd data in s drv: 0 , len : 7 , last:0 , valid : 1
@@ -2573,10 +2585,12 @@
 # xyz : 7
 # xyz : 8
 # xyz : 9
+# AR ADDR IN SB : 3b2
 # xyz : 10
 # xyz : 11
 # xyz : 12
 # xyz : 13
+# AR ADDR IN SB : 3b2
 # AFFTER W CHANNEL
 # m mon rid : f598
 # match arid : 0 , rid : 0
@@ -2602,15 +2616,15 @@
 # rd data in s drv: 0 , len : 7 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : f598
-# UVM_INFO ../env/axi_sb.sv(78) @ 4335: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 4335: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 4335: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 4335: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 1 , last:0 , valid : 1
 # m mon rid : e3a4
 # rd data in s drv: 0 , len : 1 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : e3a4
-# UVM_INFO ../env/axi_sb.sv(78) @ 4355: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 4355: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 4355: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 4355: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 8 , last:0 , valid : 1
 # m mon rid : 30ac
 # rd data in s drv: 0 , len : 8 , last:0 , valid : 1
@@ -2630,8 +2644,8 @@
 # rd data in s drv: 0 , len : 8 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 30ac
-# UVM_INFO ../env/axi_sb.sv(78) @ 4445: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 4445: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 4445: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 4445: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 8 , last:0 , valid : 1
 # m mon rid : 5183
 # rd data in s drv: 0 , len : 8 , last:0 , valid : 1
@@ -2651,8 +2665,8 @@
 # rd data in s drv: 0 , len : 8 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 5183
-# UVM_INFO ../env/axi_sb.sv(78) @ 4535: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 4535: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 4535: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 4535: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 9 , last:0 , valid : 1
 # m mon rid : eea0
 # rd data in s drv: 0 , len : 9 , last:0 , valid : 1
@@ -2674,8 +2688,8 @@
 # rd data in s drv: 0 , len : 9 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : eea0
-# UVM_INFO ../env/axi_sb.sv(78) @ 4635: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 4635: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 4635: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 4635: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 3 , last:0 , valid : 1
 # m mon rid : 4d49
 # rd data in s drv: 0 , len : 3 , last:0 , valid : 1
@@ -2685,8 +2699,8 @@
 # rd data in s drv: 0 , len : 3 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 4d49
-# UVM_INFO ../env/axi_sb.sv(78) @ 4675: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 4675: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 4675: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 4675: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # abc : 1
 # ref model mem : 719
 # abc : 2
@@ -2798,12 +2812,14 @@
 # xyz : 7
 # xyz : 8
 # xyz : 9
+# AR ADDR IN SB : 2c7
 # xyz : 10
 # xyz : 11
 # xyz : 12
 # xyz : 13
 # xyz : 14
 # xyz : 15
+# AR ADDR IN SB : 3cf
 # xyz : 16
 # xyz : 17
 # xyz : 18
@@ -2811,6 +2827,7 @@
 # xyz : 20
 # xyz : 21
 # xyz : 22
+# AR ADDR IN SB : 2cf
 # xyz : 23
 # xyz : 24
 # xyz : 25
@@ -2820,11 +2837,13 @@
 # xyz : 29
 # xyz : 30
 # xyz : 31
+# AR ADDR IN SB : 2f7
 # xyz : 32
 # xyz : 33
 # xyz : 34
 # xyz : 35
 # xyz : 36
+# AR ADDR IN SB : 337
 # AFFTER W CHANNEL
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 4815: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
@@ -2869,8 +2888,8 @@
 # rd data in s drv: 0 , len : 8 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : b357
-# UVM_INFO ../env/axi_sb.sv(78) @ 4905: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 4905: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 4905: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 4905: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 5 , last:0 , valid : 1
 # m mon rid : 1ea1
 # rd data in s drv: 0 , len : 5 , last:0 , valid : 1
@@ -2884,8 +2903,8 @@
 # rd data in s drv: 0 , len : 5 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 1ea1
-# UVM_INFO ../env/axi_sb.sv(78) @ 4965: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 4965: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 4965: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 4965: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 6 , last:0 , valid : 1
 # m mon rid : 6b6f
 # rd data in s drv: 0 , len : 6 , last:0 , valid : 1
@@ -2901,8 +2920,8 @@
 # rd data in s drv: 0 , len : 6 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 6b6f
-# UVM_INFO ../env/axi_sb.sv(78) @ 5035: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 5035: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 5035: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 5035: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 8 , last:0 , valid : 1
 # m mon rid : a6ca
 # rd data in s drv: 0 , len : 8 , last:0 , valid : 1
@@ -2922,8 +2941,8 @@
 # rd data in s drv: 0 , len : 8 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : a6ca
-# UVM_INFO ../env/axi_sb.sv(78) @ 5125: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 5125: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 5125: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 5125: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 4 , last:0 , valid : 1
 # m mon rid : 6c3c
 # rd data in s drv: 0 , len : 4 , last:0 , valid : 1
@@ -3006,11 +3025,12 @@
 # abc : 36
 # ref model mem : 876
 # xyz : 1
+# AR ADDR IN SB : 24c
 # AFFTER W CHANNEL
 # req kind : READ
 # m mon rid : 6c3c
-# UVM_INFO ../env/axi_sb.sv(78) @ 5175: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 5175: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 5175: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 5175: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 5175: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 31203
@@ -3020,8 +3040,8 @@
 # rd data in s drv: 0 , len : 0 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 79e3
-# UVM_INFO ../env/axi_sb.sv(78) @ 5185: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 5185: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 5185: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 5185: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # req wid : 61878 , bid:61878
 # UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 5195: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
 # abc : 1
@@ -3322,17 +3342,21 @@
 # xyz : 9
 # xyz : 10
 # xyz : 11
+# AR ADDR IN SB : c9
 # xyz : 12
 # xyz : 13
 # xyz : 14
+# AR ADDR IN SB : c9
 # xyz : 15
 # xyz : 16
 # xyz : 17
 # xyz : 18
 # xyz : 19
+# AR ADDR IN SB : 179
 # xyz : 20
 # xyz : 21
 # xyz : 22
+# AR ADDR IN SB : 179
 # AFFTER W CHANNEL
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 6585: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
@@ -3373,8 +3397,8 @@
 # rd data in s drv: 0 , len : 10 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 6467
-# UVM_INFO ../env/axi_sb.sv(78) @ 6695: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 6695: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 6695: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 6695: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 2 , last:0 , valid : 1
 # m mon rid : 3bca
 # rd data in s drv: 0 , len : 2 , last:0 , valid : 1
@@ -3382,8 +3406,8 @@
 # rd data in s drv: 0 , len : 2 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 3bca
-# UVM_INFO ../env/axi_sb.sv(78) @ 6725: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 6725: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 6725: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 6725: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 2 , last:0 , valid : 1
 # m mon rid : 39e4
 # rd data in s drv: 0 , len : 2 , last:0 , valid : 1
@@ -3391,8 +3415,8 @@
 # rd data in s drv: 0 , len : 2 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 39e4
-# UVM_INFO ../env/axi_sb.sv(78) @ 6755: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 6755: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 6755: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 6755: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # abc : 1
 # ref model mem : 615
 # abc : 2
@@ -3489,6 +3513,7 @@
 # xyz : 6
 # xyz : 7
 # xyz : 8
+# AR ADDR IN SB : 25f
 # AFFTER W CHANNEL
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 7025: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
@@ -3519,8 +3544,8 @@
 # rd data in s drv: 0 , len : 7 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : adf
-# UVM_INFO ../env/axi_sb.sv(78) @ 7105: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 7105: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 7105: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 7105: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 4 , last:0 , valid : 1
 # m mon rid : 4d82
 # rd data in s drv: 0 , len : 4 , last:0 , valid : 1
@@ -3532,8 +3557,8 @@
 # rd data in s drv: 0 , len : 4 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 4d82
-# UVM_INFO ../env/axi_sb.sv(78) @ 7155: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 7155: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 7155: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 7155: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # abc : 1
 # ref model mem : 545
 # abc : 2
@@ -3954,17 +3979,21 @@
 # ref model mem : 572
 # xyz : 1
 # xyz : 2
+# AR ADDR IN SB : 4
 # xyz : 3
 # xyz : 4
 # xyz : 5
+# AR ADDR IN SB : 154
 # xyz : 6
 # xyz : 7
+# AR ADDR IN SB : 1dc
 # xyz : 8
 # xyz : 9
 # xyz : 10
 # xyz : 11
 # xyz : 12
 # xyz : 13
+# AR ADDR IN SB : 10c
 # xyz : 14
 # xyz : 15
 # xyz : 16
@@ -3975,18 +4004,22 @@
 # xyz : 21
 # xyz : 22
 # xyz : 23
+# AR ADDR IN SB : 94
 # xyz : 24
 # xyz : 25
+# AR ADDR IN SB : 1c
 # xyz : 26
 # xyz : 27
 # xyz : 28
 # xyz : 29
 # xyz : 30
+# AR ADDR IN SB : 19c
 # xyz : 31
 # xyz : 32
 # xyz : 33
 # xyz : 34
 # xyz : 35
+# AR ADDR IN SB : c4
 # xyz : 36
 # xyz : 37
 # xyz : 38
@@ -3998,6 +4031,7 @@
 # xyz : 44
 # xyz : 45
 # xyz : 46
+# AR ADDR IN SB : 1e4
 # AFFTER W CHANNEL
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 9065: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
@@ -4044,8 +4078,8 @@
 # m mon rid : 942a
 # req wid : 49711 , bid:49711
 # UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 9085: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
-# UVM_INFO ../env/axi_sb.sv(78) @ 9085: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 9085: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 9085: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 9085: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 2 , last:0 , valid : 1
 # m mon rid : 8e77
 # rd data in s drv: 0 , len : 2 , last:0 , valid : 1
@@ -4053,15 +4087,15 @@
 # rd data in s drv: 0 , len : 2 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 8e77
-# UVM_INFO ../env/axi_sb.sv(78) @ 9115: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 9115: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 9115: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 9115: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 1 , last:0 , valid : 1
 # m mon rid : cc1c
 # rd data in s drv: 0 , len : 1 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : cc1c
-# UVM_INFO ../env/axi_sb.sv(78) @ 9135: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 9135: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 9135: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 9135: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 5 , last:0 , valid : 1
 # m mon rid : 111
 # rd data in s drv: 0 , len : 5 , last:0 , valid : 1
@@ -4075,8 +4109,8 @@
 # rd data in s drv: 0 , len : 5 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 111
-# UVM_INFO ../env/axi_sb.sv(78) @ 9195: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 9195: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 9195: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 9195: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 9 , last:0 , valid : 1
 # m mon rid : a51d
 # rd data in s drv: 0 , len : 9 , last:0 , valid : 1
@@ -4098,15 +4132,15 @@
 # rd data in s drv: 0 , len : 9 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : a51d
-# UVM_INFO ../env/axi_sb.sv(78) @ 9295: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 9295: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 9295: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 9295: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 1 , last:0 , valid : 1
 # m mon rid : eb39
 # rd data in s drv: 0 , len : 1 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : eb39
-# UVM_INFO ../env/axi_sb.sv(78) @ 9315: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 9315: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 9315: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 9315: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 4 , last:0 , valid : 1
 # m mon rid : f0fd
 # rd data in s drv: 0 , len : 4 , last:0 , valid : 1
@@ -4118,8 +4152,8 @@
 # rd data in s drv: 0 , len : 4 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : f0fd
-# UVM_INFO ../env/axi_sb.sv(78) @ 9365: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 9365: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 9365: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 9365: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 4 , last:0 , valid : 1
 # m mon rid : 7792
 # rd data in s drv: 0 , len : 4 , last:0 , valid : 1
@@ -4131,8 +4165,8 @@
 # rd data in s drv: 0 , len : 4 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 7792
-# UVM_INFO ../env/axi_sb.sv(78) @ 9415: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 9415: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 9415: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 9415: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 10 , last:0 , valid : 1
 # m mon rid : 909c
 # rd data in s drv: 0 , len : 10 , last:0 , valid : 1
@@ -4156,8 +4190,8 @@
 # rd data in s drv: 0 , len : 10 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 909c
-# UVM_INFO ../env/axi_sb.sv(78) @ 9525: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 9525: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 9525: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 9525: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # abc : 1
 # ref model mem : 597
 # abc : 2
@@ -4325,6 +4359,7 @@
 # xyz : 7
 # xyz : 8
 # xyz : 9
+# AR ADDR IN SB : 24d
 # xyz : 10
 # xyz : 11
 # xyz : 12
@@ -4335,6 +4370,7 @@
 # xyz : 17
 # xyz : 18
 # xyz : 19
+# AR ADDR IN SB : 3ad
 # xyz : 20
 # xyz : 21
 # xyz : 22
@@ -4345,11 +4381,13 @@
 # xyz : 27
 # xyz : 28
 # xyz : 29
+# AR ADDR IN SB : 345
 # xyz : 30
 # xyz : 31
 # xyz : 32
 # xyz : 33
 # xyz : 34
+# AR ADDR IN SB : 2ad
 # xyz : 35
 # xyz : 36
 # xyz : 37
@@ -4358,7 +4396,9 @@
 # xyz : 40
 # xyz : 41
 # xyz : 42
+# AR ADDR IN SB : 265
 # xyz : 43
+# AR ADDR IN SB : 32d
 # AFFTER W CHANNEL
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 9855: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
@@ -4407,8 +4447,8 @@
 # rd data in s drv: 0 , len : 8 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 669
-# UVM_INFO ../env/axi_sb.sv(78) @ 9945: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 9945: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 9945: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 9945: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 9 , last:0 , valid : 1
 # m mon rid : 8ce0
 # rd data in s drv: 0 , len : 9 , last:0 , valid : 1
@@ -4430,8 +4470,8 @@
 # rd data in s drv: 0 , len : 9 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 8ce0
-# UVM_INFO ../env/axi_sb.sv(78) @ 10045: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 10045: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 10045: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 10045: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 9 , last:0 , valid : 1
 # m mon rid : 7f93
 # rd data in s drv: 0 , len : 9 , last:0 , valid : 1
@@ -4453,8 +4493,8 @@
 # rd data in s drv: 0 , len : 9 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 7f93
-# UVM_INFO ../env/axi_sb.sv(78) @ 10145: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 10145: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 10145: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 10145: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 4 , last:0 , valid : 1
 # m mon rid : 4bc2
 # rd data in s drv: 0 , len : 4 , last:0 , valid : 1
@@ -4466,8 +4506,8 @@
 # rd data in s drv: 0 , len : 4 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 4bc2
-# UVM_INFO ../env/axi_sb.sv(78) @ 10195: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 10195: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 10195: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 10195: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 7 , last:0 , valid : 1
 # m mon rid : 18d3
 # rd data in s drv: 0 , len : 7 , last:0 , valid : 1
@@ -4574,12 +4614,14 @@
 # xyz : 9
 # xyz : 10
 # xyz : 11
+# AR ADDR IN SB : 1a7
 # xyz : 12
 # xyz : 13
 # xyz : 14
 # xyz : 15
 # xyz : 16
 # xyz : 17
+# AR ADDR IN SB : 1af
 # AFFTER W CHANNEL
 # m mon rid : 18d3
 # match arid : 0 , rid : 0
@@ -4595,15 +4637,15 @@
 # rd data in s drv: 0 , len : 7 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 18d3
-# UVM_INFO ../env/axi_sb.sv(78) @ 10275: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 10275: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 10275: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 10275: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 0 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 7dd8
 # req wid : 45105 , bid:45105
 # UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 10285: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
-# UVM_INFO ../env/axi_sb.sv(78) @ 10285: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 10285: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 10285: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 10285: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 10 , last:0 , valid : 1
 # m mon rid : 835a
 # rd data in s drv: 0 , len : 10 , last:0 , valid : 1
@@ -4627,8 +4669,8 @@
 # rd data in s drv: 0 , len : 10 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 835a
-# UVM_INFO ../env/axi_sb.sv(78) @ 10395: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 10395: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 10395: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 10395: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 5 , last:0 , valid : 1
 # m mon rid : 8247
 # rd data in s drv: 0 , len : 5 , last:0 , valid : 1
@@ -4642,8 +4684,8 @@
 # rd data in s drv: 0 , len : 5 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 8247
-# UVM_INFO ../env/axi_sb.sv(78) @ 10455: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 10455: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 10455: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 10455: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # abc : 1
 # ref model mem : 348
 # abc : 2
@@ -5051,6 +5093,7 @@
 # xyz : 2
 # xyz : 3
 # xyz : 4
+# AR ADDR IN SB : 342
 # xyz : 5
 # xyz : 6
 # xyz : 7
@@ -5058,6 +5101,7 @@
 # xyz : 9
 # xyz : 10
 # xyz : 11
+# AR ADDR IN SB : 34a
 # AFFTER W CHANNEL
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 12205: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
@@ -5080,8 +5124,8 @@
 # rd data in s drv: 0 , len : 3 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 1adf
-# UVM_INFO ../env/axi_sb.sv(78) @ 12245: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 12245: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 12245: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 12245: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 6 , last:0 , valid : 1
 # m mon rid : f54b
 # rd data in s drv: 0 , len : 6 , last:0 , valid : 1
@@ -5097,8 +5141,8 @@
 # rd data in s drv: 0 , len : 6 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : f54b
-# UVM_INFO ../env/axi_sb.sv(78) @ 12315: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 12315: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 12315: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 12315: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # abc : 1
 # ref model mem : 216
 # abc : 2
@@ -5282,11 +5326,13 @@
 # xyz : 9
 # xyz : 10
 # xyz : 11
+# AR ADDR IN SB : d0
 # xyz : 12
 # xyz : 13
 # xyz : 14
 # xyz : 15
 # xyz : 16
+# AR ADDR IN SB : 160
 # xyz : 17
 # xyz : 18
 # xyz : 19
@@ -5298,6 +5344,7 @@
 # xyz : 25
 # xyz : 26
 # xyz : 27
+# AR ADDR IN SB : 120
 # AFFTER W CHANNEL
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 13065: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
@@ -5321,6 +5368,7 @@
 # xyz : 3
 # xyz : 4
 # xyz : 5
+# AR ADDR IN SB : 3a4
 # AFFTER W CHANNEL
 # m mon rid : 96ac
 # match arid : 0 , rid : 0
@@ -5354,8 +5402,8 @@
 # rd data in s drv: 0 , len : 10 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 96ac
-# UVM_INFO ../env/axi_sb.sv(78) @ 13175: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 13175: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 13175: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 13175: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 4 , last:0 , valid : 1
 # m mon rid : 662e
 # rd data in s drv: 0 , len : 4 , last:0 , valid : 1
@@ -5367,8 +5415,8 @@
 # rd data in s drv: 0 , len : 4 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 662e
-# UVM_INFO ../env/axi_sb.sv(78) @ 13225: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 13225: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 13225: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 13225: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 10 , last:0 , valid : 1
 # m mon rid : 45f2
 # rd data in s drv: 0 , len : 10 , last:0 , valid : 1
@@ -5392,8 +5440,8 @@
 # rd data in s drv: 0 , len : 10 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 45f2
-# UVM_INFO ../env/axi_sb.sv(78) @ 13335: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 13335: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 13335: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 13335: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 4 , last:0 , valid : 1
 # m mon rid : bed4
 # rd data in s drv: 0 , len : 4 , last:0 , valid : 1
@@ -5405,8 +5453,8 @@
 # rd data in s drv: 0 , len : 4 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : bed4
-# UVM_INFO ../env/axi_sb.sv(78) @ 13385: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 13385: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 13385: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 13385: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # abc : 1
 # ref model mem : 983
 # abc : 2
@@ -6121,11 +6169,13 @@
 # xyz : 3
 # xyz : 4
 # xyz : 5
+# AR ADDR IN SB : 212
 # xyz : 6
 # xyz : 7
 # xyz : 8
 # xyz : 9
 # xyz : 10
+# AR ADDR IN SB : 2da
 # xyz : 11
 # xyz : 12
 # xyz : 13
@@ -6135,6 +6185,7 @@
 # xyz : 17
 # xyz : 18
 # xyz : 19
+# AR ADDR IN SB : 30a
 # AFFTER W CHANNEL
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 16495: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
@@ -6163,8 +6214,8 @@
 # rd data in s drv: 0 , len : 4 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : d290
-# UVM_INFO ../env/axi_sb.sv(78) @ 16545: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 16545: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 16545: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 16545: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 4 , last:0 , valid : 1
 # m mon rid : bc86
 # rd data in s drv: 0 , len : 4 , last:0 , valid : 1
@@ -6176,8 +6227,8 @@
 # rd data in s drv: 0 , len : 4 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : bc86
-# UVM_INFO ../env/axi_sb.sv(78) @ 16595: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 16595: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 16595: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 16595: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 8 , last:0 , valid : 1
 # m mon rid : cd7d
 # rd data in s drv: 0 , len : 8 , last:0 , valid : 1
@@ -6197,8 +6248,8 @@
 # rd data in s drv: 0 , len : 8 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : cd7d
-# UVM_INFO ../env/axi_sb.sv(78) @ 16685: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 16685: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 16685: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 16685: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # abc : 1
 # ref model mem : 276
 # abc : 2
@@ -6398,6 +6449,7 @@
 # xyz : 8
 # xyz : 9
 # xyz : 10
+# AR ADDR IN SB : 3ac
 # xyz : 11
 # xyz : 12
 # xyz : 13
@@ -6405,6 +6457,7 @@
 # xyz : 15
 # xyz : 16
 # xyz : 17
+# AR ADDR IN SB : 3dc
 # AFFTER W CHANNEL
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 17415: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
@@ -6439,8 +6492,8 @@
 # rd data in s drv: 0 , len : 9 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 9da6
-# UVM_INFO ../env/axi_sb.sv(78) @ 17515: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 17515: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 17515: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 17515: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 6 , last:0 , valid : 1
 # m mon rid : b133
 # rd data in s drv: 0 , len : 6 , last:0 , valid : 1
@@ -6456,8 +6509,8 @@
 # rd data in s drv: 0 , len : 6 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : b133
-# UVM_INFO ../env/axi_sb.sv(78) @ 17585: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 17585: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 17585: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 17585: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # abc : 1
 # ref model mem : 643
 # abc : 2
@@ -6642,6 +6695,7 @@
 # xyz : 9
 # xyz : 10
 # xyz : 11
+# AR ADDR IN SB : 1fd
 # AFFTER W CHANNEL
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 18255: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
@@ -6674,8 +6728,8 @@
 # rd data in s drv: 0 , len : 10 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 547
-# UVM_INFO ../env/axi_sb.sv(78) @ 18365: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 18365: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 18365: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 18365: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # abc : 1
 # ref model mem : 360
 # abc : 2
@@ -7193,15 +7247,18 @@
 # xyz : 9
 # xyz : 10
 # xyz : 11
+# AR ADDR IN SB : 11e
 # xyz : 12
 # xyz : 13
 # xyz : 14
 # xyz : 15
 # xyz : 16
+# AR ADDR IN SB : 186
 # xyz : 17
 # xyz : 18
 # xyz : 19
 # xyz : 20
+# AR ADDR IN SB : 126
 # xyz : 21
 # xyz : 22
 # xyz : 23
@@ -7209,7 +7266,9 @@
 # xyz : 25
 # xyz : 26
 # xyz : 27
+# AR ADDR IN SB : 246
 # xyz : 28
+# AR ADDR IN SB : 3e6
 # AFFTER W CHANNEL
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 20735: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
@@ -7258,8 +7317,8 @@
 # rd data in s drv: 0 , len : 10 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 7ade
-# UVM_INFO ../env/axi_sb.sv(78) @ 20845: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 20845: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 20845: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 20845: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 4 , last:0 , valid : 1
 # m mon rid : e8a9
 # rd data in s drv: 0 , len : 4 , last:0 , valid : 1
@@ -7271,8 +7330,8 @@
 # rd data in s drv: 0 , len : 4 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : e8a9
-# UVM_INFO ../env/axi_sb.sv(78) @ 20895: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 20895: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 20895: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 20895: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 3 , last:0 , valid : 1
 # m mon rid : a7d
 # rd data in s drv: 0 , len : 3 , last:0 , valid : 1
@@ -7282,8 +7341,8 @@
 # rd data in s drv: 0 , len : 3 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : a7d
-# UVM_INFO ../env/axi_sb.sv(78) @ 20935: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 20935: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 20935: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 20935: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 6 , last:0 , valid : 1
 # m mon rid : 64b4
 # rd data in s drv: 0 , len : 6 , last:0 , valid : 1
@@ -7299,13 +7358,13 @@
 # rd data in s drv: 0 , len : 6 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 64b4
-# UVM_INFO ../env/axi_sb.sv(78) @ 21005: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 21005: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 21005: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 21005: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 0 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 5176
-# UVM_INFO ../env/axi_sb.sv(78) @ 21015: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 21015: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 21015: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 21015: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # abc : 1
 # ref model mem : 777
 # abc : 2
@@ -7698,6 +7757,7 @@
 # ref model mem : 999
 # xyz : 1
 # xyz : 2
+# AR ADDR IN SB : 18f
 # xyz : 3
 # xyz : 4
 # xyz : 5
@@ -7705,6 +7765,7 @@
 # xyz : 7
 # xyz : 8
 # xyz : 9
+# AR ADDR IN SB : 197
 # AFFTER W CHANNEL
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 22635: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
@@ -7723,8 +7784,8 @@
 # m mon rid : 1fed
 # req wid : 51226 , bid:51226
 # UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 22655: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
-# UVM_INFO ../env/axi_sb.sv(78) @ 22655: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 22655: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 22655: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 22655: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 6 , last:0 , valid : 1
 # m mon rid : 6827
 # rd data in s drv: 0 , len : 6 , last:0 , valid : 1
@@ -7740,8 +7801,8 @@
 # rd data in s drv: 0 , len : 6 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 6827
-# UVM_INFO ../env/axi_sb.sv(78) @ 22725: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 22725: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 22725: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 22725: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # abc : 1
 # ref model mem : 49
 # abc : 2
@@ -7914,10 +7975,12 @@
 # xyz : 8
 # xyz : 9
 # xyz : 10
+# AR ADDR IN SB : 29
 # xyz : 11
 # xyz : 12
 # xyz : 13
 # xyz : 14
+# AR ADDR IN SB : 49
 # AFFTER W CHANNEL
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 23445: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
@@ -7952,8 +8015,8 @@
 # rd data in s drv: 0 , len : 9 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : be23
-# UVM_INFO ../env/axi_sb.sv(78) @ 23545: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 23545: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 23545: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 23545: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 3 , last:0 , valid : 1
 # m mon rid : 79e0
 # rd data in s drv: 0 , len : 3 , last:0 , valid : 1
@@ -7963,8 +8026,8 @@
 # rd data in s drv: 0 , len : 3 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 79e0
-# UVM_INFO ../env/axi_sb.sv(78) @ 23585: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 23585: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 23585: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 23585: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # abc : 1
 # ref model mem : 69
 # abc : 2
@@ -8071,12 +8134,16 @@
 # xyz : 8
 # xyz : 9
 # xyz : 10
+# AR ADDR IN SB : 3d
 # xyz : 11
 # xyz : 12
+# AR ADDR IN SB : 1b5
 # xyz : 13
+# AR ADDR IN SB : 16d
 # xyz : 14
 # xyz : 15
 # xyz : 16
+# AR ADDR IN SB : 18d
 # AFFTER W CHANNEL
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 23925: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
@@ -8119,20 +8186,20 @@
 # rd data in s drv: 0 , len : 9 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : a643
-# UVM_INFO ../env/axi_sb.sv(78) @ 24025: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 24025: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 24025: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 24025: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 1 , last:0 , valid : 1
 # m mon rid : abbf
 # rd data in s drv: 0 , len : 1 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : abbf
-# UVM_INFO ../env/axi_sb.sv(78) @ 24045: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 24045: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 24045: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 24045: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 0 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 86d3
-# UVM_INFO ../env/axi_sb.sv(78) @ 24055: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 24055: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 24055: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 24055: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 2 , last:0 , valid : 1
 # m mon rid : bf24
 # rd data in s drv: 0 , len : 2 , last:0 , valid : 1
@@ -8140,8 +8207,8 @@
 # rd data in s drv: 0 , len : 2 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : bf24
-# UVM_INFO ../env/axi_sb.sv(78) @ 24085: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 24085: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 24085: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 24085: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # abc : 1
 # ref model mem : 19
 # abc : 2
@@ -8311,6 +8378,7 @@
 # abc : 84
 # ref model mem : 683
 # xyz : 1
+# AR ADDR IN SB : b
 # AFFTER W CHANNEL
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 24765: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
@@ -8321,8 +8389,8 @@
 # rd data in s drv: 0 , len : 0 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : dc52
-# UVM_INFO ../env/axi_sb.sv(78) @ 24775: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 24775: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 24775: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 24775: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # req wid : 38040 , bid:38040
 # UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 24785: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
 # abc : 1
@@ -8792,12 +8860,14 @@
 # xyz : 9
 # xyz : 10
 # xyz : 11
+# AR ADDR IN SB : 1ed
 # xyz : 12
 # xyz : 13
 # xyz : 14
 # xyz : 15
 # xyz : 16
 # xyz : 17
+# AR ADDR IN SB : 1c5
 # AFFTER W CHANNEL
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 26995: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
@@ -8834,8 +8904,8 @@
 # rd data in s drv: 0 , len : 10 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 4c28
-# UVM_INFO ../env/axi_sb.sv(78) @ 27105: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 27105: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 27105: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 27105: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 5 , last:0 , valid : 1
 # m mon rid : d36b
 # rd data in s drv: 0 , len : 5 , last:0 , valid : 1
@@ -8849,8 +8919,8 @@
 # rd data in s drv: 0 , len : 5 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : d36b
-# UVM_INFO ../env/axi_sb.sv(78) @ 27165: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 27165: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 27165: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 27165: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # abc : 1
 # ref model mem : 98
 # abc : 2
@@ -9018,7 +9088,9 @@
 # xyz : 3
 # xyz : 4
 # xyz : 5
+# AR ADDR IN SB : 5a
 # xyz : 6
+# AR ADDR IN SB : 20a
 # xyz : 7
 # xyz : 8
 # xyz : 9
@@ -9028,6 +9100,7 @@
 # xyz : 13
 # xyz : 14
 # xyz : 15
+# AR ADDR IN SB : e2
 # xyz : 16
 # xyz : 17
 # xyz : 18
@@ -9035,10 +9108,12 @@
 # xyz : 20
 # xyz : 21
 # xyz : 22
+# AR ADDR IN SB : 1c2
 # xyz : 23
 # xyz : 24
 # xyz : 25
 # xyz : 26
+# AR ADDR IN SB : 102
 # AFFTER W CHANNEL
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 27805: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
@@ -9071,13 +9146,13 @@
 # rd data in s drv: 0 , len : 4 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : aee1
-# UVM_INFO ../env/axi_sb.sv(78) @ 27855: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 27855: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 27855: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 27855: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 0 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 3316
-# UVM_INFO ../env/axi_sb.sv(78) @ 27865: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 27865: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 27865: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 27865: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 6 , last:0 , valid : 1
 # m mon rid : 7a42
 # rd data in s drv: 0 , len : 6 , last:0 , valid : 1
@@ -9093,8 +9168,8 @@
 # rd data in s drv: 0 , len : 6 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 7a42
-# UVM_INFO ../env/axi_sb.sv(78) @ 27935: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 27935: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 27935: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 27935: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 3 , last:0 , valid : 1
 # m mon rid : 320e
 # rd data in s drv: 0 , len : 3 , last:0 , valid : 1
@@ -9104,8 +9179,8 @@
 # rd data in s drv: 0 , len : 3 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 320e
-# UVM_INFO ../env/axi_sb.sv(78) @ 27975: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 27975: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 27975: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 27975: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # abc : 1
 # ref model mem : 38
 # abc : 2
@@ -9287,6 +9362,7 @@
 # xyz : 9
 # xyz : 10
 # xyz : 11
+# AR ADDR IN SB : 1e
 # xyz : 12
 # xyz : 13
 # xyz : 14
@@ -9297,6 +9373,7 @@
 # xyz : 19
 # xyz : 20
 # xyz : 21
+# AR ADDR IN SB : 36
 # AFFTER W CHANNEL
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 28655: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
@@ -9333,8 +9410,8 @@
 # rd data in s drv: 0 , len : 10 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : ceec
-# UVM_INFO ../env/axi_sb.sv(78) @ 28765: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 28765: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 28765: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 28765: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 9 , last:0 , valid : 1
 # m mon rid : 1e34
 # rd data in s drv: 0 , len : 9 , last:0 , valid : 1
@@ -9399,8 +9476,8 @@
 # AFFTER W CHANNEL
 # req kind : READ
 # m mon rid : 1e34
-# UVM_INFO ../env/axi_sb.sv(78) @ 28865: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 28865: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 28865: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 28865: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 28865: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 36317
@@ -9428,8 +9505,8 @@
 # rd data in s drv: 0 , len : 8 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 8ddd
-# UVM_INFO ../env/axi_sb.sv(78) @ 28955: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 28955: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 28955: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 28955: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # abc : 1
 # ref model mem : 738
 # abc : 2
@@ -10435,6 +10512,7 @@
 # xyz : 4
 # xyz : 5
 # xyz : 6
+# AR ADDR IN SB : 35
 # AFFTER W CHANNEL
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 33635: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
@@ -10457,8 +10535,8 @@
 # rd data in s drv: 0 , len : 5 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 839b
-# UVM_INFO ../env/axi_sb.sv(78) @ 33695: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 33695: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 33695: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 33695: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # abc : 1
 # ref model mem : 296
 # abc : 2
@@ -10656,6 +10734,7 @@
 # xyz : 7
 # xyz : 8
 # xyz : 9
+# AR ADDR IN SB : 97
 # xyz : 10
 # xyz : 11
 # xyz : 12
@@ -10663,6 +10742,7 @@
 # xyz : 14
 # xyz : 15
 # xyz : 16
+# AR ADDR IN SB : 137
 # xyz : 17
 # xyz : 18
 # xyz : 19
@@ -10671,6 +10751,7 @@
 # xyz : 22
 # xyz : 23
 # xyz : 24
+# AR ADDR IN SB : 187
 # AFFTER W CHANNEL
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 34525: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
@@ -10703,8 +10784,8 @@
 # rd data in s drv: 0 , len : 8 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : d667
-# UVM_INFO ../env/axi_sb.sv(78) @ 34615: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 34615: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 34615: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 34615: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # rd data in s drv: 0 , len : 6 , last:0 , valid : 1
 # m mon rid : a31a
 # rd data in s drv: 0 , len : 6 , last:0 , valid : 1
@@ -10720,8 +10801,8 @@
 # rd data in s drv: 0 , len : 6 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : a31a
-# UVM_INFO ../env/axi_sb.sv(78) @ 34685: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 34685: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 34685: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 34685: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # abc : 1
 # ref model mem : 36
 # abc : 2
@@ -10876,8 +10957,8 @@
 # rd data in s drv: 0 , len : 7 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : dbc9
-# UVM_INFO ../env/axi_sb.sv(78) @ 35245: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 35245: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 35245: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 35245: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # abc : 1
 # ref model mem : 209
 # abc : 2
@@ -11612,6 +11693,7 @@
 # xyz : 1
 # xyz : 2
 # xyz : 3
+# AR ADDR IN SB : 98
 # AFFTER W CHANNEL
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 38695: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
@@ -11628,8 +11710,8 @@
 # rd data in s drv: 0 , len : 2 , last:1 , valid : 1
 # req kind : READ
 # m mon rid : 5d62
-# UVM_INFO ../env/axi_sb.sv(78) @ 38725: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(76) @ 38725: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(79) @ 38725: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(77) @ 38725: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # abc : 1
 # ref model mem : 501
 # abc : 2
@@ -14666,7 +14748,7 @@
 #                                                            #
 ##############################################################
 # 
-# UVM_INFO ../env/axi_sb.sv(127) @ 103085: uvm_test_top.env_h.sb_h [SCOREBOARD_SUMMARY] 
+# UVM_INFO ../env/axi_sb.sv(128) @ 103085: uvm_test_top.env_h.sb_h [SCOREBOARD_SUMMARY] 
 # === FINAL RESULTS ===
 # Total Pass = 100
 # Total Fail = 0
@@ -14698,5 +14780,5 @@
 # ** Note: $finish    : /tools/mentor/questa/2023.4/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 103085 ns  Iteration: 53  Instance: /axi_tb_top
 # Saving coverage database on exit...
-# End time: 14:36:57 on May 07,2026, Elapsed time: 0:00:03
-# Errors: 0, Warnings: 33
+# End time: 11:23:42 on May 11,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 24
