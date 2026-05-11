@@ -88,6 +88,50 @@ interface axi_m_inf #(int ADDR_WIDTH=32,DATA_WIDTH=32) (input bit ACLK);
     modport MDRV_MP (clocking m_drv_cb);
     modport MMON_MP (clocking m_mon_cb);
 
+    property p_stable_awvalid;
+        @(posedge ACLK) disable iff (!ARESETn)
+        (AWVALID && !AWREADY) |=> AWVALID;
+    endproperty
+
+    property p_stable_wvalid;
+        @(posedge ACLK) disable iff (!ARESETn)
+        (WVALID && !WREADY) |=> WVALID;
+    endproperty
+
+    property p_stable_bvalid;
+        @(posedge ACLK) disable iff (!ARESETn)
+        (BVALID && !BREADY) |=> BVALID;
+    endproperty
+
+    property p_stable_arvalid;
+        @(posedge ACLK) disable iff (!ARESETn)
+        (ARVALID && !ARREADY) |=> ARVALID;
+    endproperty
+
+    property p_stable_rvalid;
+        @(posedge ACLK) disable iff (!ARESETn)
+        (RVALID && !RREADY) |=> RVALID;
+    endproperty
+
+    ASSERT_STABLE_AWVALID : assert property(p_stable_awvalid)
+        else
+            $error("AWVALID NOT STABLE");
+
+    ASSERT_STABLE_WVALID : assert property(p_stable_wvalid)
+        else
+            $error("AWVALID NOT STABLE");
+
+    ASSERT_STABLE_BVALID : assert property(p_stable_bvalid)
+        else
+            $error("BVALID NOT STABLE");
+
+    ASSERT_STABLE_ARVALID : assert property(p_stable_arvalid)
+        else
+            $error("ARVALID NOT STABLE");
+
+    ASSERT_STABLE_RVALID : assert property(p_stable_rvalid)
+        else
+            $error("RVALID NOT STABLE");
 endinterface
 
 `endif

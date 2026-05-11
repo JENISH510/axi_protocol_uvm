@@ -1,5 +1,5 @@
 # vsim -coverage -voptargs="+acc" axi_tb_top -c -do "coverage save -onexit -directive -cvg -codeall axi_fixed_test.ucdb; run -all; exit" "+UVM_TESTNAME=axi_fixed_test" -l axi_fixed_test.log 
-# Start time: 11:23:32 on May 11,2026
+# Start time: 14:54:28 on May 11,2026
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim-64
 # //  Version 2023.4 linux_x86_64 Oct  9 2023
@@ -78,33 +78,33 @@
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
 # UVM_INFO @ 0: reporter [RNTST] Running test axi_fixed_test...
 # ** Warning: (vsim-8474) A higher value '4294967295' is found in bin 'all_ones' of Coverpoint 'cp_wdata'. It is invalid and will be ignored.
-#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648c File: ../env/axi_coverage.sv Line: 46
+#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648d File: ../env/axi_coverage.sv Line: 49
 # ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'all_ones' in Coverpoint 'cp_wdata' of Covergroup instance '\/axi_env_pkg::axi_coverage::write_cov ' has converged to empty list. The bin will be taken out of coverage calculation.
 #    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
 # ** Warning: (vsim-8474) A higher value '1431655765' is found in bin 'toggle_01' of Coverpoint 'cp_wdata'. It is invalid and will be ignored.
-#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648c File: ../env/axi_coverage.sv Line: 47
+#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648d File: ../env/axi_coverage.sv Line: 50
 # ** Warning: (vsim-8474) A higher value '2863311530' is found in bin 'toggle_01' of Coverpoint 'cp_wdata'. It is invalid and will be ignored.
-#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648c File: ../env/axi_coverage.sv Line: 47
+#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648d File: ../env/axi_coverage.sv Line: 50
 # ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'toggle_01' in Coverpoint 'cp_wdata' of Covergroup instance '\/axi_env_pkg::axi_coverage::write_cov ' has converged to empty list. The bin will be taken out of coverage calculation.
 #    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
-# ** Warning: (vsim-3881) ../env/axi_coverage.sv(48): Width conversion applied in bin 'other_data' for Coverpoint 'cp_wdata'. Value '1' changed to ' (maximum)' value.
+# ** Warning: (vsim-3881) ../env/axi_coverage.sv(51): Width conversion applied in bin 'other_data' for Coverpoint 'cp_wdata'. Value '1' changed to ' (maximum)' value.
 #    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
-# ** Warning: (vsim-3881) ../env/axi_coverage.sv(48): Width conversion applied in bin 'other_data' for Coverpoint 'cp_wdata'. Value '4294901759' changed to ' (maximum)' value.
+# ** Warning: (vsim-3881) ../env/axi_coverage.sv(51): Width conversion applied in bin 'other_data' for Coverpoint 'cp_wdata'. Value '4294901759' changed to ' (maximum)' value.
 #    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
 # ** Warning: (vsim-8475) The invalid value range [1 : 4294901759] is found in bin 'other_data' of Coverpoint 'cp_wdata'. It will be ignored.
-#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648c File: ../env/axi_coverage.sv Line: 48
+#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648d File: ../env/axi_coverage.sv Line: 51
 # ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with array bin 'other_data' in Coverpoint 'cp_wdata' of Covergroup instance '\/axi_env_pkg::axi_coverage::write_cov ' has converged to empty list. The bin will be taken out of coverage calculation.
 #    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
 # ** Warning: (vsim-8474) A higher value '8' is found in bin 'single_byte' of Coverpoint 'cp_wstrb'. It is invalid and will be ignored.
-#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648c File: ../env/axi_coverage.sv Line: 69
+#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648d File: ../env/axi_coverage.sv Line: 72
 # ** Warning: (vsim-8474) A higher value '12' is found in bin 'single_byte' of Coverpoint 'cp_wstrb'. It is invalid and will be ignored.
-#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648c File: ../env/axi_coverage.sv Line: 69
+#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648d File: ../env/axi_coverage.sv Line: 72
 # ** Warning: (vsim-8474) A higher value '14' is found in bin 'single_byte' of Coverpoint 'cp_wstrb'. It is invalid and will be ignored.
-#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648c File: ../env/axi_coverage.sv Line: 69
+#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648d File: ../env/axi_coverage.sv Line: 72
 # ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'single_byte' in Coverpoint 'cp_wstrb' of Covergroup instance '\/axi_env_pkg::axi_coverage::write_cov ' has converged to empty list. The bin will be taken out of coverage calculation.
 #    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
 # ** Warning: (vsim-8474) A higher value '15' is found in bin 'all_bytes' of Coverpoint 'cp_wstrb'. It is invalid and will be ignored.
-#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648c File: ../env/axi_coverage.sv Line: 70
+#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648d File: ../env/axi_coverage.sv Line: 73
 # ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'all_bytes' in Coverpoint 'cp_wstrb' of Covergroup instance '\/axi_env_pkg::axi_coverage::write_cov ' has converged to empty list. The bin will be taken out of coverage calculation.
 #    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
 # ** Warning: (vsim-8554) The expression 'binsof(cp_wstrb.single_byte)' inside the select expression of Bin 'invalid_wrap' of Cross 'STRB_CP' in Covergroup instance '\/axi_env_pkg::axi_coverage::write_cov ' is an empty user bin. The binsof expression will result in an empty set.
@@ -166,7 +166,7 @@
 #       num_last_rsps              integral                            32    'd1  
 # --------------------------------------------------------------------------------
 # 
-# UVM_INFO ../env/axi_sb.sv(77) @ 0: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 0: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # UVM_INFO ../env/m_agent/axi_m_mon.sv(28) @ 0: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_mon_h [M MON RUN PHASE before] Inside master mon run phase
 # UVM_INFO ../env/m_agent/axi_m_mon.sv(36) @ 0: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_mon_h [M MON run PHASE after] Inside master mon
 # UVM_INFO ../env/m_agent/axi_m_mon.sv(41) @ 0: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_mon_h [M MON write addr PHASE before] Inside master mon
@@ -441,10 +441,43 @@
 # arid in s mon : 22357
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1598     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'heb2b    
+#   ARADDR        integral           32    'h17f     
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'heb2b    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'he1000000
+#     [1]         integral           32    'h5ade4b3 
+#     [2]         integral           32    'h55d992b7
+#     [3]         integral           32    'hedb2c52b
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 3774873600 95282355 1440322231 3987916075
 # m mon rid : eb2b
 # m mon ar id : 5755
-# UVM_INFO ../env/axi_sb.sv(79) @ 85: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 85: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 85: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 85: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 85: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 59707
@@ -486,10 +519,43 @@
 # arid in s mon : 52439
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1618     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'he93b    
+#   ARADDR        integral           32    'h2a8     
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'he93b    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'h766d2096
+#     [1]         integral           32    'hc6d5f5ef
+#     [2]         integral           32    'hb8665e42
+#     [3]         integral           32    'heaba05fa
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 1986863254 3335910895 3093716546 3938059770
 # m mon rid : e93b
 # m mon ar id : ccd7
-# UVM_INFO ../env/axi_sb.sv(79) @ 125: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 125: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 125: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 125: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 125: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 59859
@@ -531,10 +597,43 @@
 # arid in s mon : 47995
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1654     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'he9d3    
+#   ARADDR        integral           32    'h386     
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'he9d3    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'h45420000
+#     [1]         integral           32    'h3b27ee47
+#     [2]         integral           32    'h549c6744
+#     [3]         integral           32    'h1bc5235 
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 1161953280 992472647 1419536196 29119029
 # m mon rid : e9d3
 # m mon ar id : bb7b
-# UVM_INFO ../env/axi_sb.sv(79) @ 165: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 165: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 165: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 165: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 165: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 10426
@@ -576,10 +675,43 @@
 # arid in s mon : 40878
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1683     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h28ba    
+#   ARADDR        integral           32    'hdc      
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'h28ba    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'h7ef31ad8
+#     [1]         integral           32    'h400041b1
+#     [2]         integral           32    'h6f3347d9
+#     [3]         integral           32    'h761402a3
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 2129861336 1073758641 1865631705 1981022883
 # m mon rid : 28ba
 # m mon ar id : 9fae
-# UVM_INFO ../env/axi_sb.sv(79) @ 205: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 205: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 205: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 205: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 205: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 61524
@@ -621,10 +753,43 @@
 # arid in s mon : 60350
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1723     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'hf054    
+#   ARADDR        integral           32    'hea      
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'hf054    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'h90e40000
+#     [1]         integral           32    'h7c5cf680
+#     [2]         integral           32    'hcdcb11b4
+#     [3]         integral           32    'he77068cf
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 2430861312 2086467200 3452637620 3882903759
 # m mon rid : f054
 # m mon ar id : ebbe
-# UVM_INFO ../env/axi_sb.sv(79) @ 245: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 245: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 245: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 245: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 245: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 26459
@@ -666,10 +831,43 @@
 # arid in s mon : 15132
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1755     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h675b    
+#   ARADDR        integral           32    'h9d      
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'h675b    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'he692a900
+#     [1]         integral           32    'h5e5d6ae8
+#     [2]         integral           32    'h2e5cdf84
+#     [3]         integral           32    'h85dca7b4
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 3868371200 1583180520 777838468 2245830580
 # m mon rid : 675b
 # m mon ar id : 3b1c
-# UVM_INFO ../env/axi_sb.sv(79) @ 285: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 285: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 285: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 285: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 285: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 22357
@@ -711,10 +909,43 @@
 # arid in s mon : 11395
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1803     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h5755    
+#   ARADDR        integral           32    'h86      
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'h5755    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'h2b20000 
+#     [1]         integral           32    'h372f0987
+#     [2]         integral           32    'h4ab7d9f9
+#     [3]         integral           32    'h293074ef
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 45219840 925829511 1253562873 691041519
 # m mon rid : 5755
 # m mon ar id : 2c83
-# UVM_INFO ../env/axi_sb.sv(79) @ 325: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 325: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 325: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 325: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 325: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 58966
@@ -756,10 +987,43 @@
 # arid in s mon : 33047
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1855     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'he656    
+#   ARADDR        integral           32    'hcb      
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'he656    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'hd7000000
+#     [1]         integral           32    'hbaee7d8 
+#     [2]         integral           32    'he174315a
+#     [3]         integral           32    'h502c68b6
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 3607101440 196011992 3782488410 1345087670
 # m mon rid : e656
 # m mon ar id : 8117
-# UVM_INFO ../env/axi_sb.sv(79) @ 365: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 365: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 365: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 365: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 365: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 64759
@@ -785,13 +1049,13 @@
 # xyz : 2
 # xyz : 3
 # ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
-#    Time: 395 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec2ac4e File: ../env/axi_ref_model.sv Line: 79
+#    Time: 395 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec2ac52 File: ../env/axi_ref_model.sv Line: 79
 # xyz : 4
 # AR ADDR IN SB : cc
 # m mon ar id : 3c8b
 # m mon rid : fcf7
 # ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
-#    Time: 395 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec2a949 File: ../env/s_agent/axi_base_s_seqs.sv Line: 103
+#    Time: 395 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec2a94c File: ../env/s_agent/axi_base_s_seqs.sv Line: 103
 # s seqs arid : 15499
 # INIDE_SLAVE_SEQ_CTR=10
 # match arid : 3c8b , rid : 3c8b
@@ -814,10 +1078,43 @@
 # arid in s mon : 29379
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1907     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'hfcf7    
+#   ARADDR        integral           32    'h1c7     
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'hfcf7    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'h8a000000
+#     [1]         integral           32    'h316470ff
+#     [2]         integral           32    'h28dd5745
+#     [3]         integral           32    'h8092a68c
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 2315255808 828666111 685594437 2157094540
 # m mon rid : fcf7
 # m mon ar id : 72c3
-# UVM_INFO ../env/axi_sb.sv(79) @ 405: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 405: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 405: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 405: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 405: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 43156
@@ -860,18 +1157,51 @@
 # xyz : 1
 # xyz : 2
 # ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
-#    Time: 445 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec2ac4e File: ../env/axi_ref_model.sv Line: 79
+#    Time: 445 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec2ac52 File: ../env/axi_ref_model.sv Line: 79
 # xyz : 3
 # ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
-#    Time: 445 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec2ac4e File: ../env/axi_ref_model.sv Line: 79
+#    Time: 445 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec2ac52 File: ../env/axi_ref_model.sv Line: 79
 # xyz : 4
 # AR ADDR IN SB : 181
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @5003     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h3c8b    
+#   ARADDR        integral           32    'hcc      
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'h3c8b    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'hbaee7d8 
+#     [1]         integral           32    'he174315a
+#     [2]         integral           32    'h502c68b6
+#     [3]         integral           32    'h0       
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 196011992 3782488410 1345087670 0
 # m mon rid : 3c8b
 # m mon ar id : 8ddb
-# UVM_INFO ../env/axi_sb.sv(79) @ 445: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 445: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 445: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 445: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 445: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 52439
@@ -879,9 +1209,9 @@
 # match arid : ccd7 , rid : ccd7
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 445: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
-#    Time: 445 ns  Iteration: 12  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec2a949 File: ../env/s_agent/axi_base_s_seqs.sv Line: 103
+#    Time: 445 ns  Iteration: 12  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec2a94c File: ../env/s_agent/axi_base_s_seqs.sv Line: 103
 # ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
-#    Time: 445 ns  Iteration: 12  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec2a949 File: ../env/s_agent/axi_base_s_seqs.sv Line: 103
+#    Time: 445 ns  Iteration: 12  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec2a94c File: ../env/s_agent/axi_base_s_seqs.sv Line: 103
 # s seqs arid : 36315
 # INIDE_SLAVE_SEQ_CTR=13
 # match arid : 8ddb , rid : 8ddb
@@ -926,10 +1256,43 @@
 # arid in s mon : 22723
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1951     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'ha894    
+#   ARADDR        integral           32    'h82      
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'ha894    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'hb3f50000
+#     [1]         integral           32    'hb5c5d03b
+#     [2]         integral           32    'h869f0c8e
+#     [3]         integral           32    'haf45646f
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 3019177984 3049639995 2258570382 2940560495
 # m mon rid : a894
 # m mon ar id : 58c3
-# UVM_INFO ../env/axi_sb.sv(79) @ 485: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 485: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 485: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 485: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 485: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 4905
@@ -973,9 +1336,42 @@
 # AR ADDR IN SB : 71
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @2011     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'hccd7    
+#   ARADDR        integral           32    'h2ef     
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'hccd7    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'ha1000000
+#     [1]         integral           32    'h9bd541f3
+#     [2]         integral           32    'heb2a1de0
+#     [3]         integral           32    'hb51a296e
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 2701131776 2614444531 3945405920 3038390638
 # m mon rid : ccd7
-# UVM_INFO ../env/axi_sb.sv(79) @ 525: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 525: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 525: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 525: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 525: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 35577
@@ -1006,9 +1402,42 @@
 # AR ADDR IN SB : 215
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @5815     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h8ddb    
+#   ARADDR        integral           32    'h181     
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'h8ddb    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'h55d992b7
+#     [1]         integral           32    'hedb2c52b
+#     [2]         integral           32    'h0       
+#     [3]         integral           32    'h0       
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 1440322231 3987916075 0 0
 # m mon rid : 8ddb
-# UVM_INFO ../env/axi_sb.sv(79) @ 565: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 565: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 565: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 565: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 565: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 25219
@@ -1039,9 +1468,42 @@
 # AR ADDR IN SB : 28b
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @2087     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h1329    
+#   ARADDR        integral           32    'h170     
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'h1329    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'ha93a1366
+#     [1]         integral           32    'hf1c9ee1 
+#     [2]         integral           32    'hb95e5aa2
+#     [3]         integral           32    'h27a31541
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 2839155558 253533921 3109968546 664999233
 # m mon rid : 1329
-# UVM_INFO ../env/axi_sb.sv(79) @ 605: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 605: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 605: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 605: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 605: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 47995
@@ -1073,17 +1535,50 @@
 # xyz : 5
 # xyz : 6
 # ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
-#    Time: 645 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#34_7fefec2ac26 File: ../env/axi_ref_model.sv Line: 79
+#    Time: 645 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#34_7fefec2ac2a File: ../env/axi_ref_model.sv Line: 79
 # xyz : 7
 # ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
-#    Time: 645 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#34_7fefec2ac26 File: ../env/axi_ref_model.sv Line: 79
+#    Time: 645 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#34_7fefec2ac2a File: ../env/axi_ref_model.sv Line: 79
 # xyz : 8
 # AR ADDR IN SB : 304
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @2731     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'hfe09    
+#   ARADDR        integral           32    'h170     
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'hfe09    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'ha93a1366
+#     [1]         integral           32    'hf1c9ee1 
+#     [2]         integral           32    'hb95e5aa2
+#     [3]         integral           32    'h27a31541
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 2839155558 253533921 3109968546 664999233
 # m mon rid : fe09
-# UVM_INFO ../env/axi_sb.sv(79) @ 645: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 645: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 645: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 645: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 645: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 51276
@@ -1091,9 +1586,9 @@
 # match arid : c84c , rid : c84c
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 645: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
-#    Time: 645 ns  Iteration: 12  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec2a949 File: ../env/s_agent/axi_base_s_seqs.sv Line: 103
+#    Time: 645 ns  Iteration: 12  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec2a94c File: ../env/s_agent/axi_base_s_seqs.sv Line: 103
 # ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
-#    Time: 645 ns  Iteration: 12  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec2a949 File: ../env/s_agent/axi_base_s_seqs.sv Line: 103
+#    Time: 645 ns  Iteration: 12  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec2a94c File: ../env/s_agent/axi_base_s_seqs.sv Line: 103
 # s seqs arid : 14176
 # INIDE_SLAVE_SEQ_CTR=20
 # match arid : 3760 , rid : 3760
@@ -1122,9 +1617,42 @@
 # AR ADDR IN SB : 1fb
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @2151     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h8af9    
+#   ARADDR        integral           32    'h71      
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'h8af9    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'h67135d00
+#     [1]         integral           32    'h63ae97a9
+#     [2]         integral           32    'h1bda4650
+#     [3]         integral           32    'h22dc21c3
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 1729322240 1672386473 467289680 584851907
 # m mon rid : 8af9
-# UVM_INFO ../env/axi_sb.sv(79) @ 685: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 685: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 685: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 685: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 685: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 44353
@@ -1155,9 +1683,42 @@
 # AR ADDR IN SB : 1f2
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @2207     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h6283    
+#   ARADDR        integral           32    'h215     
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'h6283    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'h1caf3200
+#     [1]         integral           32    'h62b68558
+#     [2]         integral           32    'h346f872e
+#     [3]         integral           32    'h5172b9cc
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 481243648 1656128856 879724334 1366473164
 # m mon rid : 6283
-# UVM_INFO ../env/axi_sb.sv(79) @ 725: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 725: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 725: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 725: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 725: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 34273
@@ -1188,9 +1749,42 @@
 # AR ADDR IN SB : 2c5
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @2279     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'hbb7b    
+#   ARADDR        integral           32    'h28b     
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'hbb7b    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'h9e000000
+#     [1]         integral           32    'h29347435
+#     [2]         integral           32    'h43b9fe37
+#     [3]         integral           32    'h3be473  
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 2650800128 691303477 1136262711 3925107
 # m mon rid : bb7b
-# UVM_INFO ../env/axi_sb.sv(79) @ 765: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 765: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 765: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 765: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 765: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 40878
@@ -1216,9 +1810,42 @@
 # ref model mem : 372
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @2379     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'hc84c    
+#   ARADDR        integral           32    'h302     
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'hc84c    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'h8fa30000
+#     [1]         integral           32    'h167e33ce
+#     [2]         integral           32    'hc98d86f4
+#     [3]         integral           32    'h2e2e080d
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 2409824256 377369550 3381495540 774768653
 # m mon rid : c84c
-# UVM_INFO ../env/axi_sb.sv(79) @ 805: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 805: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 805: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 805: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 805: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # rd data in s drv: c98d86f4 , len : 3 , last:0 , valid : 1
@@ -1245,9 +1872,42 @@
 # AR ADDR IN SB : 15
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @4875     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h3760    
+#   ARADDR        integral           32    'h304     
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'h3760    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'hc98d86f4
+#     [1]         integral           32    'h2e2e080d
+#     [2]         integral           32    'h0       
+#     [3]         integral           32    'h0       
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 3381495540 774768653 0 0
 # m mon rid : 3760
-# UVM_INFO ../env/axi_sb.sv(79) @ 845: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 845: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 845: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 845: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 845: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 39064
@@ -1278,9 +1938,42 @@
 # AR ADDR IN SB : 56
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @2455     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'had41    
+#   ARADDR        integral           32    'h1fb     
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'had41    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'hf8000000
+#     [1]         integral           32    'hc2374bc8
+#     [2]         integral           32    'h38d4c252
+#     [3]         integral           32    'hd10bfa61
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 4160749568 3258403784 953467474 3507223137
 # m mon rid : ad41
-# UVM_INFO ../env/axi_sb.sv(79) @ 885: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 885: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 885: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 885: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 885: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 62773
@@ -1311,9 +2004,42 @@
 # AR ADDR IN SB : 128
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @2523     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h85e1    
+#   ARADDR        integral           32    'h1f2     
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'h85e1    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'h194e0000
+#     [1]         integral           32    'h55ae3a3a
+#     [2]         integral           32    'h98339ceb
+#     [3]         integral           32    'h2bbfbc60
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 424542208 1437481530 2553519339 733985888
 # m mon rid : 85e1
-# UVM_INFO ../env/axi_sb.sv(79) @ 925: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 925: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 925: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 925: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 925: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 60350
@@ -1344,9 +2070,42 @@
 # AR ADDR IN SB : 394
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @2607     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h9fae    
+#   ARADDR        integral           32    'h2c5     
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'h9fae    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'hefe6ee00
+#     [1]         integral           32    'h83d11aa2
+#     [2]         integral           32    'h489eab56
+#     [3]         integral           32    'he3dafdae
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 4024888832 2211519138 1218358102 3822779822
 # m mon rid : 9fae
-# UVM_INFO ../env/axi_sb.sv(79) @ 965: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 965: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 965: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 965: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 965: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 45043
@@ -1377,9 +2136,42 @@
 # AR ADDR IN SB : 2fb
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @2819     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h9898    
+#   ARADDR        integral           32    'h15      
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'h9898    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'hd48e2600
+#     [1]         integral           32    'h8fdf6496
+#     [2]         integral           32    'h948f84bc
+#     [3]         integral           32    'hd1fa8698
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 3566085632 2413782166 2492433596 3522856600
 # m mon rid : 9898
-# UVM_INFO ../env/axi_sb.sv(79) @ 1005: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 1005: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 1005: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 1005: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1005: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 15796
@@ -1410,9 +2202,42 @@
 # AR ADDR IN SB : 246
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @2899     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'hf535    
+#   ARADDR        integral           32    'h56      
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'hf535    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'h8e20000 
+#     [1]         integral           32    'he2de1c47
+#     [2]         integral           32    'hdb900cc0
+#     [3]         integral           32    'h50435ffc
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 149028864 3806207047 3683650752 1346592764
 # m mon rid : f535
-# UVM_INFO ../env/axi_sb.sv(79) @ 1045: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 1045: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 1045: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 1045: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1045: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 64427
@@ -1443,9 +2268,42 @@
 # AR ADDR IN SB : 207
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @2995     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'hebbe    
+#   ARADDR        integral           32    'h128     
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'hebbe    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'h57e01e0e
+#     [1]         integral           32    'hc61a22ea
+#     [2]         integral           32    'hf6be4664
+#     [3]         integral           32    'h437ddebe
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 1474305550 3323601642 4139664996 1132322494
 # m mon rid : ebbe
-# UVM_INFO ../env/axi_sb.sv(79) @ 1085: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 1085: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 1085: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 1085: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1085: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 15132
@@ -1476,9 +2334,42 @@
 # AR ADDR IN SB : 2b
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @3143     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'haff3    
+#   ARADDR        integral           32    'h394     
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'haff3    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'h9a338bb3
+#     [1]         integral           32    'h86b7504d
+#     [2]         integral           32    'ha97bcad2
+#     [3]         integral           32    'hb365884c
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 2587069363 2260160589 2843462354 3009775692
 # m mon rid : aff3
-# UVM_INFO ../env/axi_sb.sv(79) @ 1125: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 1125: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 1125: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 1125: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1125: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 25003
@@ -1509,9 +2400,42 @@
 # AR ADDR IN SB : 226
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @3243     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h3db4    
+#   ARADDR        integral           32    'h2fb     
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'h3db4    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'hdb000000
+#     [1]         integral           32    'ha5565310
+#     [2]         integral           32    'haffeddb5
+#     [3]         integral           32    'h7f9f11df
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 3674210304 2773898000 2952715701 2141131231
 # m mon rid : 3db4
-# UVM_INFO ../env/axi_sb.sv(79) @ 1165: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 1165: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 1165: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 1165: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1165: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 51408
@@ -1542,9 +2466,42 @@
 # AR ADDR IN SB : 163
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @3335     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'hfbab    
+#   ARADDR        integral           32    'h246     
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'hfbab    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'h96280000
+#     [1]         integral           32    'hce5fb8ab
+#     [2]         integral           32    'h476e8e07
+#     [3]         integral           32    'hc87e607f
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 2519203840 3462379691 1198427655 3363725439
 # m mon rid : fbab
-# UVM_INFO ../env/axi_sb.sv(79) @ 1205: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 1205: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 1205: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 1205: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1205: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 29970
@@ -1575,9 +2532,42 @@
 # AR ADDR IN SB : 21b
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @3443     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h3b1c    
+#   ARADDR        integral           32    'h207     
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'h3b1c    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'h2000000 
+#     [1]         integral           32    'hcf1f676d
+#     [2]         integral           32    'h502dab8a
+#     [3]         integral           32    'haee101a 
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 33554432 3474941805 1345170314 183373850
 # m mon rid : 3b1c
-# UVM_INFO ../env/axi_sb.sv(79) @ 1245: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 1245: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 1245: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 1245: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1245: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 11395
@@ -1610,14 +2600,47 @@
 # xyz : 6
 # xyz : 7
 # ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
-#    Time: 1285 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#34_7fefec2ac26 File: ../env/axi_ref_model.sv Line: 79
+#    Time: 1285 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#34_7fefec2ac2a File: ../env/axi_ref_model.sv Line: 79
 # xyz : 8
 # AR ADDR IN SB : 364
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @3615     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h61ab    
+#   ARADDR        integral           32    'h2b      
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'h61ab    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'hc0000000
+#     [1]         integral           32    'h73a7f155
+#     [2]         integral           32    'hbf796793
+#     [3]         integral           32    'h4f00fd62
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 3221225472 1940386133 3212404627 1325464930
 # m mon rid : 61ab
-# UVM_INFO ../env/axi_sb.sv(79) @ 1285: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 1285: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 1285: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 1285: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1285: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 43166
@@ -1625,7 +2648,7 @@
 # match arid : a89e , rid : a89e
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1285: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
-#    Time: 1285 ns  Iteration: 12  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec2a949 File: ../env/s_agent/axi_base_s_seqs.sv Line: 103
+#    Time: 1285 ns  Iteration: 12  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec2a94c File: ../env/s_agent/axi_base_s_seqs.sv Line: 103
 # s seqs arid : 12754
 # INIDE_SLAVE_SEQ_CTR=36
 # match arid : 31d2 , rid : 31d2
@@ -1656,14 +2679,47 @@
 # xyz : 6
 # xyz : 7
 # ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
-#    Time: 1325 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#34_7fefec2ac26 File: ../env/axi_ref_model.sv Line: 79
+#    Time: 1325 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#34_7fefec2ac2a File: ../env/axi_ref_model.sv Line: 79
 # xyz : 8
 # AR ADDR IN SB : 3b3
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @3727     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'hc8d0    
+#   ARADDR        integral           32    'h226     
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'hc8d0    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'hefca0000
+#     [1]         integral           32    'hd90a2ccc
+#     [2]         integral           32    'h3e39828c
+#     [3]         integral           32    'hb8949cb7
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 4022992896 3641322700 1043956364 3096747191
 # m mon rid : c8d0
-# UVM_INFO ../env/axi_sb.sv(79) @ 1325: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 1325: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 1325: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 1325: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1325: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 11187
@@ -1671,7 +2727,7 @@
 # match arid : 2bb3 , rid : 2bb3
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1325: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
-#    Time: 1325 ns  Iteration: 12  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec2a949 File: ../env/s_agent/axi_base_s_seqs.sv Line: 103
+#    Time: 1325 ns  Iteration: 12  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec2a94c File: ../env/s_agent/axi_base_s_seqs.sv Line: 103
 # s seqs arid : 9563
 # INIDE_SLAVE_SEQ_CTR=38
 # match arid : 255b , rid : 255b
@@ -1700,9 +2756,42 @@
 # AR ADDR IN SB : 1b3
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @3831     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h7512    
+#   ARADDR        integral           32    'h163     
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'h7512    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'hbf000000
+#     [1]         integral           32    'h5c22a82a
+#     [2]         integral           32    'h17d9543d
+#     [3]         integral           32    'h7cb0c74f
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 3204448256 1545775146 400118845 2091960143
 # m mon rid : 7512
-# UVM_INFO ../env/axi_sb.sv(79) @ 1365: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 1365: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 1365: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 1365: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1365: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 5180
@@ -1733,9 +2822,42 @@
 # AR ADDR IN SB : 1da
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @3951     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h2c83    
+#   ARADDR        integral           32    'h21b     
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'h2c83    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'h79000000
+#     [1]         integral           32    'h28ab3b47
+#     [2]         integral           32    'h1734046b
+#     [3]         integral           32    'hdd4d13b4
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 2030043136 682310471 389284971 3712816052
 # m mon rid : 2c83
-# UVM_INFO ../env/axi_sb.sv(79) @ 1405: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 1405: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 1405: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 1405: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1405: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 33047
@@ -1766,9 +2888,42 @@
 # AR ADDR IN SB : 147
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @4147     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'ha89e    
+#   ARADDR        integral           32    'h363     
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'ha89e    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'hf3000000
+#     [1]         integral           32    'h94eb1e7c
+#     [2]         integral           32    'h57bb5f55
+#     [3]         integral           32    'hcdaaffbf
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 4076863488 2498436732 1471897429 3450535871
 # m mon rid : a89e
-# UVM_INFO ../env/axi_sb.sv(79) @ 1445: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 1445: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 1445: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 1445: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1445: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 41870
@@ -1794,9 +2949,42 @@
 # ref model mem : 776
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @7107     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h31d2    
+#   ARADDR        integral           32    'h364     
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'h31d2    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'h94eb1e7c
+#     [1]         integral           32    'h57bb5f55
+#     [2]         integral           32    'hcdaaffbf
+#     [3]         integral           32    'h0       
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 2498436732 1471897429 3450535871 0
 # m mon rid : 31d2
-# UVM_INFO ../env/axi_sb.sv(79) @ 1485: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 1485: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 1485: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 1485: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1485: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # rd data in s drv: 495e0000 , len : 3 , last:0 , valid : 1
@@ -1818,9 +3006,42 @@
 # ref model mem : 208
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @4271     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h2bb3    
+#   ARADDR        integral           32    'h3b2     
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'h2bb3    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'h495e0000
+#     [1]         integral           32    'hec4f5585
+#     [2]         integral           32    'hc8fa413b
+#     [3]         integral           32    'h9bf6d0bf
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 1230897152 3964622213 3371843899 2616643775
 # m mon rid : 2bb3
-# UVM_INFO ../env/axi_sb.sv(79) @ 1525: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 1525: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 1525: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 1525: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1525: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # rd data in s drv: ec4f5585 , len : 3 , last:0 , valid : 1
@@ -1847,9 +3068,42 @@
 # AR ADDR IN SB : 23a
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @6959     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h255b    
+#   ARADDR        integral           32    'h3b3     
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'h255b    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'hec4f5585
+#     [1]         integral           32    'hc8fa413b
+#     [2]         integral           32    'h9bf6d0bf
+#     [3]         integral           32    'h0       
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 3964622213 3371843899 2616643775 0
 # m mon rid : 255b
-# UVM_INFO ../env/axi_sb.sv(79) @ 1565: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 1565: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 1565: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 1565: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1565: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 29379
@@ -1880,9 +3134,42 @@
 # AR ADDR IN SB : 2a5
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @4387     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h143c    
+#   ARADDR        integral           32    'h1b3     
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'h143c    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'h8d000000
+#     [1]         integral           32    'h34abba76
+#     [2]         integral           32    'he36d973f
+#     [3]         integral           32    'h8a0ee082
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 2365587456 883669622 3815610175 2316230786
 # m mon rid : 143c
-# UVM_INFO ../env/axi_sb.sv(79) @ 1605: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 1605: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 1605: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 1605: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1605: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 11568
@@ -1913,9 +3200,42 @@
 # AR ADDR IN SB : 9
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @4519     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h8117    
+#   ARADDR        integral           32    'h1da     
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'h8117    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'h60ff0000
+#     [1]         integral           32    'h74412a88
+#     [2]         integral           32    'h39d9ac53
+#     [3]         integral           32    'h55319476
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 1627324416 1950427784 970566739 1429312630
 # m mon rid : 8117
-# UVM_INFO ../env/axi_sb.sv(79) @ 1645: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 1645: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 1645: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 1645: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1645: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 16179
@@ -1946,9 +3266,42 @@
 # AR ADDR IN SB : ac
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @4739     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'ha38e    
+#   ARADDR        integral           32    'h147     
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'ha38e    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'h70000000
+#     [1]         integral           32    'h75d86acf
+#     [2]         integral           32    'h9ff15101
+#     [3]         integral           32    'hb3704f99
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 1879048192 1977117391 2683392257 3010482073
 # m mon rid : a38e
-# UVM_INFO ../env/axi_sb.sv(79) @ 1685: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 1685: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 1685: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 1685: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1685: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 60092
@@ -1974,9 +3327,42 @@
 # ref model mem : 389
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @5147     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h72c3    
+#   ARADDR        integral           32    'h23a     
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'h72c3    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'hb97c0000
+#     [1]         integral           32    'h4dfeb572
+#     [2]         integral           32    'hf680952f
+#     [3]         integral           32    'hcb908a76
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 3111911424 1308538226 4135621935 3415247478
 # m mon rid : 72c3
-# UVM_INFO ../env/axi_sb.sv(79) @ 1725: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 1725: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 1725: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 1725: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1725: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # rd data in s drv: 1193e100 , len : 3 , last:0 , valid : 1
@@ -2003,9 +3389,42 @@
 # AR ADDR IN SB : 195
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @5383     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h2d30    
+#   ARADDR        integral           32    'h2a5     
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'h2d30    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'h1193e100
+#     [1]         integral           32    'h5b02d89c
+#     [2]         integral           32    'ha6d0e2b8
+#     [3]         integral           32    'h5f69d455
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 294904064 1526913180 2798707384 1600771157
 # m mon rid : 2d30
-# UVM_INFO ../env/axi_sb.sv(79) @ 1765: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 1765: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 1765: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 1765: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1765: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 5087
@@ -2036,9 +3455,42 @@
 # AR ADDR IN SB : 28
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @5527     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h3f33    
+#   ARADDR        integral           32    'h9       
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'h3f33    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'hbd60eb00
+#     [1]         integral           32    'he5c2eba5
+#     [2]         integral           32    'hdb72182 
+#     [3]         integral           32    'hdf4c9f38
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 3177245440 3854756773 230105474 3746340664
 # m mon rid : 3f33
-# UVM_INFO ../env/axi_sb.sv(79) @ 1805: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 1805: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 1805: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 1805: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1805: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 47476
@@ -2069,9 +3521,42 @@
 # AR ADDR IN SB : 273
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @5663     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'heabc    
+#   ARADDR        integral           32    'hac      
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'heabc    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'h13ef0fdb
+#     [1]         integral           32    'ha5f1a70b
+#     [2]         integral           32    'h366bb992
+#     [3]         integral           32    'h182f69bd
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 334434267 2784077579 913029522 405760445
 # m mon rid : eabc
-# UVM_INFO ../env/axi_sb.sv(79) @ 1845: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 1845: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 1845: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 1845: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1845: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 36504
@@ -2102,9 +3587,42 @@
 # AR ADDR IN SB : 2c0
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @6075     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h13df    
+#   ARADDR        integral           32    'h195     
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'h13df    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'h59cd4b00
+#     [1]         integral           32    'h4b5c4803
+#     [2]         integral           32    'h222e96fe
+#     [3]         integral           32    'haabaa67 
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 1506626304 1264338947 573478654 179022439
 # m mon rid : 13df
-# UVM_INFO ../env/axi_sb.sv(79) @ 1885: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 1885: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 1885: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 1885: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1885: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 22723
@@ -2135,9 +3653,42 @@
 # AR ADDR IN SB : 6a
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @6227     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'hb974    
+#   ARADDR        integral           32    'h28      
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'hb974    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'h83e45107
+#     [1]         integral           32    'h594f1084
+#     [2]         integral           32    'h74343217
+#     [3]         integral           32    'hcc0fbbaa
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 2212778247 1498353796 1949577751 3423583146
 # m mon rid : b974
-# UVM_INFO ../env/axi_sb.sv(79) @ 1925: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 1925: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 1925: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 1925: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1925: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 50465
@@ -2163,9 +3714,42 @@
 # ref model mem : 951
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @6371     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h8e98    
+#   ARADDR        integral           32    'h273     
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'h8e98    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'hf9000000
+#     [1]         integral           32    'h83eb57c5
+#     [2]         integral           32    'h6437108 
+#     [3]         integral           32    'h43e90fda
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 4177526784 2213238725 105083144 1139347418
 # m mon rid : 8e98
-# UVM_INFO ../env/axi_sb.sv(79) @ 1965: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 1965: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 1965: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 1965: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1965: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # rd data in s drv: 315d7cc8 , len : 3 , last:0 , valid : 1
@@ -2187,9 +3771,42 @@
 # ref model mem : 872
 # AFFTER W CHANNEL
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @6531     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h58c3    
+#   ARADDR        integral           32    'h2c0     
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'h58c3    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'h315d7cc8
+#     [1]         integral           32    'h905956d9
+#     [2]         integral           32    'h9247fba1
+#     [3]         integral           32    'h9bb246ed
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 828210376 2421774041 2454191009 2612152045
 # m mon rid : 58c3
-# UVM_INFO ../env/axi_sb.sv(79) @ 2005: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 2005: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 2005: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 2005: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # match arid : 0 , rid : 0
 # UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 2005: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # rd data in s drv: 81e00000 , len : 3 , last:0 , valid : 1
@@ -2202,9 +3819,42 @@
 # m mon rid : c521
 # rd data in s drv: 11fc48fc , len : 3 , last:1 , valid : 1
 # req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @6799     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'hc521    
+#   ARADDR        integral           32    'h6a      
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'hc521    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'h81e00000
+#     [1]         integral           32    'h4229cd7c
+#     [2]         integral           32    'hc09e8c95
+#     [3]         integral           32    'h11fc48fc
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 2178940928 1110035836 3231616149 301746428
 # m mon rid : c521
-# UVM_INFO ../env/axi_sb.sv(79) @ 2045: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(77) @ 2045: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 2045: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 2045: uvm_test_top.env_h.sb_h [before event in sb] aaaa
 # UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 5025: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
 # 
 ##############################################################
@@ -2217,7 +3867,7 @@
 #                                                            #
 ##############################################################
 # 
-# UVM_INFO ../env/axi_sb.sv(128) @ 5025: uvm_test_top.env_h.sb_h [SCOREBOARD_SUMMARY] 
+# UVM_INFO ../env/axi_sb.sv(131) @ 5025: uvm_test_top.env_h.sb_h [SCOREBOARD_SUMMARY] 
 # === FINAL RESULTS ===
 # Total Pass = 50
 # Total Fail = 0
@@ -2249,5 +3899,5 @@
 # ** Note: $finish    : /tools/mentor/questa/2023.4/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 5025 ns  Iteration: 53  Instance: /axi_tb_top
 # Saving coverage database on exit...
-# End time: 11:23:34 on May 11,2026, Elapsed time: 0:00:02
+# End time: 14:54:29 on May 11,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 38

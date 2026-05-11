@@ -41,6 +41,8 @@ class axi_sb extends uvm_scoreboard;
         end
         if (req.kind_e == axi_m_agent_pkg::READ) begin
             $display("req kind : %s",req.kind_e);
+            $display("INSIDE BEORE SAMPLE");
+            req.print();
             cov.write_func(req);
             $display("RDATa IN SB : %0p",req.RDATA);
             act_q[req.RID].push_back(req);

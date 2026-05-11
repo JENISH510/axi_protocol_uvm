@@ -6,6 +6,9 @@ class axi_coverage;
     axi_m_seq_item m_trans;
     axi_s_seq_item s_trans;
 
+    bit [31:0] current_wdata;
+    bit [31:0] current_rdata;
+
     covergroup write_cov;
 
         cp_awburst : coverpoint m_trans.AWBURST {
@@ -71,9 +74,6 @@ class axi_coverage;
             bins default_bin = default; 
         }
 
-        //ID_CP : cross cp_awid, cp_wid;
-        //ID_CP1 : cross cp_wid, cp_bid;
-
         ADDR_DATA_CP  : cross cp_awaddr, cp_wdata;
         
         ADDR_BURST_CP : cross cp_awaddr, cp_awburst;
@@ -133,7 +133,7 @@ class axi_coverage;
             bins high_range = {[32'hF000_0000 : 32'hFFFE_FFFF]};
         }
 
-        cp_rdata : coverpoint s_trans.RDATA[0] {   
+        cp_rdata : coverpoint current_rdata {
             bins all_zeros   = {32'h0000_0000};
             bins all_ones    = {32'hFFFF_FFFF};
             bins toggle_01   = {32'h5555_5555, 32'hAAAA_AAAA};
@@ -156,8 +156,6 @@ class axi_coverage;
         cp_trans_kind_s : coverpoint s_trans.kind_e {
             bins read  = {axi_s_agent_pkg::READ};
         }
-
-        //IC_CP : cross cp_arid, cp_rid;
 
         ADDR_DATA_CP  : cross cp_araddr, cp_rdata;
         
@@ -184,12 +182,18 @@ class axi_coverage;
 
     function void write_func(axi_m_seq_item req);
         this.m_trans = req;
-        write_cov.sample();
+        //foreach (req.WDATA[i]) begin
+           // current_wdata = req.WDATA[i]; 
+            write_cov.sample();           
+        //end
     endfunction
 
     function void read_func(axi_s_seq_item req);
         this.s_trans = req;
-        read_cov.sample();
+        foreach (req.RDATA[i]) begin
+            current_rdata = req.RDATA[i]; 
+            read_cov.sample();            
+        end
     endfunction
 
 endclass
