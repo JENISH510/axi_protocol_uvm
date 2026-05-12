@@ -1,6 +1,6 @@
 # vsim -coverage -voptargs="+acc" axi_tb_top -c -do "coverage save -onexit -directive -cvg -codeall axi_sanity_test.ucdb; run -all; exit" "+UVM_TESTNAME=axi_sanity_test" -l axi_sanity_test.log 
-# Start time: 14:54:30 on May 11,2026
-# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Start time: 14:31:47 on May 12,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt8
 # //  Questa Sim-64
 # //  Version 2023.4 linux_x86_64 Oct  9 2023
 # //
@@ -77,38 +77,6 @@
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
 # UVM_INFO @ 0: reporter [RNTST] Running test axi_sanity_test...
-# ** Warning: (vsim-8474) A higher value '4294967295' is found in bin 'all_ones' of Coverpoint 'cp_wdata'. It is invalid and will be ignored.
-#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648d File: ../env/axi_coverage.sv Line: 49
-# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'all_ones' in Coverpoint 'cp_wdata' of Covergroup instance '\/axi_env_pkg::axi_coverage::write_cov ' has converged to empty list. The bin will be taken out of coverage calculation.
-#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
-# ** Warning: (vsim-8474) A higher value '1431655765' is found in bin 'toggle_01' of Coverpoint 'cp_wdata'. It is invalid and will be ignored.
-#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648d File: ../env/axi_coverage.sv Line: 50
-# ** Warning: (vsim-8474) A higher value '2863311530' is found in bin 'toggle_01' of Coverpoint 'cp_wdata'. It is invalid and will be ignored.
-#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648d File: ../env/axi_coverage.sv Line: 50
-# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'toggle_01' in Coverpoint 'cp_wdata' of Covergroup instance '\/axi_env_pkg::axi_coverage::write_cov ' has converged to empty list. The bin will be taken out of coverage calculation.
-#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
-# ** Warning: (vsim-3881) ../env/axi_coverage.sv(51): Width conversion applied in bin 'other_data' for Coverpoint 'cp_wdata'. Value '1' changed to ' (maximum)' value.
-#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
-# ** Warning: (vsim-3881) ../env/axi_coverage.sv(51): Width conversion applied in bin 'other_data' for Coverpoint 'cp_wdata'. Value '4294901759' changed to ' (maximum)' value.
-#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
-# ** Warning: (vsim-8475) The invalid value range [1 : 4294901759] is found in bin 'other_data' of Coverpoint 'cp_wdata'. It will be ignored.
-#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648d File: ../env/axi_coverage.sv Line: 51
-# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with array bin 'other_data' in Coverpoint 'cp_wdata' of Covergroup instance '\/axi_env_pkg::axi_coverage::write_cov ' has converged to empty list. The bin will be taken out of coverage calculation.
-#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
-# ** Warning: (vsim-8474) A higher value '8' is found in bin 'single_byte' of Coverpoint 'cp_wstrb'. It is invalid and will be ignored.
-#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648d File: ../env/axi_coverage.sv Line: 72
-# ** Warning: (vsim-8474) A higher value '12' is found in bin 'single_byte' of Coverpoint 'cp_wstrb'. It is invalid and will be ignored.
-#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648d File: ../env/axi_coverage.sv Line: 72
-# ** Warning: (vsim-8474) A higher value '14' is found in bin 'single_byte' of Coverpoint 'cp_wstrb'. It is invalid and will be ignored.
-#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648d File: ../env/axi_coverage.sv Line: 72
-# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'single_byte' in Coverpoint 'cp_wstrb' of Covergroup instance '\/axi_env_pkg::axi_coverage::write_cov ' has converged to empty list. The bin will be taken out of coverage calculation.
-#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
-# ** Warning: (vsim-8474) A higher value '15' is found in bin 'all_bytes' of Coverpoint 'cp_wstrb'. It is invalid and will be ignored.
-#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648d File: ../env/axi_coverage.sv Line: 73
-# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'all_bytes' in Coverpoint 'cp_wstrb' of Covergroup instance '\/axi_env_pkg::axi_coverage::write_cov ' has converged to empty list. The bin will be taken out of coverage calculation.
-#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
-# ** Warning: (vsim-8554) The expression 'binsof(cp_wstrb.single_byte)' inside the select expression of Bin 'invalid_wrap' of Cross 'STRB_CP' in Covergroup instance '\/axi_env_pkg::axi_coverage::write_cov ' is an empty user bin. The binsof expression will result in an empty set.
-#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
 # UVM_INFO ../env/s_agent/axi_s_seqr.sv(25) @ 0: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_seqr_h [Data in s seqr] Data got in slave seqr
 # UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
 # --------------------------------------------------------------------------------
@@ -294,5 +262,5 @@
 # ** Note: $finish    : /tools/mentor/questa/2023.4/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 165 ns  Iteration: 53  Instance: /axi_tb_top
 # Saving coverage database on exit...
-# End time: 14:54:32 on May 11,2026, Elapsed time: 0:00:02
-# Errors: 0, Warnings: 24
+# End time: 14:31:48 on May 12,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 8

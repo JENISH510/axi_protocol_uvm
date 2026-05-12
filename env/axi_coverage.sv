@@ -8,6 +8,7 @@ class axi_coverage;
 
     bit [31:0] current_wdata;
     bit [31:0] current_rdata;
+    bit [3:0]  current_wstrb;
 
     covergroup write_cov;
 
@@ -44,7 +45,7 @@ class axi_coverage;
             bins high_range = {[32'hF000_0000 : 32'hFFFE_FFFF]};
         }
 
-        cp_wdata : coverpoint m_trans.WDATA {
+        cp_wdata : coverpoint current_wdata {
             bins all_zeros   = {32'h0000_0000};
             bins all_ones    = {32'hFFFF_FFFF};
             bins toggle_01   = {32'h5555_5555, 32'hAAAA_AAAA};
@@ -67,8 +68,8 @@ class axi_coverage;
             bins mid_ids[14] = {[16'h0001 : 16'hFFFE]};
         }
 
-        cp_wstrb : coverpoint m_trans.WSTRB {
-            bins no_byte     = {4'h0};
+        cp_wstrb : coverpoint current_wstrb {
+            //bins no_byte     = {4'h0};
             bins single_byte = {4'h8,4'hc,4'he};
             bins all_bytes   = {4'hF};
             bins default_bin = default; 
@@ -90,10 +91,10 @@ class axi_coverage;
 
         STRB_CP : cross cp_awburst, cp_wstrb {
             ignore_bins invalid_wrap = binsof(cp_awburst.wrap) &&
-                                       (binsof(cp_wstrb.no_byte) || binsof(cp_wstrb.single_byte));
+                                       /*(binsof(cp_wstrb.no_byte) ||*/ binsof(cp_wstrb.single_byte);
 
-            ignore_bins invalid_incr = binsof(cp_awburst.wrap) &&
-                                       binsof(cp_wstrb.no_byte);
+            /*ignore_bins invalid_incr = binsof(cp_awburst.wrap) &&
+                                       binsof(cp_wstrb.no_byte);*/
         }
 
     endgroup
@@ -182,10 +183,11 @@ class axi_coverage;
 
     function void write_func(axi_m_seq_item req);
         this.m_trans = req;
-        //foreach (req.WDATA[i]) begin
-           // current_wdata = req.WDATA[i]; 
+        foreach (req.WDATA[i]) begin
+            current_wdata = req.WDATA[i];
+            current_wstrb = req.WSTRB[i];
             write_cov.sample();           
-        //end
+        end
     endfunction
 
     function void read_func(axi_s_seq_item req);

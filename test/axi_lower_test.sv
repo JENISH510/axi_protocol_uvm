@@ -13,7 +13,7 @@ class axi_lower_vseqs extends axi_base_vseqs;
 
     task body();
         super.body();
-        `uvm_do_on_with(m_wseqs_h,m_seqr_h,{no_of_trans == 2;})
+        `uvm_do_on_with(m_wseqs_h,m_seqr_h,{no_of_trans == 1;})
     endtask
 
 endclass

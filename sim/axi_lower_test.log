@@ -1,6 +1,6 @@
 # vsim -coverage -voptargs="+acc" axi_tb_top -c -do "coverage save -onexit -directive -cvg -codeall axi_lower_test.ucdb; run -all; exit" "+UVM_TESTNAME=axi_lower_test" -l axi_lower_test.log 
-# Start time: 14:54:45 on May 11,2026
-# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Start time: 14:32:02 on May 12,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt8
 # //  Questa Sim-64
 # //  Version 2023.4 linux_x86_64 Oct  9 2023
 # //
@@ -77,38 +77,6 @@
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
 # UVM_INFO @ 0: reporter [RNTST] Running test axi_lower_test...
-# ** Warning: (vsim-8474) A higher value '4294967295' is found in bin 'all_ones' of Coverpoint 'cp_wdata'. It is invalid and will be ignored.
-#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648d File: ../env/axi_coverage.sv Line: 49
-# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'all_ones' in Coverpoint 'cp_wdata' of Covergroup instance '\/axi_env_pkg::axi_coverage::write_cov ' has converged to empty list. The bin will be taken out of coverage calculation.
-#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
-# ** Warning: (vsim-8474) A higher value '1431655765' is found in bin 'toggle_01' of Coverpoint 'cp_wdata'. It is invalid and will be ignored.
-#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648d File: ../env/axi_coverage.sv Line: 50
-# ** Warning: (vsim-8474) A higher value '2863311530' is found in bin 'toggle_01' of Coverpoint 'cp_wdata'. It is invalid and will be ignored.
-#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648d File: ../env/axi_coverage.sv Line: 50
-# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'toggle_01' in Coverpoint 'cp_wdata' of Covergroup instance '\/axi_env_pkg::axi_coverage::write_cov ' has converged to empty list. The bin will be taken out of coverage calculation.
-#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
-# ** Warning: (vsim-3881) ../env/axi_coverage.sv(51): Width conversion applied in bin 'other_data' for Coverpoint 'cp_wdata'. Value '1' changed to ' (maximum)' value.
-#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
-# ** Warning: (vsim-3881) ../env/axi_coverage.sv(51): Width conversion applied in bin 'other_data' for Coverpoint 'cp_wdata'. Value '4294901759' changed to ' (maximum)' value.
-#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
-# ** Warning: (vsim-8475) The invalid value range [1 : 4294901759] is found in bin 'other_data' of Coverpoint 'cp_wdata'. It will be ignored.
-#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648d File: ../env/axi_coverage.sv Line: 51
-# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with array bin 'other_data' in Coverpoint 'cp_wdata' of Covergroup instance '\/axi_env_pkg::axi_coverage::write_cov ' has converged to empty list. The bin will be taken out of coverage calculation.
-#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
-# ** Warning: (vsim-8474) A higher value '8' is found in bin 'single_byte' of Coverpoint 'cp_wstrb'. It is invalid and will be ignored.
-#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648d File: ../env/axi_coverage.sv Line: 72
-# ** Warning: (vsim-8474) A higher value '12' is found in bin 'single_byte' of Coverpoint 'cp_wstrb'. It is invalid and will be ignored.
-#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648d File: ../env/axi_coverage.sv Line: 72
-# ** Warning: (vsim-8474) A higher value '14' is found in bin 'single_byte' of Coverpoint 'cp_wstrb'. It is invalid and will be ignored.
-#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648d File: ../env/axi_coverage.sv Line: 72
-# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'single_byte' in Coverpoint 'cp_wstrb' of Covergroup instance '\/axi_env_pkg::axi_coverage::write_cov ' has converged to empty list. The bin will be taken out of coverage calculation.
-#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
-# ** Warning: (vsim-8474) A higher value '15' is found in bin 'all_bytes' of Coverpoint 'cp_wstrb'. It is invalid and will be ignored.
-#    Time: 0 ns  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefec4648d File: ../env/axi_coverage.sv Line: 73
-# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'all_bytes' in Coverpoint 'cp_wstrb' of Covergroup instance '\/axi_env_pkg::axi_coverage::write_cov ' has converged to empty list. The bin will be taken out of coverage calculation.
-#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
-# ** Warning: (vsim-8554) The expression 'binsof(cp_wstrb.single_byte)' inside the select expression of Bin 'invalid_wrap' of Cross 'STRB_CP' in Covergroup instance '\/axi_env_pkg::axi_coverage::write_cov ' is an empty user bin. The binsof expression will result in an empty set.
-#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
 # UVM_INFO ../env/s_agent/axi_s_seqr.sv(25) @ 0: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_seqr_h [Data in s seqr] Data got in slave seqr
 # UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
 # --------------------------------------------------------------------------------
@@ -179,46 +147,35 @@
 # Before R CHANNEL
 # AWLEN IN M DRV:2
 # cnt : 1
+# abc : 1
+# ref model mem : 1
+# abc : 2
+# ref model mem : 2
+# abc : 3
+# ref model mem : 3
+# AFFTER W CHANNEL
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 35: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# req wid : 0 , bid:0
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 55: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
 # AWLEN IN M DRV:7
 # cnt : 2
 # AWLEN IN M DRV:2
 # cnt : 3
-# AWLEN IN M DRV:13
-# cnt : 4
 # INIDE_SLAVE_MON_CTR=1
 # arid in s mon : 0
-# m mon ar id : 0
-# INIDE_SLAVE_MON_CTR=2
-# arid in s mon : 0
-# abc : 1
-# ref model mem : 1
-# abc : 2
-# ref model mem : 2
-# abc : 3
-# ref model mem : 3
 # xyz : 1
 # xyz : 2
 # xyz : 3
 # AR ADDR IN SB : 0
-# xyz : 4
-# xyz : 5
-# xyz : 6
-# AR ADDR IN SB : 0
-# AFFTER W CHANNEL
 # m mon ar id : 0
-# match arid : 0 , rid : 0
-# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 35: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # s seqs arid : 0
 # INIDE_SLAVE_SEQ_CTR=1
 # match arid : 0 , rid : 0
-# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 35: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 65: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 2 , last:0 , valid : 1
+# m mon rid : 0
 # rd data in s drv: 55555555 , len : 2 , last:0 , valid : 1
-# m mon rid : 0
-# rd data in s drv: aaaaaaaa , len : 2 , last:0 , valid : 1
-# m mon rid : 0
-# req wid : 48469 , bid:48469
-# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 55: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
-# rd data in s drv: ffffffff , len : 2 , last:1 , valid : 1
 # abc : 1
 # ref model mem : 1
 # abc : 2
@@ -226,12 +183,16 @@
 # abc : 3
 # ref model mem : 3
 # AFFTER W CHANNEL
+# m mon rid : 0
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 85: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: ffffffff , len : 2 , last:1 , valid : 1
 # req kind : READ
 # INSIDE BEORE SAMPLE
 # ---------------------------------------------------
 # Name            Type               Size  Value     
 # ---------------------------------------------------
-# axi_m_seq_item  uvm_sequence_item  -     @1234     
+# axi_m_seq_item  uvm_sequence_item  -     @1219     
 #   AWID          integral           16    'h0       
 #   AWADDR        integral           32    'h0       
 #   AWLEN         integral           8     'd0       
@@ -246,37 +207,79 @@
 #   ARID          integral           16    'h0       
 #   ARADDR        integral           32    'h0       
 #   ARLEN         integral           8     'd2       
-#   ARSIZE        integral           3     'd3       
+#   ARSIZE        integral           3     'd2       
 #   ARBURST       integral           2     'd0       
 #   RID           integral           16    'h0       
 #   RDATA         da(integral)       3     -         
-#     [0]         integral           32    'h55555555
-#     [1]         integral           32    'haaaaaaaa
+#     [0]         integral           32    'h0       
+#     [1]         integral           32    'h55555555
 #     [2]         integral           32    'hffffffff
 #   RRESP         integral           2     'd0       
 #   RLAST         integral           1     'd0       
 #   burst_kind_e  burst_kind         2     FIXED     
 #   kind_e        trans_kind         2     READ      
 # ---------------------------------------------------
-# RDATa IN SB : 1431655765 2863311530 4294967295
+# RDATa IN SB : 0 1431655765 4294967295
 # m mon rid : 0
-# UVM_INFO ../env/axi_sb.sv(82) @ 65: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(80) @ 65: uvm_test_top.env_h.sb_h [before event in sb] aaaa
-# match arid : 0 , rid : 0
-# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 65: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# UVM_INFO ../env/axi_sb.sv(82) @ 95: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 95: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# req wid : 0 , bid:0
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 105: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# AWLEN IN M DRV:13
+# cnt : 4
+# INIDE_SLAVE_MON_CTR=2
+# arid in s mon : 0
+# xyz : 1
+# xyz : 2
+# xyz : 3
+# AR ADDR IN SB : 0
+# m mon ar id : 0
 # s seqs arid : 0
 # INIDE_SLAVE_SEQ_CTR=2
 # match arid : 0 , rid : 0
-# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 65: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 115: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # rd data in s drv: ffffffff , len : 2 , last:0 , valid : 1
 # m mon rid : 0
 # rd data in s drv: ffffffff , len : 2 , last:0 , valid : 1
 # m mon rid : 0
-# req wid : 48924 , bid:48924
-# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 85: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
 # rd data in s drv: ffffffff , len : 2 , last:1 , valid : 1
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1248     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h0       
+#   ARADDR        integral           32    'h0       
+#   ARLEN         integral           8     'd2       
+#   ARSIZE        integral           3     'd2       
+#   ARBURST       integral           2     'd0       
+#   RID           integral           16    'h0       
+#   RDATA         da(integral)       3     -         
+#     [0]         integral           32    'hffffffff
+#     [1]         integral           32    'hffffffff
+#     [2]         integral           32    'hffffffff
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 4294967295 4294967295 4294967295
 # m mon rid : 0
-# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 1085: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO ../env/axi_sb.sv(82) @ 145: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 145: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 1105: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
 # 
 ##############################################################
 #                                                            #
@@ -288,15 +291,15 @@
 #                                                            #
 ##############################################################
 # 
-# UVM_INFO ../env/axi_sb.sv(131) @ 1085: uvm_test_top.env_h.sb_h [SCOREBOARD_SUMMARY] 
+# UVM_INFO ../env/axi_sb.sv(131) @ 1105: uvm_test_top.env_h.sb_h [SCOREBOARD_SUMMARY] 
 # === FINAL RESULTS ===
-# Total Pass = 1
+# Total Pass = 2
 # Total Fail = 0
 # 
 # --- UVM Report Summary ---
 # 
 # ** Report counts by severity
-# UVM_INFO :   22
+# UVM_INFO :   24
 # UVM_WARNING :    0
 # UVM_ERROR :    0
 # UVM_FATAL :    0
@@ -315,10 +318,10 @@
 # [SCOREBOARD_SUMMARY]     1
 # [TEST_DONE]     1
 # [UVMTOP]     1
-# [after event in sb]     1
-# [before event in sb]     2
+# [after event in sb]     2
+# [before event in sb]     3
 # ** Note: $finish    : /tools/mentor/questa/2023.4/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
-#    Time: 1085 ns  Iteration: 53  Instance: /axi_tb_top
+#    Time: 1105 ns  Iteration: 53  Instance: /axi_tb_top
 # Saving coverage database on exit...
-# End time: 14:54:50 on May 11,2026, Elapsed time: 0:00:05
-# Errors: 0, Warnings: 24
+# End time: 14:32:03 on May 12,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 8

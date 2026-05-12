@@ -23,23 +23,19 @@ class axi_lower_m_wseqs #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends axi_base_m_se
             start_item(m_seq_item_h);
             assert(m_seq_item_h.randomize() with {
                 kind_e       == axi_m_agent_pkg::WRITE;
-                
                 burst_kind_e == axi_m_agent_pkg::FIXED;
                 
-                //AWID         == 16'hffff;
-                //AWADDR inside {[0:1000]};
+                AWID         == 16'h0000;
                 AWADDR       == 32'h0000_0000;
                 AWLEN        == 8'd2; 
-                AWSIZE       == 8'd3; 
+                AWSIZE       == 8'd2;  
 
                 foreach(WDATA[i])
-                    WDATA[i] inside {32'h5555_5555, 32'hAAAA_AAAA,32'hffff_ffff};
-
-                /*foreach(WSTRB[i]) {
-                    WSTRB[i] == 4'hF; 
-                }*/
+                    WDATA[i] inside {32'h5555_5555, 32'h0000_0000, 32'hffff_ffff};
             });
             finish_item(m_seq_item_h);
+            
+            resp(1);
 
             saved_addr = m_seq_item_h.AWADDR;
 
@@ -47,22 +43,18 @@ class axi_lower_m_wseqs #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends axi_base_m_se
             start_item(m_seq_item_h);
             assert(m_seq_item_h.randomize() with {
                 kind_e       == axi_m_agent_pkg::READ;
-                
                 burst_kind_e == axi_m_agent_pkg::FIXED;
                 
-                //ARID         == seq_arid;
                 ARID         == 16'h0000;
                 ARADDR       == saved_addr;
                 ARLEN        == 8'd2; 
-                //ARLEN        == saved_len;
-                ARSIZE       == 8'd3; 
+                ARSIZE       == 8'd2; 
             });
             finish_item(m_seq_item_h);
+            
         end
-      resp(2);
     endtask
     
 endclass
 
 `endif
-

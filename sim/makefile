@@ -11,7 +11,7 @@ sim:
 	vsim -voptargs=+acc axi_tb_top -c -do "run -all; exit" +UVM_TESTNAME=$(UVM_TESTNAME)
 
 sim1:
-	vsim -voptargs=+acc axi_tb_top -do "do wave.do; run -all; exit" +UVM_TESTNAME=$(UVM_TESTNAME)
+	vsim -assertdebug  -voptargs=+acc axi_tb_top -do "do wave.do; run -all; exit" +UVM_TESTNAME=$(UVM_TESTNAME)
 
 sim2:
 	vsim -coverage -voptargs=+acc axi_tb_top -c -do "coverage save -onexit -directive -cvg -codeall axi_cg.ucdb; run -all; exit" +UVM_TESTNAME=$(UVM_TESTNAME)
