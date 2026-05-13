@@ -1,3 +1,6 @@
+# vsim -coverage -voptargs="+acc" axi_tb_top -c -do "coverage save -onexit -directive -cvg -codeall axi_incr_cov_test.ucdb; run -all; exit" "+UVM_TESTNAME=axi_incr_cov_test" -l axi_incr_cov_test.log 
+# Start time: 12:46:55 on May 13,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
 # //  Questa Sim-64
 # //  Version 2023.4 linux_x86_64 Oct  9 2023
 # //
@@ -12,12 +15,6 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-# vsim -voptargs="+acc" axi_tb_top -do "do wave.do; run -all; exit" "+UVM_TESTNAME=axi_incr_cov_test" 
-# Start time: 12:41:58 on May 13,2026
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
-# ** Warning: (vopt-13408) Code coverage will be disabled for some DUs/packages/classes and source files.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
 # Loading sv_std.std
 # Loading work.axi_s_inf(fast)
 # Loading work.axi_m_inf(fast)
@@ -55,7 +52,7 @@
 # or another expression.
 #    Time: 0 ns  Iteration: 0  Region: /axi_s_agent_pkg::axi_s_drv #(32, 32) File: ../env/s_agent/axi_s_drv.sv Line: 116
 # Loading /tools/mentor/questa/2023.4/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so
-# do wave.do
+# coverage save -onexit -directive -cvg -codeall axi_incr_cov_test.ucdb
 #  run -all
 # ----------------------------------------------------------------
 # UVM-1.1d
@@ -1211,25 +1208,25 @@
 # xyz : 8
 # xyz : 9
 # ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
-#    Time: 135 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec44530 File: ../env/axi_ref_model.sv Line: 79
+#    Time: 135 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 79
 # xyz : 10
 # ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
-#    Time: 135 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec44530 File: ../env/axi_ref_model.sv Line: 79
+#    Time: 135 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 79
 # xyz : 11
 # ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
-#    Time: 135 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec44530 File: ../env/axi_ref_model.sv Line: 79
+#    Time: 135 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 79
 # xyz : 12
 # ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
-#    Time: 135 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec44530 File: ../env/axi_ref_model.sv Line: 79
+#    Time: 135 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 79
 # xyz : 13
 # ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
-#    Time: 135 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec44530 File: ../env/axi_ref_model.sv Line: 79
+#    Time: 135 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 79
 # xyz : 14
 # ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
-#    Time: 135 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec44530 File: ../env/axi_ref_model.sv Line: 79
+#    Time: 135 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 79
 # xyz : 15
 # ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
-#    Time: 135 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec44530 File: ../env/axi_ref_model.sv Line: 79
+#    Time: 135 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 79
 # xyz : 16
 # AR ADDR IN SB : ffffffff
 # m mon rid : eb2b
@@ -1251,13 +1248,13 @@
 # xyz : 8
 # xyz : 9
 # ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
-#    Time: 145 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec44530 File: ../env/axi_ref_model.sv Line: 79
+#    Time: 145 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 79
 # xyz : 10
 # ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
-#    Time: 145 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec44530 File: ../env/axi_ref_model.sv Line: 79
+#    Time: 145 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 79
 # xyz : 11
 # ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
-#    Time: 145 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec44530 File: ../env/axi_ref_model.sv Line: 79
+#    Time: 145 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 79
 # xyz : 12
 # AR ADDR IN SB : ffffffff
 # m mon ar id : 8af9
@@ -2006,10 +2003,10 @@
 # xyz : 8
 # xyz : 9
 # ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
-#    Time: 205 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec44530 File: ../env/axi_ref_model.sv Line: 79
+#    Time: 205 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 79
 # xyz : 10
 # ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
-#    Time: 205 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec44530 File: ../env/axi_ref_model.sv Line: 79
+#    Time: 205 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 79
 # xyz : 11
 # AR ADDR IN SB : ffffffff
 # m mon ar id : 9fae
@@ -2035,22 +2032,22 @@
 # xyz : 8
 # xyz : 9
 # ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
-#    Time: 215 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec44530 File: ../env/axi_ref_model.sv Line: 79
+#    Time: 215 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 79
 # xyz : 10
 # ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
-#    Time: 215 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec44530 File: ../env/axi_ref_model.sv Line: 79
+#    Time: 215 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 79
 # xyz : 11
 # ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
-#    Time: 215 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec44530 File: ../env/axi_ref_model.sv Line: 79
+#    Time: 215 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 79
 # xyz : 12
 # ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
-#    Time: 215 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec44530 File: ../env/axi_ref_model.sv Line: 79
+#    Time: 215 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 79
 # xyz : 13
 # ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
-#    Time: 215 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec44530 File: ../env/axi_ref_model.sv Line: 79
+#    Time: 215 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 79
 # xyz : 14
 # ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
-#    Time: 215 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec44530 File: ../env/axi_ref_model.sv Line: 79
+#    Time: 215 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 79
 # xyz : 15
 # AR ADDR IN SB : ffffffff
 # m mon rid : f054
@@ -8711,9 +8708,6 @@
 # [before event in sb]    21
 # ** Note: $finish    : /tools/mentor/questa/2023.4/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 17615 ns  Iteration: 53  Instance: /axi_tb_top
-# 1
-# Break in Task uvm_pkg/uvm_root::run_test at /tools/mentor/questa/2023.4/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
-#  exit
- exit
-# End time: 12:44:16 on May 13,2026, Elapsed time: 0:02:18
-# Errors: 0, Warnings: 46
+# Saving coverage database on exit...
+# End time: 12:46:56 on May 13,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 44

@@ -36,6 +36,15 @@ package axi_test_pkg;
     
     `include "axi_lower_m_wseqs.sv"
     `include "axi_lower_test.sv"
+    
+    `include "axi_coverage_m_wseqs.sv"
+    `include "axi_coverage_test.sv"
+    
+    `include "axi_wrap_cov_m_wseqs.sv"
+    `include "axi_wrap_cov_test.sv"
+    
+    `include "axi_incr_cov_m_wseqs.sv"
+    `include "axi_incr_cov_test.sv"
 endpackage
 
 `endif

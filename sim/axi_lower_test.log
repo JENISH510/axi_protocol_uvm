@@ -1,6 +1,6 @@
 # vsim -coverage -voptargs="+acc" axi_tb_top -c -do "coverage save -onexit -directive -cvg -codeall axi_lower_test.ucdb; run -all; exit" "+UVM_TESTNAME=axi_lower_test" -l axi_lower_test.log 
-# Start time: 14:32:02 on May 12,2026
-# ** Note: (vsim-8009) Loading existing optimized design _opt8
+# Start time: 12:46:47 on May 13,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
 # //  Questa Sim-64
 # //  Version 2023.4 linux_x86_64 Oct  9 2023
 # //
@@ -160,8 +160,6 @@
 # UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 55: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
 # AWLEN IN M DRV:7
 # cnt : 2
-# AWLEN IN M DRV:2
-# cnt : 3
 # INIDE_SLAVE_MON_CTR=1
 # arid in s mon : 0
 # xyz : 1
@@ -176,23 +174,14 @@
 # rd data in s drv: 0 , len : 2 , last:0 , valid : 1
 # m mon rid : 0
 # rd data in s drv: 55555555 , len : 2 , last:0 , valid : 1
-# abc : 1
-# ref model mem : 1
-# abc : 2
-# ref model mem : 2
-# abc : 3
-# ref model mem : 3
-# AFFTER W CHANNEL
 # m mon rid : 0
-# match arid : 0 , rid : 0
-# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 85: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
 # rd data in s drv: ffffffff , len : 2 , last:1 , valid : 1
 # req kind : READ
 # INSIDE BEORE SAMPLE
 # ---------------------------------------------------
 # Name            Type               Size  Value     
 # ---------------------------------------------------
-# axi_m_seq_item  uvm_sequence_item  -     @1219     
+# axi_m_seq_item  uvm_sequence_item  -     @1208     
 #   AWID          integral           16    'h0       
 #   AWADDR        integral           32    'h0       
 #   AWLEN         integral           8     'd0       
@@ -223,63 +212,7 @@
 # m mon rid : 0
 # UVM_INFO ../env/axi_sb.sv(82) @ 95: uvm_test_top.env_h.sb_h [after event in sb] aaaa
 # UVM_INFO ../env/axi_sb.sv(80) @ 95: uvm_test_top.env_h.sb_h [before event in sb] aaaa
-# req wid : 0 , bid:0
-# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 105: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
-# AWLEN IN M DRV:13
-# cnt : 4
-# INIDE_SLAVE_MON_CTR=2
-# arid in s mon : 0
-# xyz : 1
-# xyz : 2
-# xyz : 3
-# AR ADDR IN SB : 0
-# m mon ar id : 0
-# s seqs arid : 0
-# INIDE_SLAVE_SEQ_CTR=2
-# match arid : 0 , rid : 0
-# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 115: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
-# rd data in s drv: ffffffff , len : 2 , last:0 , valid : 1
-# m mon rid : 0
-# rd data in s drv: ffffffff , len : 2 , last:0 , valid : 1
-# m mon rid : 0
-# rd data in s drv: ffffffff , len : 2 , last:1 , valid : 1
-# req kind : READ
-# INSIDE BEORE SAMPLE
-# ---------------------------------------------------
-# Name            Type               Size  Value     
-# ---------------------------------------------------
-# axi_m_seq_item  uvm_sequence_item  -     @1248     
-#   AWID          integral           16    'h0       
-#   AWADDR        integral           32    'h0       
-#   AWLEN         integral           8     'd0       
-#   AWSIZE        integral           3     'd0       
-#   AWBURST       integral           2     'd0       
-#   WID           integral           16    'h0       
-#   WDATA         da(integral)       0     -         
-#   WSTRB         da(integral)       0     -         
-#   WLAST         integral           1     'd0       
-#   BID           integral           16    'h0       
-#   BRESP         integral           2     'd0       
-#   ARID          integral           16    'h0       
-#   ARADDR        integral           32    'h0       
-#   ARLEN         integral           8     'd2       
-#   ARSIZE        integral           3     'd2       
-#   ARBURST       integral           2     'd0       
-#   RID           integral           16    'h0       
-#   RDATA         da(integral)       3     -         
-#     [0]         integral           32    'hffffffff
-#     [1]         integral           32    'hffffffff
-#     [2]         integral           32    'hffffffff
-#   RRESP         integral           2     'd0       
-#   RLAST         integral           1     'd0       
-#   burst_kind_e  burst_kind         2     FIXED     
-#   kind_e        trans_kind         2     READ      
-# ---------------------------------------------------
-# RDATa IN SB : 4294967295 4294967295 4294967295
-# m mon rid : 0
-# UVM_INFO ../env/axi_sb.sv(82) @ 145: uvm_test_top.env_h.sb_h [after event in sb] aaaa
-# UVM_INFO ../env/axi_sb.sv(80) @ 145: uvm_test_top.env_h.sb_h [before event in sb] aaaa
-# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 1105: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 1055: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
 # 
 ##############################################################
 #                                                            #
@@ -291,22 +224,22 @@
 #                                                            #
 ##############################################################
 # 
-# UVM_INFO ../env/axi_sb.sv(131) @ 1105: uvm_test_top.env_h.sb_h [SCOREBOARD_SUMMARY] 
+# UVM_INFO ../env/axi_sb.sv(131) @ 1055: uvm_test_top.env_h.sb_h [SCOREBOARD_SUMMARY] 
 # === FINAL RESULTS ===
-# Total Pass = 2
+# Total Pass = 1
 # Total Fail = 0
 # 
 # --- UVM Report Summary ---
 # 
 # ** Report counts by severity
-# UVM_INFO :   24
+# UVM_INFO :   19
 # UVM_WARNING :    0
 # UVM_ERROR :    0
 # UVM_FATAL :    0
 # ** Report counts by id
 # [Data in s seqr]     1
-# [ID MATCH]     4
-# [IN V SEQS]     2
+# [ID MATCH]     2
+# [IN V SEQS]     1
 # [M MON RUN PHASE before]     1
 # [M MON read addr PHASE before]     1
 # [M MON read data PHASE before]     1
@@ -318,10 +251,10 @@
 # [SCOREBOARD_SUMMARY]     1
 # [TEST_DONE]     1
 # [UVMTOP]     1
-# [after event in sb]     2
-# [before event in sb]     3
+# [after event in sb]     1
+# [before event in sb]     2
 # ** Note: $finish    : /tools/mentor/questa/2023.4/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
-#    Time: 1105 ns  Iteration: 53  Instance: /axi_tb_top
+#    Time: 1055 ns  Iteration: 53  Instance: /axi_tb_top
 # Saving coverage database on exit...
-# End time: 14:32:03 on May 12,2026, Elapsed time: 0:00:01
+# End time: 12:46:49 on May 13,2026, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 8

@@ -1,0 +1,2023 @@
+# vsim -coverage -voptargs="+acc" axi_tb_top -c -do "coverage save -onexit -directive -cvg -codeall axi_coverage_test.ucdb; run -all; exit" "+UVM_TESTNAME=axi_coverage_test" -l axi_coverage_test.log 
+# Start time: 12:46:50 on May 13,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# //  Questa Sim-64
+# //  Version 2023.4 linux_x86_64 Oct  9 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.axi_s_inf(fast)
+# Loading work.axi_m_inf(fast)
+# Loading mtiUvm.uvm_pkg(fast)
+# Loading work.axi_s_agent_pkg(fast)
+# Loading work.axi_m_agent_pkg(fast)
+# Loading work.axi_env_pkg(fast)
+# Loading work.axi_test_pkg(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.axi_tb_top(fast)
+# Loading work.axi_m_inf(fast__2)
+# Loading work.axi_s_inf(fast__2)
+# ** Warning: (vsim-8441) Clocking block output s_vif.s_drv_cb.RDATA is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /axi_s_agent_pkg::axi_s_drv #(32, 32) File: ../env/s_agent/axi_s_drv.sv Line: 113
+# ** Warning: (vsim-8441) Clocking block output s_vif.s_drv_cb.RVALID is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /axi_s_agent_pkg::axi_s_drv #(32, 32) File: ../env/s_agent/axi_s_drv.sv Line: 115
+# ** Warning: (vsim-8441) Clocking block output s_vif.s_drv_cb.RLAST is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /axi_s_agent_pkg::axi_s_drv #(32, 32) File: ../env/s_agent/axi_s_drv.sv Line: 116
+# ** Warning: (vsim-8441) Clocking block output s_vif.s_drv_cb.RDATA is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /axi_s_agent_pkg::axi_s_drv #(32, 32) File: ../env/s_agent/axi_s_drv.sv Line: 113
+# ** Warning: (vsim-8441) Clocking block output s_vif.s_drv_cb.RLAST is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /axi_s_agent_pkg::axi_s_drv #(32, 32) File: ../env/s_agent/axi_s_drv.sv Line: 116
+# ** Warning: (vsim-8441) Clocking block output s_vif.s_drv_cb.RVALID is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /axi_s_agent_pkg::axi_s_drv #(32, 32) File: ../env/s_agent/axi_s_drv.sv Line: 115
+# ** Warning: (vsim-8441) Clocking block output s_vif.s_drv_cb.RVALID is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /axi_s_agent_pkg::axi_s_drv #(32, 32) File: ../env/s_agent/axi_s_drv.sv Line: 115
+# ** Warning: (vsim-8441) Clocking block output s_vif.s_drv_cb.RLAST is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /axi_s_agent_pkg::axi_s_drv #(32, 32) File: ../env/s_agent/axi_s_drv.sv Line: 116
+# Loading /tools/mentor/questa/2023.4/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so
+# coverage save -onexit -directive -cvg -codeall axi_coverage_test.ucdb
+#  run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test axi_coverage_test...
+# UVM_INFO ../env/s_agent/axi_s_seqr.sv(25) @ 0: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_seqr_h [Data in s seqr] Data got in slave seqr
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# --------------------------------------------------------------------------------
+# Name                             Type                                Size  Value
+# --------------------------------------------------------------------------------
+# uvm_test_top                     axi_coverage_test                   -     @479 
+#   env_h                          axi_env                             -     @491 
+#     m_uvc_h                      uvm_agent                           -     @513 
+#       m_agent_h[0]               uvm_agent                           -     @693 
+#         m_drv_h                  uvm_driver #(REQ,RSP)               -     @814 
+#           rsp_port               uvm_analysis_port                   -     @829 
+#           seq_item_port          uvm_seq_item_pull_port              -     @821 
+#         m_mon_h                  axi_m_mon#(ADDR_WIDTH, DATA_WIDTH)  -     @837 
+#           s_port                 uvm_analysis_port                   -     @844 
+#         m_seqr_h                 uvm_sequencer                       -     @705 
+#           rsp_export             uvm_analysis_export                 -     @712 
+#           seq_item_export        uvm_seq_item_pull_imp               -     @806 
+#           arbitration_queue      array                               0     -    
+#           lock_queue             array                               0     -    
+#           num_last_reqs          integral                            32    'd1  
+#           num_last_rsps          integral                            32    'd1  
+#     ref_model_h                  axi_ref_model                       -     @558 
+#       mon_imp                    uvm_analysis_imp                    -     @565 
+#       sb_imp                     uvm_analysis_port                   -     @573 
+#     s_uvc_h                      uvm_agent                           -     @520 
+#       s_agent_h[0]               uvm_agent                           -     @860 
+#         s_drv_h                  uvm_driver #(REQ,RSP)               -     @1036
+#           rsp_port               uvm_analysis_port                   -     @1051
+#           seq_item_port          uvm_seq_item_pull_port              -     @1043
+#         s_mon_h                  axi_s_mon#(ADDR_WIDTH, DATA_WIDTH)  -     @1059
+#           s_port                 uvm_analysis_port                   -     @1066
+#         s_seqr_h                 uvm_sequencer                       -     @872 
+#           item_collected_export  uvm_analysis_export                 -     @981 
+#           item_req_fifo          uvm_tlm_analysis_fifo #(T)          -     @989 
+#             analysis_export      uvm_analysis_imp                    -     @1028
+#             get_ap               uvm_analysis_port                   -     @1020
+#             get_peek_export      uvm_get_peek_imp                    -     @1004
+#             put_ap               uvm_analysis_port                   -     @1012
+#             put_export           uvm_put_imp                         -     @996 
+#           rsp_export             uvm_analysis_export                 -     @879 
+#           seq_item_export        uvm_seq_item_pull_imp               -     @973 
+#           arbitration_queue      array                               0     -    
+#           lock_queue             array                               0     -    
+#           num_last_reqs          integral                            32    'd1  
+#           num_last_rsps          integral                            32    'd1  
+#     sb_h                         axi_sb                              -     @527 
+#       anl_imp_m                  uvm_analysis_imp_m                  -     @534 
+#       anl_imp_ref                uvm_analysis_imp_ref                -     @542 
+#     vseqr_h                      axi_virtual_seqr                    -     @581 
+#       rsp_export                 uvm_analysis_export                 -     @588 
+#       seq_item_export            uvm_seq_item_pull_imp               -     @682 
+#       arbitration_queue          array                               0     -    
+#       lock_queue                 array                               0     -    
+#       num_last_reqs              integral                            32    'd1  
+#       num_last_rsps              integral                            32    'd1  
+# --------------------------------------------------------------------------------
+# 
+# UVM_INFO ../env/axi_sb.sv(80) @ 0: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/m_agent/axi_m_mon.sv(28) @ 0: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_mon_h [M MON RUN PHASE before] Inside master mon run phase
+# UVM_INFO ../env/m_agent/axi_m_mon.sv(36) @ 0: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_mon_h [M MON run PHASE after] Inside master mon
+# UVM_INFO ../env/m_agent/axi_m_mon.sv(41) @ 0: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_mon_h [M MON write addr PHASE before] Inside master mon
+# UVM_INFO ../env/m_agent/axi_m_mon.sv(60) @ 0: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_mon_h [M MON write data PHASE before] Inside master mon
+# UVM_INFO ../env/m_agent/axi_m_mon.sv(99) @ 0: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_mon_h [M MON read addr PHASE before] Inside master mon
+# UVM_INFO ../env/m_agent/axi_m_mon.sv(118) @ 0: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_mon_h [M MON read data PHASE before] Inside master mon
+# Before AW CHANNEL
+# Before W CHANNEL
+# Before AR CHANNEL
+# Before R CHANNEL
+# AWLEN IN M DRV:6
+# cnt : 1
+# AWLEN IN M DRV:24
+# cnt : 2
+# AWLEN IN M DRV:6
+# cnt : 3
+# AWLEN IN M DRV:212
+# cnt : 4
+# AWLEN IN M DRV:0
+# cnt : 5
+# AWLEN IN M DRV:96
+# cnt : 6
+# AWLEN IN M DRV:1
+# cnt : 7
+# AWLEN IN M DRV:155
+# cnt : 8
+# AWLEN IN M DRV:15
+# cnt : 9
+# AWLEN IN M DRV:234
+# cnt : 10
+# AWLEN IN M DRV:15
+# cnt : 11
+# AWLEN IN M DRV:7
+# cnt : 12
+# AWLEN IN M DRV:1
+# cnt : 13
+# AWLEN IN M DRV:171
+# cnt : 14
+# AWLEN IN M DRV:3
+# cnt : 15
+# AWLEN IN M DRV:3
+# cnt : 16
+# AWLEN IN M DRV:6
+# cnt : 17
+# AWLEN IN M DRV:201
+# cnt : 18
+# AWLEN IN M DRV:1
+# cnt : 19
+# AWLEN IN M DRV:70
+# cnt : 20
+# AWLEN IN M DRV:3
+# cnt : 21
+# AWLEN IN M DRV:147
+# cnt : 22
+# AWLEN IN M DRV:9
+# cnt : 23
+# AWLEN IN M DRV:178
+# cnt : 24
+# AWLEN IN M DRV:1
+# cnt : 25
+# AWLEN IN M DRV:1
+# cnt : 26
+# AWLEN IN M DRV:14
+# cnt : 27
+# AWLEN IN M DRV:105
+# cnt : 28
+# AWLEN IN M DRV:3
+# cnt : 29
+# AWLEN IN M DRV:1
+# cnt : 30
+# AWLEN IN M DRV:15
+# cnt : 31
+# AWLEN IN M DRV:1
+# cnt : 32
+# AWLEN IN M DRV:7
+# cnt : 33
+# AWLEN IN M DRV:207
+# cnt : 34
+# AWLEN IN M DRV:15
+# cnt : 35
+# AWLEN IN M DRV:1
+# cnt : 36
+# AWLEN IN M DRV:2
+# cnt : 37
+# AWLEN IN M DRV:17
+# cnt : 38
+# AWLEN IN M DRV:2
+# cnt : 39
+# AWLEN IN M DRV:56
+# cnt : 40
+# INIDE_SLAVE_MON_CTR=1
+# arid in s mon : 60203
+# m mon ar id : eb2b
+# INIDE_SLAVE_MON_CTR=2
+# arid in s mon : 59707
+# m mon ar id : e93b
+# INIDE_SLAVE_MON_CTR=3
+# arid in s mon : 59859
+# m mon ar id : e9d3
+# INIDE_SLAVE_MON_CTR=4
+# arid in s mon : 10426
+# m mon ar id : 28ba
+# INIDE_SLAVE_MON_CTR=5
+# arid in s mon : 61524
+# m mon ar id : f054
+# INIDE_SLAVE_MON_CTR=6
+# arid in s mon : 26459
+# abc : 1
+# ref model mem : 873386080
+# abc : 2
+# ref model mem : 873386088
+# abc : 3
+# ref model mem : 873386096
+# abc : 4
+# ref model mem : 873386104
+# abc : 5
+# ref model mem : 873386112
+# abc : 6
+# ref model mem : 873386120
+# abc : 7
+# ref model mem : 873386128
+# xyz : 1
+# xyz : 2
+# xyz : 3
+# xyz : 4
+# xyz : 5
+# xyz : 6
+# xyz : 7
+# AR ADDR IN SB : 340ed058
+# AFFTER W CHANNEL
+# m mon ar id : 675b
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 75: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# s seqs arid : 60203
+# INIDE_SLAVE_SEQ_CTR=1
+# match arid : eb2b , rid : eb2b
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 75: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 6 , last:0 , valid : 1
+# INIDE_SLAVE_MON_CTR=7
+# arid in s mon : 22357
+# m mon ar id : 5755
+# m mon rid : eb2b
+# rd data in s drv: 0 , len : 6 , last:0 , valid : 1
+# INIDE_SLAVE_MON_CTR=8
+# arid in s mon : 58966
+# m mon rid : eb2b
+# m mon ar id : e656
+# req wid : 48469 , bid:48469
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 95: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# rd data in s drv: 0 , len : 6 , last:0 , valid : 1
+# INIDE_SLAVE_MON_CTR=9
+# arid in s mon : 64759
+# m mon ar id : fcf7
+# m mon rid : eb2b
+# rd data in s drv: 0 , len : 6 , last:0 , valid : 1
+# INIDE_SLAVE_MON_CTR=10
+# arid in s mon : 43156
+# m mon rid : eb2b
+# m mon ar id : a894
+# rd data in s drv: 0 , len : 6 , last:0 , valid : 1
+# INIDE_SLAVE_MON_CTR=11
+# arid in s mon : 52439
+# m mon ar id : ccd7
+# m mon rid : eb2b
+# rd data in s drv: 0 , len : 6 , last:0 , valid : 1
+# INIDE_SLAVE_MON_CTR=12
+# arid in s mon : 4905
+# m mon rid : eb2b
+# m mon ar id : 1329
+# rd data in s drv: 0 , len : 6 , last:1 , valid : 1
+# abc : 1
+# ref model mem : 3917114957
+# abc : 2
+# ref model mem : 3917114965
+# abc : 3
+# ref model mem : 3917114973
+# abc : 4
+# ref model mem : 3917114981
+# abc : 5
+# ref model mem : 3917114989
+# abc : 6
+# ref model mem : 3917114997
+# abc : 7
+# ref model mem : 3917115005
+# xyz : 1
+# xyz : 2
+# xyz : 3
+# xyz : 4
+# xyz : 5
+# xyz : 6
+# xyz : 7
+# AR ADDR IN SB : e97a6e45
+# INIDE_SLAVE_MON_CTR=13
+# arid in s mon : 35577
+# AFFTER W CHANNEL
+# m mon ar id : 8af9
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1358     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'heb2b    
+#   ARADDR        integral           32    'h340ed058
+#   ARLEN         integral           8     'd6       
+#   ARSIZE        integral           3     'd3       
+#   ARBURST       integral           2     'd1       
+#   RID           integral           16    'heb2b    
+#   RDATA         da(integral)       7     -         
+#     [0]         integral           32    'h0       
+#     [1]         integral           32    'h0       
+#     [2]         integral           32    'h0       
+#     [3]         integral           32    'h0       
+#     [4]         integral           32    'h0       
+#     [5]         integral           32    'h0       
+#     [6]         integral           32    'h0       
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 0 0 0 0 0 0 0
+# m mon rid : eb2b
+# UVM_INFO ../env/axi_sb.sv(82) @ 145: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 145: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 145: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# s seqs arid : 59707
+# INIDE_SLAVE_SEQ_CTR=2
+# match arid : e93b , rid : e93b
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 145: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 6 , last:0 , valid : 1
+# INIDE_SLAVE_MON_CTR=14
+# arid in s mon : 25219
+# abc : 1
+# ref model mem : 2974280404
+# xyz : 1
+# AR ADDR IN SB : b147eacc
+# AFFTER W CHANNEL
+# m mon rid : e93b
+# m mon ar id : 6283
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 155: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# s seqs arid : 59859
+# INIDE_SLAVE_SEQ_CTR=3
+# match arid : e9d3 , rid : e9d3
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 155: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 6 , last:0 , valid : 1
+# INIDE_SLAVE_MON_CTR=15
+# arid in s mon : 47995
+# m mon ar id : bb7b
+# m mon rid : e93b
+# req wid : 48924 , bid:48924
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 165: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# rd data in s drv: 0 , len : 6 , last:0 , valid : 1
+# INIDE_SLAVE_MON_CTR=16
+# arid in s mon : 51276
+# abc : 1
+# ref model mem : 3584260920
+# abc : 2
+# ref model mem : 3584260928
+# xyz : 1
+# xyz : 2
+# AR ADDR IN SB : d5a37b30
+# AFFTER W CHANNEL
+# m mon rid : e93b
+# m mon ar id : c84c
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 175: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# s seqs arid : 10426
+# INIDE_SLAVE_SEQ_CTR=4
+# match arid : 28ba , rid : 28ba
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 175: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 6 , last:0 , valid : 1
+# INIDE_SLAVE_MON_CTR=17
+# arid in s mon : 44353
+# m mon ar id : ad41
+# m mon rid : e93b
+# req wid : 11091 , bid:11091
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 185: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# rd data in s drv: 0 , len : 6 , last:0 , valid : 1
+# INIDE_SLAVE_MON_CTR=18
+# arid in s mon : 34273
+# m mon rid : e93b
+# m mon ar id : 85e1
+# rd data in s drv: 0 , len : 6 , last:0 , valid : 1
+# INIDE_SLAVE_MON_CTR=19
+# arid in s mon : 40878
+# m mon ar id : 9fae
+# m mon rid : e93b
+# req wid : 42546 , bid:42546
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 205: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# rd data in s drv: 0 , len : 6 , last:1 , valid : 1
+# INIDE_SLAVE_MON_CTR=20
+# arid in s mon : 65033
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1378     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'he93b    
+#   ARADDR        integral           32    'he97a6e45
+#   ARLEN         integral           8     'd6       
+#   ARSIZE        integral           3     'd3       
+#   ARBURST       integral           2     'd1       
+#   RID           integral           16    'he93b    
+#   RDATA         da(integral)       7     -         
+#     [0]         integral           32    'h0       
+#     [1]         integral           32    'h0       
+#     [2]         integral           32    'h0       
+#     [3]         integral           32    'h0       
+#     [4]         integral           32    'h0       
+#     [5]         integral           32    'h0       
+#     [6]         integral           32    'h0       
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 0 0 0 0 0 0 0
+# m mon rid : e93b
+# m mon ar id : fe09
+# UVM_INFO ../env/axi_sb.sv(82) @ 215: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 215: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# rd data in s drv: 0 , len : 0 , last:1 , valid : 1
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1410     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'he9d3    
+#   ARADDR        integral           32    'hb147eacc
+#   ARLEN         integral           8     'd0       
+#   ARSIZE        integral           3     'd3       
+#   ARBURST       integral           2     'd1       
+#   RID           integral           16    'he9d3    
+#   RDATA         da(integral)       1     -         
+#     [0]         integral           32    'h0       
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 0
+# m mon rid : e9d3
+# UVM_INFO ../env/axi_sb.sv(82) @ 225: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 225: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# rd data in s drv: 0 , len : 1 , last:0 , valid : 1
+# m mon rid : 28ba
+# rd data in s drv: 0 , len : 1 , last:1 , valid : 1
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1438     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h28ba    
+#   ARADDR        integral           32    'hd5a37b30
+#   ARLEN         integral           8     'd1       
+#   ARSIZE        integral           3     'd3       
+#   ARBURST       integral           2     'd1       
+#   RID           integral           16    'h28ba    
+#   RDATA         da(integral)       2     -         
+#     [0]         integral           32    'h0       
+#     [1]         integral           32    'h0       
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 0 0
+# m mon rid : 28ba
+# UVM_INFO ../env/axi_sb.sv(82) @ 245: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 245: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# abc : 1
+# ref model mem : 4196350080
+# abc : 2
+# ref model mem : 4196350088
+# abc : 3
+# ref model mem : 4196350096
+# abc : 4
+# ref model mem : 4196350104
+# abc : 5
+# ref model mem : 4196350112
+# abc : 6
+# ref model mem : 4196350120
+# abc : 7
+# ref model mem : 4196350128
+# abc : 8
+# ref model mem : 4196350136
+# abc : 9
+# ref model mem : 4196350144
+# abc : 10
+# ref model mem : 4196350152
+# abc : 11
+# ref model mem : 4196350160
+# abc : 12
+# ref model mem : 4196350168
+# abc : 13
+# ref model mem : 4196350176
+# abc : 14
+# ref model mem : 4196350184
+# abc : 15
+# ref model mem : 4196350192
+# abc : 16
+# ref model mem : 4196350200
+# xyz : 1
+# xyz : 2
+# xyz : 3
+# xyz : 4
+# xyz : 5
+# xyz : 6
+# xyz : 7
+# xyz : 8
+# xyz : 9
+# xyz : 10
+# xyz : 11
+# xyz : 12
+# xyz : 13
+# xyz : 14
+# xyz : 15
+# xyz : 16
+# AR ADDR IN SB : fa1f3880
+# AFFTER W CHANNEL
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 335: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# s seqs arid : 61524
+# INIDE_SLAVE_SEQ_CTR=5
+# match arid : f054 , rid : f054
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 335: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : f054
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : f054
+# req wid : 32817 , bid:32817
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 355: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : f054
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : f054
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : f054
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : f054
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : f054
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : f054
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : f054
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : f054
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : f054
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : f054
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : f054
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : f054
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : f054
+# rd data in s drv: 0 , len : 15 , last:1 , valid : 1
+# abc : 1
+# ref model mem : 2992909824
+# abc : 2
+# ref model mem : 2992909832
+# abc : 3
+# ref model mem : 2992909840
+# abc : 4
+# ref model mem : 2992909848
+# abc : 5
+# ref model mem : 2992909856
+# abc : 6
+# ref model mem : 2992909864
+# abc : 7
+# ref model mem : 2992909872
+# abc : 8
+# ref model mem : 2992909880
+# abc : 9
+# ref model mem : 2992909888
+# abc : 10
+# ref model mem : 2992909896
+# abc : 11
+# ref model mem : 2992909904
+# abc : 12
+# ref model mem : 2992909912
+# abc : 13
+# ref model mem : 2992909920
+# abc : 14
+# ref model mem : 2992909928
+# abc : 15
+# ref model mem : 2992909936
+# abc : 16
+# ref model mem : 2992909944
+# xyz : 1
+# xyz : 2
+# xyz : 3
+# xyz : 4
+# xyz : 5
+# xyz : 6
+# xyz : 7
+# xyz : 8
+# xyz : 9
+# xyz : 10
+# xyz : 11
+# xyz : 12
+# xyz : 13
+# xyz : 14
+# xyz : 15
+# xyz : 16
+# AR ADDR IN SB : b2642e00
+# AFFTER W CHANNEL
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1478     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'hf054    
+#   ARADDR        integral           32    'hfa1f3880
+#   ARLEN         integral           8     'd15      
+#   ARSIZE        integral           3     'd3       
+#   ARBURST       integral           2     'd1       
+#   RID           integral           16    'hf054    
+#   RDATA         da(integral)       16    -         
+#     [0]         integral           32    'h0       
+#     [1]         integral           32    'h0       
+#     [2]         integral           32    'h0       
+#     [3]         integral           32    'h0       
+#     [4]         integral           32    'h0       
+#     ...         ...                ...   ...       
+#     [11]        integral           32    'h0       
+#     [12]        integral           32    'h0       
+#     [13]        integral           32    'h0       
+#     [14]        integral           32    'h0       
+#     [15]        integral           32    'h0       
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+# m mon rid : f054
+# UVM_INFO ../env/axi_sb.sv(82) @ 495: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 495: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 495: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# s seqs arid : 26459
+# INIDE_SLAVE_SEQ_CTR=6
+# match arid : 675b , rid : 675b
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 495: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 55555555 , len : 15 , last:0 , valid : 1
+# m mon rid : 675b
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# abc : 1
+# ref model mem : 3965711056
+# abc : 2
+# ref model mem : 3965711064
+# xyz : 1
+# xyz : 2
+# AR ADDR IN SB : ec5ff2d0
+# AFFTER W CHANNEL
+# m mon rid : 675b
+# req wid : 64272 , bid:64272
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 515: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 515: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# s seqs arid : 22357
+# INIDE_SLAVE_SEQ_CTR=7
+# match arid : 5755 , rid : 5755
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 515: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : 675b
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : 675b
+# req wid : 48097 , bid:48097
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 535: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# rd data in s drv: ffffffff , len : 15 , last:0 , valid : 1
+# m mon rid : 675b
+# rd data in s drv: ffffffff , len : 15 , last:0 , valid : 1
+# abc : 1
+# ref model mem : 3336513376
+# abc : 2
+# ref model mem : 3336513384
+# abc : 3
+# ref model mem : 3336513392
+# abc : 4
+# ref model mem : 3336513400
+# xyz : 1
+# xyz : 2
+# xyz : 3
+# xyz : 4
+# AR ADDR IN SB : c6df2760
+# AFFTER W CHANNEL
+# m mon rid : 675b
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 555: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# s seqs arid : 58966
+# INIDE_SLAVE_SEQ_CTR=8
+# match arid : e656 , rid : e656
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 555: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: ffffffff , len : 15 , last:0 , valid : 1
+# m mon rid : 675b
+# rd data in s drv: ffffffff , len : 15 , last:0 , valid : 1
+# m mon rid : 675b
+# req wid : 48149 , bid:48149
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 575: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# rd data in s drv: ffffffff , len : 15 , last:0 , valid : 1
+# m mon rid : 675b
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : 675b
+# rd data in s drv: ffffffff , len : 15 , last:0 , valid : 1
+# m mon rid : 675b
+# rd data in s drv: ffffffff , len : 15 , last:0 , valid : 1
+# m mon rid : 675b
+# rd data in s drv: ffffffff , len : 15 , last:0 , valid : 1
+# abc : 1
+# ref model mem : 3847923731
+# abc : 2
+# ref model mem : 3847923739
+# abc : 3
+# ref model mem : 3847923747
+# abc : 4
+# ref model mem : 3847923755
+# abc : 5
+# ref model mem : 3847923763
+# abc : 6
+# ref model mem : 3847923771
+# abc : 7
+# ref model mem : 3847923779
+# xyz : 1
+# xyz : 2
+# xyz : 3
+# xyz : 4
+# xyz : 5
+# xyz : 6
+# xyz : 7
+# AR ADDR IN SB : e55aa80b
+# AFFTER W CHANNEL
+# m mon rid : 675b
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 625: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# s seqs arid : 64759
+# INIDE_SLAVE_SEQ_CTR=9
+# match arid : fcf7 , rid : fcf7
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 625: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: ffffffff , len : 15 , last:0 , valid : 1
+# m mon rid : 675b
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# abc : 1
+# ref model mem : 479724512
+# abc : 2
+# ref model mem : 479724520
+# xyz : 1
+# xyz : 2
+# AR ADDR IN SB : 1c9803e0
+# AFFTER W CHANNEL
+# m mon rid : 675b
+# req wid : 23496 , bid:23496
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 645: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 645: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# s seqs arid : 43156
+# INIDE_SLAVE_SEQ_CTR=10
+# match arid : a894 , rid : a894
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 645: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 15 , last:1 , valid : 1
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1518     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h675b    
+#   ARADDR        integral           32    'hb2642e00
+#   ARLEN         integral           8     'd15      
+#   ARSIZE        integral           3     'd3       
+#   ARBURST       integral           2     2         
+#   RID           integral           16    'h675b    
+#   RDATA         da(integral)       16    -         
+#     [0]         integral           32    'h55555555
+#     [1]         integral           32    'h0       
+#     [2]         integral           32    'h0       
+#     [3]         integral           32    'h0       
+#     [4]         integral           32    'hffffffff
+#     ...         ...                ...   ...       
+#     [11]        integral           32    'hffffffff
+#     [12]        integral           32    'hffffffff
+#     [13]        integral           32    'hffffffff
+#     [14]        integral           32    'h0       
+#     [15]        integral           32    'h0       
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 1431655765 0 0 0 4294967295 4294967295 4294967295 4294967295 4294967295 0 4294967295 4294967295 4294967295 4294967295 0 0
+# m mon rid : 675b
+# UVM_INFO ../env/axi_sb.sv(82) @ 655: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 655: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# rd data in s drv: 0 , len : 1 , last:0 , valid : 1
+# m mon rid : 5755
+# req wid : 53607 , bid:53607
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 665: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# rd data in s drv: 0 , len : 1 , last:1 , valid : 1
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1587     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h5755    
+#   ARADDR        integral           32    'hec5ff2d0
+#   ARLEN         integral           8     'd1       
+#   ARSIZE        integral           3     'd3       
+#   ARBURST       integral           2     'd1       
+#   RID           integral           16    'h5755    
+#   RDATA         da(integral)       2     -         
+#     [0]         integral           32    'h0       
+#     [1]         integral           32    'h0       
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 0 0
+# m mon rid : 5755
+# UVM_INFO ../env/axi_sb.sv(82) @ 675: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 675: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# rd data in s drv: 0 , len : 3 , last:0 , valid : 1
+# abc : 1
+# ref model mem : 1126544730
+# abc : 2
+# ref model mem : 1126544738
+# abc : 3
+# ref model mem : 1126544746
+# abc : 4
+# ref model mem : 1126544754
+# xyz : 1
+# xyz : 2
+# xyz : 3
+# xyz : 4
+# AR ADDR IN SB : 4325b552
+# AFFTER W CHANNEL
+# m mon rid : e656
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 685: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# s seqs arid : 52439
+# INIDE_SLAVE_SEQ_CTR=11
+# match arid : ccd7 , rid : ccd7
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 685: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 3 , last:0 , valid : 1
+# m mon rid : e656
+# rd data in s drv: ffffffff , len : 3 , last:0 , valid : 1
+# m mon rid : e656
+# req wid : 17367 , bid:17367
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 705: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# rd data in s drv: ffffffff , len : 3 , last:1 , valid : 1
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1631     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'he656    
+#   ARADDR        integral           32    'hc6df2760
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd3       
+#   ARBURST       integral           2     2         
+#   RID           integral           16    'he656    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'h0       
+#     [1]         integral           32    'h0       
+#     [2]         integral           32    'hffffffff
+#     [3]         integral           32    'hffffffff
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 0 0 4294967295 4294967295
+# m mon rid : e656
+# UVM_INFO ../env/axi_sb.sv(82) @ 715: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 715: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# rd data in s drv: 0 , len : 6 , last:0 , valid : 1
+# m mon rid : fcf7
+# rd data in s drv: 0 , len : 6 , last:0 , valid : 1
+# m mon rid : fcf7
+# rd data in s drv: 0 , len : 6 , last:0 , valid : 1
+# m mon rid : fcf7
+# rd data in s drv: 0 , len : 6 , last:0 , valid : 1
+# m mon rid : fcf7
+# rd data in s drv: 0 , len : 6 , last:0 , valid : 1
+# m mon rid : fcf7
+# rd data in s drv: 0 , len : 6 , last:0 , valid : 1
+# m mon rid : fcf7
+# rd data in s drv: 0 , len : 6 , last:1 , valid : 1
+# abc : 1
+# ref model mem : 1165472471
+# abc : 2
+# ref model mem : 1165472479
+# abc : 3
+# ref model mem : 1165472487
+# abc : 4
+# ref model mem : 1165472495
+# abc : 5
+# ref model mem : 1165472503
+# abc : 6
+# ref model mem : 1165472511
+# abc : 7
+# ref model mem : 1165472519
+# abc : 8
+# ref model mem : 1165472527
+# abc : 9
+# ref model mem : 1165472535
+# abc : 10
+# ref model mem : 1165472543
+# xyz : 1
+# xyz : 2
+# xyz : 3
+# xyz : 4
+# xyz : 5
+# xyz : 6
+# xyz : 7
+# xyz : 8
+# xyz : 9
+# xyz : 10
+# AR ADDR IN SB : 4577b2cf
+# AFFTER W CHANNEL
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1683     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'hfcf7    
+#   ARADDR        integral           32    'he55aa80b
+#   ARLEN         integral           8     'd6       
+#   ARSIZE        integral           3     'd3       
+#   ARBURST       integral           2     'd1       
+#   RID           integral           16    'hfcf7    
+#   RDATA         da(integral)       7     -         
+#     [0]         integral           32    'h0       
+#     [1]         integral           32    'h0       
+#     [2]         integral           32    'h0       
+#     [3]         integral           32    'h0       
+#     [4]         integral           32    'h0       
+#     [5]         integral           32    'h0       
+#     [6]         integral           32    'h0       
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 0 0 0 0 0 0 0
+# m mon rid : fcf7
+# UVM_INFO ../env/axi_sb.sv(82) @ 785: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 785: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 785: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# s seqs arid : 4905
+# INIDE_SLAVE_SEQ_CTR=12
+# match arid : 1329 , rid : 1329
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 785: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 1 , last:0 , valid : 1
+# m mon rid : a894
+# rd data in s drv: 0 , len : 1 , last:1 , valid : 1
+# abc : 1
+# ref model mem : 3407061075
+# abc : 2
+# ref model mem : 3407061083
+# xyz : 1
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 805 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#34_7fefec46508 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 2
+# AR ADDR IN SB : cb13a04b
+# AFFTER W CHANNEL
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1731     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'ha894    
+#   ARADDR        integral           32    'h1c9803e0
+#   ARLEN         integral           8     'd1       
+#   ARSIZE        integral           3     'd3       
+#   ARBURST       integral           2     'd1       
+#   RID           integral           16    'ha894    
+#   RDATA         da(integral)       2     -         
+#     [0]         integral           32    'h0       
+#     [1]         integral           32    'h0       
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 0 0
+# m mon rid : a894
+# req wid : 23008 , bid:23008
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 805: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# UVM_INFO ../env/axi_sb.sv(82) @ 805: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 805: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 805: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 805 ns  Iteration: 8  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# s seqs arid : 35577
+# INIDE_SLAVE_SEQ_CTR=13
+# match arid : 8af9 , rid : 8af9
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 805: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 3 , last:0 , valid : 1
+# m mon rid : ccd7
+# rd data in s drv: 0 , len : 3 , last:0 , valid : 1
+# m mon rid : ccd7
+# req wid : 32031 , bid:32031
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 825: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# rd data in s drv: 0 , len : 3 , last:0 , valid : 1
+# m mon rid : ccd7
+# rd data in s drv: 0 , len : 3 , last:1 , valid : 1
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1791     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'hccd7    
+#   ARADDR        integral           32    'h4325b552
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd3       
+#   ARBURST       integral           2     'd1       
+#   RID           integral           16    'hccd7    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'h0       
+#     [1]         integral           32    'h0       
+#     [2]         integral           32    'h0       
+#     [3]         integral           32    'h0       
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 0 0 0 0
+# m mon rid : ccd7
+# UVM_INFO ../env/axi_sb.sv(82) @ 845: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 845: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# rd data in s drv: 0 , len : 9 , last:0 , valid : 1
+# m mon rid : 1329
+# rd data in s drv: 0 , len : 9 , last:0 , valid : 1
+# m mon rid : 1329
+# rd data in s drv: 0 , len : 9 , last:0 , valid : 1
+# m mon rid : 1329
+# rd data in s drv: 0 , len : 9 , last:0 , valid : 1
+# m mon rid : 1329
+# rd data in s drv: 0 , len : 9 , last:0 , valid : 1
+# m mon rid : 1329
+# rd data in s drv: 0 , len : 9 , last:0 , valid : 1
+# m mon rid : 1329
+# rd data in s drv: 0 , len : 9 , last:0 , valid : 1
+# m mon rid : 1329
+# rd data in s drv: 0 , len : 9 , last:0 , valid : 1
+# m mon rid : 1329
+# rd data in s drv: 0 , len : 9 , last:0 , valid : 1
+# m mon rid : 1329
+# rd data in s drv: 0 , len : 9 , last:1 , valid : 1
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1847     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h1329    
+#   ARADDR        integral           32    'h4577b2cf
+#   ARLEN         integral           8     'd9       
+#   ARSIZE        integral           3     'd3       
+#   ARBURST       integral           2     'd1       
+#   RID           integral           16    'h1329    
+#   RDATA         da(integral)       10    -         
+#     [0]         integral           32    'h0       
+#     [1]         integral           32    'h0       
+#     [2]         integral           32    'h0       
+#     [3]         integral           32    'h0       
+#     [4]         integral           32    'h0       
+#     [5]         integral           32    'h0       
+#     [6]         integral           32    'h0       
+#     [7]         integral           32    'h0       
+#     [8]         integral           32    'h0       
+#     [9]         integral           32    'h0       
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 0 0 0 0 0 0 0 0 0 0
+# m mon rid : 1329
+# UVM_INFO ../env/axi_sb.sv(82) @ 945: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 945: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# rd data in s drv: 0 , len : 1 , last:0 , valid : 1
+# abc : 1
+# ref model mem : 2284537369
+# abc : 2
+# ref model mem : 2284537377
+# abc : 3
+# ref model mem : 2284537385
+# abc : 4
+# ref model mem : 2284537393
+# abc : 5
+# ref model mem : 2284537401
+# abc : 6
+# ref model mem : 2284537409
+# abc : 7
+# ref model mem : 2284537417
+# abc : 8
+# ref model mem : 2284537425
+# abc : 9
+# ref model mem : 2284537433
+# abc : 10
+# ref model mem : 2284537441
+# abc : 11
+# ref model mem : 2284537449
+# abc : 12
+# ref model mem : 2284537457
+# abc : 13
+# ref model mem : 2284537465
+# abc : 14
+# ref model mem : 2284537473
+# abc : 15
+# ref model mem : 2284537481
+# xyz : 1
+# xyz : 2
+# xyz : 3
+# xyz : 4
+# xyz : 5
+# xyz : 6
+# xyz : 7
+# xyz : 8
+# xyz : 9
+# xyz : 10
+# xyz : 11
+# xyz : 12
+# xyz : 13
+# xyz : 14
+# xyz : 15
+# AR ADDR IN SB : 882b4611
+# AFFTER W CHANNEL
+# m mon rid : 8af9
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 955: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# s seqs arid : 25219
+# INIDE_SLAVE_SEQ_CTR=14
+# match arid : 6283 , rid : 6283
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 955: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 1 , last:1 , valid : 1
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1919     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h8af9    
+#   ARADDR        integral           32    'hcb13a04b
+#   ARLEN         integral           8     'd1       
+#   ARSIZE        integral           3     'd3       
+#   ARBURST       integral           2     2         
+#   RID           integral           16    'h8af9    
+#   RDATA         da(integral)       2     -         
+#     [0]         integral           32    'h0       
+#     [1]         integral           32    'h0       
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 0 0
+# m mon rid : 8af9
+# UVM_INFO ../env/axi_sb.sv(82) @ 965: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 965: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# rd data in s drv: 0 , len : 14 , last:0 , valid : 1
+# m mon rid : 6283
+# req wid : 12673 , bid:12673
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 975: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# rd data in s drv: 0 , len : 14 , last:0 , valid : 1
+# m mon rid : 6283
+# rd data in s drv: 0 , len : 14 , last:0 , valid : 1
+# abc : 1
+# ref model mem : 310184992
+# abc : 2
+# ref model mem : 310185000
+# abc : 3
+# ref model mem : 310185008
+# abc : 4
+# ref model mem : 310185016
+# xyz : 1
+# xyz : 2
+# xyz : 3
+# xyz : 4
+# AR ADDR IN SB : 127d0c20
+# AFFTER W CHANNEL
+# m mon rid : 6283
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 995: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# s seqs arid : 47995
+# INIDE_SLAVE_SEQ_CTR=15
+# match arid : bb7b , rid : bb7b
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 995: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 14 , last:0 , valid : 1
+# m mon rid : 6283
+# rd data in s drv: 0 , len : 14 , last:0 , valid : 1
+# m mon rid : 6283
+# req wid : 40425 , bid:40425
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 1015: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# rd data in s drv: 0 , len : 14 , last:0 , valid : 1
+# m mon rid : 6283
+# rd data in s drv: 0 , len : 14 , last:0 , valid : 1
+# m mon rid : 6283
+# rd data in s drv: 0 , len : 14 , last:0 , valid : 1
+# m mon rid : 6283
+# rd data in s drv: 0 , len : 14 , last:0 , valid : 1
+# m mon rid : 6283
+# rd data in s drv: 0 , len : 14 , last:0 , valid : 1
+# m mon rid : 6283
+# rd data in s drv: 0 , len : 14 , last:0 , valid : 1
+# m mon rid : 6283
+# rd data in s drv: 0 , len : 14 , last:0 , valid : 1
+# m mon rid : 6283
+# rd data in s drv: 0 , len : 14 , last:0 , valid : 1
+# m mon rid : 6283
+# rd data in s drv: 0 , len : 14 , last:0 , valid : 1
+# m mon rid : 6283
+# rd data in s drv: 0 , len : 14 , last:1 , valid : 1
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @2023     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h6283    
+#   ARADDR        integral           32    'h882b4611
+#   ARLEN         integral           8     'd14      
+#   ARSIZE        integral           3     'd3       
+#   ARBURST       integral           2     'd1       
+#   RID           integral           16    'h6283    
+#   RDATA         da(integral)       15    -         
+#     [0]         integral           32    'h0       
+#     [1]         integral           32    'h0       
+#     [2]         integral           32    'h0       
+#     [3]         integral           32    'h0       
+#     [4]         integral           32    'h0       
+#     ...         ...                ...   ...       
+#     [10]        integral           32    'h0       
+#     [11]        integral           32    'h0       
+#     [12]        integral           32    'h0       
+#     [13]        integral           32    'h0       
+#     [14]        integral           32    'h0       
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+# m mon rid : 6283
+# UVM_INFO ../env/axi_sb.sv(82) @ 1115: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 1115: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# rd data in s drv: ffffffff , len : 3 , last:0 , valid : 1
+# m mon rid : bb7b
+# rd data in s drv: 55555555 , len : 3 , last:0 , valid : 1
+# m mon rid : bb7b
+# rd data in s drv: ffffffff , len : 3 , last:0 , valid : 1
+# m mon rid : bb7b
+# rd data in s drv: ffffffff , len : 3 , last:1 , valid : 1
+# abc : 1
+# ref model mem : 1541636736
+# abc : 2
+# ref model mem : 1541636744
+# abc : 3
+# ref model mem : 1541636752
+# abc : 4
+# ref model mem : 1541636760
+# abc : 5
+# ref model mem : 1541636768
+# abc : 6
+# ref model mem : 1541636776
+# abc : 7
+# ref model mem : 1541636784
+# abc : 8
+# ref model mem : 1541636792
+# abc : 9
+# ref model mem : 1541636800
+# abc : 10
+# ref model mem : 1541636808
+# abc : 11
+# ref model mem : 1541636816
+# abc : 12
+# ref model mem : 1541636824
+# abc : 13
+# ref model mem : 1541636832
+# abc : 14
+# ref model mem : 1541636840
+# abc : 15
+# ref model mem : 1541636848
+# abc : 16
+# ref model mem : 1541636856
+# xyz : 1
+# xyz : 2
+# xyz : 3
+# xyz : 4
+# xyz : 5
+# xyz : 6
+# xyz : 7
+# xyz : 8
+# xyz : 9
+# xyz : 10
+# xyz : 11
+# xyz : 12
+# xyz : 13
+# xyz : 14
+# xyz : 15
+# xyz : 16
+# AR ADDR IN SB : 5be38280
+# AFFTER W CHANNEL
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @2143     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'hbb7b    
+#   ARADDR        integral           32    'h127d0c20
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd3       
+#   ARBURST       integral           2     2         
+#   RID           integral           16    'hbb7b    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'hffffffff
+#     [1]         integral           32    'h55555555
+#     [2]         integral           32    'hffffffff
+#     [3]         integral           32    'hffffffff
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 4294967295 1431655765 4294967295 4294967295
+# m mon rid : bb7b
+# UVM_INFO ../env/axi_sb.sv(82) @ 1155: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 1155: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1155: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# s seqs arid : 51276
+# INIDE_SLAVE_SEQ_CTR=16
+# match arid : c84c , rid : c84c
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1155: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 55555555 , len : 15 , last:0 , valid : 1
+# m mon rid : c84c
+# rd data in s drv: ffffffff , len : 15 , last:0 , valid : 1
+# m mon rid : c84c
+# req wid : 34571 , bid:34571
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 1175: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : c84c
+# rd data in s drv: 55555555 , len : 15 , last:0 , valid : 1
+# m mon rid : c84c
+# rd data in s drv: ffffffff , len : 15 , last:0 , valid : 1
+# m mon rid : c84c
+# rd data in s drv: 55555555 , len : 15 , last:0 , valid : 1
+# m mon rid : c84c
+# rd data in s drv: 55555555 , len : 15 , last:0 , valid : 1
+# m mon rid : c84c
+# rd data in s drv: ffffffff , len : 15 , last:0 , valid : 1
+# abc : 1
+# ref model mem : 3446537344
+# abc : 2
+# ref model mem : 3446537352
+# abc : 3
+# ref model mem : 3446537360
+# abc : 4
+# ref model mem : 3446537368
+# abc : 5
+# ref model mem : 3446537376
+# abc : 6
+# ref model mem : 3446537384
+# abc : 7
+# ref model mem : 3446537392
+# abc : 8
+# ref model mem : 3446537400
+# xyz : 1
+# xyz : 2
+# xyz : 3
+# xyz : 4
+# xyz : 5
+# xyz : 6
+# xyz : 7
+# xyz : 8
+# AR ADDR IN SB : cd6dfc80
+# AFFTER W CHANNEL
+# m mon rid : c84c
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1235: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# s seqs arid : 44353
+# INIDE_SLAVE_SEQ_CTR=17
+# match arid : ad41 , rid : ad41
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1235: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : c84c
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : c84c
+# req wid : 3557 , bid:3557
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 1255: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : c84c
+# rd data in s drv: 55555555 , len : 15 , last:0 , valid : 1
+# m mon rid : c84c
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : c84c
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : c84c
+# rd data in s drv: ffffffff , len : 15 , last:0 , valid : 1
+# m mon rid : c84c
+# rd data in s drv: 0 , len : 15 , last:1 , valid : 1
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @2211     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'hc84c    
+#   ARADDR        integral           32    'h5be38280
+#   ARLEN         integral           8     'd15      
+#   ARSIZE        integral           3     'd3       
+#   ARBURST       integral           2     2         
+#   RID           integral           16    'hc84c    
+#   RDATA         da(integral)       16    -         
+#     [0]         integral           32    'h55555555
+#     [1]         integral           32    'hffffffff
+#     [2]         integral           32    'h0       
+#     [3]         integral           32    'h55555555
+#     [4]         integral           32    'hffffffff
+#     ...         ...                ...   ...       
+#     [11]        integral           32    'h55555555
+#     [12]        integral           32    'h0       
+#     [13]        integral           32    'h0       
+#     [14]        integral           32    'hffffffff
+#     [15]        integral           32    'h0       
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 1431655765 4294967295 0 1431655765 4294967295 1431655765 1431655765 4294967295 0 0 0 1431655765 0 0 4294967295 0
+# m mon rid : c84c
+# UVM_INFO ../env/axi_sb.sv(82) @ 1315: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 1315: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# rd data in s drv: 0 , len : 7 , last:0 , valid : 1
+# m mon rid : ad41
+# rd data in s drv: 0 , len : 7 , last:0 , valid : 1
+# m mon rid : ad41
+# rd data in s drv: 0 , len : 7 , last:0 , valid : 1
+# m mon rid : ad41
+# rd data in s drv: 0 , len : 7 , last:0 , valid : 1
+# m mon rid : ad41
+# rd data in s drv: 0 , len : 7 , last:0 , valid : 1
+# m mon rid : ad41
+# rd data in s drv: 0 , len : 7 , last:0 , valid : 1
+# m mon rid : ad41
+# rd data in s drv: 0 , len : 7 , last:0 , valid : 1
+# m mon rid : ad41
+# rd data in s drv: 0 , len : 7 , last:1 , valid : 1
+# abc : 1
+# ref model mem : 940942464
+# abc : 2
+# ref model mem : 940942472
+# abc : 3
+# ref model mem : 940942480
+# abc : 4
+# ref model mem : 940942488
+# abc : 5
+# ref model mem : 940942496
+# abc : 6
+# ref model mem : 940942504
+# abc : 7
+# ref model mem : 940942512
+# abc : 8
+# ref model mem : 940942520
+# abc : 9
+# ref model mem : 940942528
+# abc : 10
+# ref model mem : 940942536
+# abc : 11
+# ref model mem : 940942544
+# abc : 12
+# ref model mem : 940942552
+# abc : 13
+# ref model mem : 940942560
+# abc : 14
+# ref model mem : 940942568
+# abc : 15
+# ref model mem : 940942576
+# abc : 16
+# ref model mem : 940942584
+# xyz : 1
+# xyz : 2
+# xyz : 3
+# xyz : 4
+# xyz : 5
+# xyz : 6
+# xyz : 7
+# xyz : 8
+# xyz : 9
+# xyz : 10
+# xyz : 11
+# xyz : 12
+# xyz : 13
+# xyz : 14
+# xyz : 15
+# xyz : 16
+# AR ADDR IN SB : 3815a480
+# AFFTER W CHANNEL
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @2339     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'had41    
+#   ARADDR        integral           32    'hcd6dfc80
+#   ARLEN         integral           8     'd7       
+#   ARSIZE        integral           3     'd3       
+#   ARBURST       integral           2     'd1       
+#   RID           integral           16    'had41    
+#   RDATA         da(integral)       8     -         
+#     [0]         integral           32    'h0       
+#     [1]         integral           32    'h0       
+#     [2]         integral           32    'h0       
+#     [3]         integral           32    'h0       
+#     [4]         integral           32    'h0       
+#     [5]         integral           32    'h0       
+#     [6]         integral           32    'h0       
+#     [7]         integral           32    'h0       
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 0 0 0 0 0 0 0 0
+# m mon rid : ad41
+# UVM_INFO ../env/axi_sb.sv(82) @ 1395: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 1395: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1395: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# s seqs arid : 34273
+# INIDE_SLAVE_SEQ_CTR=18
+# match arid : 85e1 , rid : 85e1
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1395: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: ffffffff , len : 15 , last:0 , valid : 1
+# m mon rid : 85e1
+# rd data in s drv: ffffffff , len : 15 , last:0 , valid : 1
+# m mon rid : 85e1
+# req wid : 13717 , bid:13717
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 1415: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# abc : 1
+# ref model mem : 2520445154
+# abc : 2
+# ref model mem : 2520445162
+# abc : 3
+# ref model mem : 2520445170
+# xyz : 1
+# xyz : 2
+# xyz : 3
+# AR ADDR IN SB : 963af0da
+# AFFTER W CHANNEL
+# m mon rid : 85e1
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1425: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# s seqs arid : 40878
+# INIDE_SLAVE_SEQ_CTR=19
+# match arid : 9fae , rid : 9fae
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1425: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : 85e1
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : 85e1
+# req wid : 8568 , bid:8568
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 1445: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# rd data in s drv: 55555555 , len : 15 , last:0 , valid : 1
+# abc : 1
+# ref model mem : 1218035158
+# abc : 2
+# ref model mem : 1218035166
+# abc : 3
+# ref model mem : 1218035174
+# xyz : 1
+# xyz : 2
+# xyz : 3
+# AR ADDR IN SB : 4899bdce
+# AFFTER W CHANNEL
+# m mon rid : 85e1
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1455: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# s seqs arid : 65033
+# INIDE_SLAVE_SEQ_CTR=20
+# match arid : fe09 , rid : fe09
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1455: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 55555555 , len : 15 , last:0 , valid : 1
+# m mon rid : 85e1
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : 85e1
+# req wid : 44422 , bid:44422
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 1475: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : 85e1
+# rd data in s drv: ffffffff , len : 15 , last:0 , valid : 1
+# m mon rid : 85e1
+# rd data in s drv: ffffffff , len : 15 , last:0 , valid : 1
+# m mon rid : 85e1
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : 85e1
+# rd data in s drv: ffffffff , len : 15 , last:0 , valid : 1
+# m mon rid : 85e1
+# rd data in s drv: 55555555 , len : 15 , last:0 , valid : 1
+# m mon rid : 85e1
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : 85e1
+# rd data in s drv: 55555555 , len : 15 , last:1 , valid : 1
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @2407     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h85e1    
+#   ARADDR        integral           32    'h3815a480
+#   ARLEN         integral           8     'd15      
+#   ARSIZE        integral           3     'd3       
+#   ARBURST       integral           2     2         
+#   RID           integral           16    'h85e1    
+#   RDATA         da(integral)       16    -         
+#     [0]         integral           32    'hffffffff
+#     [1]         integral           32    'hffffffff
+#     [2]         integral           32    'h0       
+#     [3]         integral           32    'h0       
+#     [4]         integral           32    'h0       
+#     ...         ...                ...   ...       
+#     [11]        integral           32    'h0       
+#     [12]        integral           32    'hffffffff
+#     [13]        integral           32    'h55555555
+#     [14]        integral           32    'h0       
+#     [15]        integral           32    'h55555555
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 4294967295 4294967295 0 0 0 1431655765 1431655765 0 0 4294967295 4294967295 0 4294967295 1431655765 0 1431655765
+# m mon rid : 85e1
+# UVM_INFO ../env/axi_sb.sv(82) @ 1555: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 1555: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# rd data in s drv: 0 , len : 2 , last:0 , valid : 1
+# m mon rid : 9fae
+# rd data in s drv: 0 , len : 2 , last:0 , valid : 1
+# m mon rid : 9fae
+# rd data in s drv: 0 , len : 2 , last:1 , valid : 1
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @2491     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h9fae    
+#   ARADDR        integral           32    'h963af0da
+#   ARLEN         integral           8     'd2       
+#   ARSIZE        integral           3     'd3       
+#   ARBURST       integral           2     'd1       
+#   RID           integral           16    'h9fae    
+#   RDATA         da(integral)       3     -         
+#     [0]         integral           32    'h0       
+#     [1]         integral           32    'h0       
+#     [2]         integral           32    'h0       
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 0 0 0
+# m mon rid : 9fae
+# UVM_INFO ../env/axi_sb.sv(82) @ 1585: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 1585: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# rd data in s drv: 0 , len : 2 , last:0 , valid : 1
+# m mon rid : fe09
+# rd data in s drv: 0 , len : 2 , last:0 , valid : 1
+# m mon rid : fe09
+# rd data in s drv: 0 , len : 2 , last:1 , valid : 1
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @2563     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'hfe09    
+#   ARADDR        integral           32    'h4899bdce
+#   ARLEN         integral           8     'd2       
+#   ARSIZE        integral           3     'd3       
+#   ARBURST       integral           2     'd1       
+#   RID           integral           16    'hfe09    
+#   RDATA         da(integral)       3     -         
+#     [0]         integral           32    'h0       
+#     [1]         integral           32    'h0       
+#     [2]         integral           32    'h0       
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 0 0 0
+# m mon rid : fe09
+# UVM_INFO ../env/axi_sb.sv(82) @ 1615: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 1615: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 4475: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# 
+##############################################################
+#                                                            #
+#   PPPPPPPP    AAA     SSSSSS    SSSSSS                     #
+#   PP     PP  A   A   SS        SS                          #
+#   PPPPPPPP   AAAAA    SSSSS     SSSSS                      #
+#   PP         A   A        SS         SS                    #
+#   PP         A   A   SSSSSS    SSSSSS                      #
+#                                                            #
+##############################################################
+# 
+# UVM_INFO ../env/axi_sb.sv(131) @ 4475: uvm_test_top.env_h.sb_h [SCOREBOARD_SUMMARY] 
+# === FINAL RESULTS ===
+# Total Pass = 20
+# Total Fail = 0
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :  114
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Data in s seqr]     1
+# [ID MATCH]    40
+# [IN V SEQS]    20
+# [M MON RUN PHASE before]     1
+# [M MON read addr PHASE before]     1
+# [M MON read data PHASE before]     1
+# [M MON run PHASE after]     1
+# [M MON write addr PHASE before]     1
+# [M MON write data PHASE before]     1
+# [Questa UVM]     2
+# [RNTST]     1
+# [SCOREBOARD_SUMMARY]     1
+# [TEST_DONE]     1
+# [UVMTOP]     1
+# [after event in sb]    20
+# [before event in sb]    21
+# ** Note: $finish    : /tools/mentor/questa/2023.4/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 4475 ns  Iteration: 53  Instance: /axi_tb_top
+# Saving coverage database on exit...
+# End time: 12:46:51 on May 13,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 10

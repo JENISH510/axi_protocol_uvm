@@ -166,7 +166,7 @@ class axi_coverage;
 
         BURST_LEN_SIZE_CP : cross cp_arburst, cp_arlen{
             ignore_bins invalid_wrap = binsof(cp_arburst.wrap) && 
-                                       (binsof(cp_arlen.medium_burst) || binsof(cp_arlen.long_burst) || binsof(cp_arlen.max_burst));
+                                       (binsof(cp_arlen.medium_burst) || binsof(cp_arlen.long_burst) || binsof(cp_arlen.max_burst) || binsof(cp_arlen.single));
 
             ignore_bins invalid_fixed = binsof(cp_arburst.fixed) &&
                                         (binsof(cp_arlen.medium_burst) || binsof(cp_arlen.long_burst) || binsof(cp_arlen.max_burst));

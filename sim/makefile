@@ -11,7 +11,7 @@ sim:
 	vsim -voptargs=+acc axi_tb_top -c -do "run -all; exit" +UVM_TESTNAME=$(UVM_TESTNAME)
 
 sim1:
-	vsim -assertdebug  -voptargs=+acc axi_tb_top -do "do wave.do; run -all; exit" +UVM_TESTNAME=$(UVM_TESTNAME)
+	vsim -voptargs=+acc axi_tb_top -do "do wave.do; run -all; exit" +UVM_TESTNAME=$(UVM_TESTNAME)
 
 sim2:
 	vsim -coverage -voptargs=+acc axi_tb_top -c -do "coverage save -onexit -directive -cvg -codeall axi_cg.ucdb; run -all; exit" +UVM_TESTNAME=$(UVM_TESTNAME)
@@ -29,6 +29,9 @@ regress:
 	vsim -coverage -voptargs=+acc axi_tb_top -c -do "coverage save -onexit -directive -cvg -codeall axi_b2b_test.ucdb; run -all; exit" +UVM_TESTNAME=axi_b2b_test -l axi_b2b_test.log
 	vsim -coverage -voptargs=+acc axi_tb_top -c -do "coverage save -onexit -directive -cvg -codeall axi_corner_test.ucdb; run -all; exit" +UVM_TESTNAME=axi_corner_test -l axi_corner_test.log
 	vsim -coverage -voptargs=+acc axi_tb_top -c -do "coverage save -onexit -directive -cvg -codeall axi_lower_test.ucdb; run -all; exit" +UVM_TESTNAME=axi_lower_test -l axi_lower_test.log
-	vcover merge func_cov.ucdb axi_wrap_test.ucdb axi_incr_test.ucdb axi_fixed_test.ucdb axi_sanity_test.ucdb axi_random_test.ucdb axi_b2b_test.ucdb axi_corner_test.ucdb axi_lower_test.ucdb
+	vsim -coverage -voptargs=+acc axi_tb_top -c -do "coverage save -onexit -directive -cvg -codeall axi_coverage_test.ucdb; run -all; exit" +UVM_TESTNAME=axi_coverage_test -l axi_coverage_test.log
+	vsim -coverage -voptargs=+acc axi_tb_top -c -do "coverage save -onexit -directive -cvg -codeall axi_wrap_cov_test.ucdb; run -all; exit" +UVM_TESTNAME=axi_wrap_cov_test -l axi_wrap_cov_test.log
+	vsim -coverage -voptargs=+acc axi_tb_top -c -do "coverage save -onexit -directive -cvg -codeall axi_incr_cov_test.ucdb; run -all; exit" +UVM_TESTNAME=axi_incr_cov_test -l axi_incr_cov_test.log
+	vcover merge func_cov.ucdb axi_wrap_test.ucdb axi_incr_test.ucdb axi_fixed_test.ucdb axi_sanity_test.ucdb axi_random_test.ucdb axi_b2b_test.ucdb axi_corner_test.ucdb axi_lower_test.ucdb axi_coverage_test.ucdb axi_wrap_cov_test.ucdb axi_incr_cov_test.ucdb
 	vcover report -html -details -output func_cov func_cov.ucdb
-	rm axi_wrap_test.ucdb axi_incr_test.ucdb axi_fixed_test.ucdb axi_sanity_test.ucdb axi_random_test.ucdb axi_b2b_test.ucdb axi_corner_test.ucdb axi_lower_test.ucdb
+	rm axi_wrap_test.ucdb axi_incr_test.ucdb axi_fixed_test.ucdb axi_sanity_test.ucdb axi_random_test.ucdb axi_b2b_test.ucdb axi_corner_test.ucdb axi_lower_test.ucdb axi_coverage_test.ucdb axi_wrap_cov_test.ucdb axi_incr_cov_test.ucdb

@@ -1,0 +1,2440 @@
+# vsim -coverage -voptargs="+acc" axi_tb_top -c -do "coverage save -onexit -directive -cvg -codeall axi_wrap_cov_test.ucdb; run -all; exit" "+UVM_TESTNAME=axi_wrap_cov_test" -l axi_wrap_cov_test.log 
+# Start time: 12:46:52 on May 13,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# //  Questa Sim-64
+# //  Version 2023.4 linux_x86_64 Oct  9 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.axi_s_inf(fast)
+# Loading work.axi_m_inf(fast)
+# Loading mtiUvm.uvm_pkg(fast)
+# Loading work.axi_s_agent_pkg(fast)
+# Loading work.axi_m_agent_pkg(fast)
+# Loading work.axi_env_pkg(fast)
+# Loading work.axi_test_pkg(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.axi_tb_top(fast)
+# Loading work.axi_m_inf(fast__2)
+# Loading work.axi_s_inf(fast__2)
+# ** Warning: (vsim-8441) Clocking block output s_vif.s_drv_cb.RDATA is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /axi_s_agent_pkg::axi_s_drv #(32, 32) File: ../env/s_agent/axi_s_drv.sv Line: 113
+# ** Warning: (vsim-8441) Clocking block output s_vif.s_drv_cb.RVALID is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /axi_s_agent_pkg::axi_s_drv #(32, 32) File: ../env/s_agent/axi_s_drv.sv Line: 115
+# ** Warning: (vsim-8441) Clocking block output s_vif.s_drv_cb.RLAST is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /axi_s_agent_pkg::axi_s_drv #(32, 32) File: ../env/s_agent/axi_s_drv.sv Line: 116
+# ** Warning: (vsim-8441) Clocking block output s_vif.s_drv_cb.RDATA is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /axi_s_agent_pkg::axi_s_drv #(32, 32) File: ../env/s_agent/axi_s_drv.sv Line: 113
+# ** Warning: (vsim-8441) Clocking block output s_vif.s_drv_cb.RLAST is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /axi_s_agent_pkg::axi_s_drv #(32, 32) File: ../env/s_agent/axi_s_drv.sv Line: 116
+# ** Warning: (vsim-8441) Clocking block output s_vif.s_drv_cb.RVALID is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /axi_s_agent_pkg::axi_s_drv #(32, 32) File: ../env/s_agent/axi_s_drv.sv Line: 115
+# ** Warning: (vsim-8441) Clocking block output s_vif.s_drv_cb.RVALID is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /axi_s_agent_pkg::axi_s_drv #(32, 32) File: ../env/s_agent/axi_s_drv.sv Line: 115
+# ** Warning: (vsim-8441) Clocking block output s_vif.s_drv_cb.RLAST is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /axi_s_agent_pkg::axi_s_drv #(32, 32) File: ../env/s_agent/axi_s_drv.sv Line: 116
+# Loading /tools/mentor/questa/2023.4/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so
+# coverage save -onexit -directive -cvg -codeall axi_wrap_cov_test.ucdb
+#  run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test axi_wrap_cov_test...
+# UVM_INFO ../env/s_agent/axi_s_seqr.sv(25) @ 0: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_seqr_h [Data in s seqr] Data got in slave seqr
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# --------------------------------------------------------------------------------
+# Name                             Type                                Size  Value
+# --------------------------------------------------------------------------------
+# uvm_test_top                     axi_wrap_cov_test                   -     @479 
+#   env_h                          axi_env                             -     @491 
+#     m_uvc_h                      uvm_agent                           -     @513 
+#       m_agent_h[0]               uvm_agent                           -     @693 
+#         m_drv_h                  uvm_driver #(REQ,RSP)               -     @814 
+#           rsp_port               uvm_analysis_port                   -     @829 
+#           seq_item_port          uvm_seq_item_pull_port              -     @821 
+#         m_mon_h                  axi_m_mon#(ADDR_WIDTH, DATA_WIDTH)  -     @837 
+#           s_port                 uvm_analysis_port                   -     @844 
+#         m_seqr_h                 uvm_sequencer                       -     @705 
+#           rsp_export             uvm_analysis_export                 -     @712 
+#           seq_item_export        uvm_seq_item_pull_imp               -     @806 
+#           arbitration_queue      array                               0     -    
+#           lock_queue             array                               0     -    
+#           num_last_reqs          integral                            32    'd1  
+#           num_last_rsps          integral                            32    'd1  
+#     ref_model_h                  axi_ref_model                       -     @558 
+#       mon_imp                    uvm_analysis_imp                    -     @565 
+#       sb_imp                     uvm_analysis_port                   -     @573 
+#     s_uvc_h                      uvm_agent                           -     @520 
+#       s_agent_h[0]               uvm_agent                           -     @860 
+#         s_drv_h                  uvm_driver #(REQ,RSP)               -     @1036
+#           rsp_port               uvm_analysis_port                   -     @1051
+#           seq_item_port          uvm_seq_item_pull_port              -     @1043
+#         s_mon_h                  axi_s_mon#(ADDR_WIDTH, DATA_WIDTH)  -     @1059
+#           s_port                 uvm_analysis_port                   -     @1066
+#         s_seqr_h                 uvm_sequencer                       -     @872 
+#           item_collected_export  uvm_analysis_export                 -     @981 
+#           item_req_fifo          uvm_tlm_analysis_fifo #(T)          -     @989 
+#             analysis_export      uvm_analysis_imp                    -     @1028
+#             get_ap               uvm_analysis_port                   -     @1020
+#             get_peek_export      uvm_get_peek_imp                    -     @1004
+#             put_ap               uvm_analysis_port                   -     @1012
+#             put_export           uvm_put_imp                         -     @996 
+#           rsp_export             uvm_analysis_export                 -     @879 
+#           seq_item_export        uvm_seq_item_pull_imp               -     @973 
+#           arbitration_queue      array                               0     -    
+#           lock_queue             array                               0     -    
+#           num_last_reqs          integral                            32    'd1  
+#           num_last_rsps          integral                            32    'd1  
+#     sb_h                         axi_sb                              -     @527 
+#       anl_imp_m                  uvm_analysis_imp_m                  -     @534 
+#       anl_imp_ref                uvm_analysis_imp_ref                -     @542 
+#     vseqr_h                      axi_virtual_seqr                    -     @581 
+#       rsp_export                 uvm_analysis_export                 -     @588 
+#       seq_item_export            uvm_seq_item_pull_imp               -     @682 
+#       arbitration_queue          array                               0     -    
+#       lock_queue                 array                               0     -    
+#       num_last_reqs              integral                            32    'd1  
+#       num_last_rsps              integral                            32    'd1  
+# --------------------------------------------------------------------------------
+# 
+# UVM_INFO ../env/axi_sb.sv(80) @ 0: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO ../env/m_agent/axi_m_mon.sv(28) @ 0: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_mon_h [M MON RUN PHASE before] Inside master mon run phase
+# UVM_INFO ../env/m_agent/axi_m_mon.sv(36) @ 0: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_mon_h [M MON run PHASE after] Inside master mon
+# UVM_INFO ../env/m_agent/axi_m_mon.sv(41) @ 0: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_mon_h [M MON write addr PHASE before] Inside master mon
+# UVM_INFO ../env/m_agent/axi_m_mon.sv(60) @ 0: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_mon_h [M MON write data PHASE before] Inside master mon
+# UVM_INFO ../env/m_agent/axi_m_mon.sv(99) @ 0: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_mon_h [M MON read addr PHASE before] Inside master mon
+# UVM_INFO ../env/m_agent/axi_m_mon.sv(118) @ 0: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_mon_h [M MON read data PHASE before] Inside master mon
+# Before AW CHANNEL
+# Before W CHANNEL
+# Before AR CHANNEL
+# Before R CHANNEL
+# AWLEN IN M DRV:3
+# cnt : 1
+# AWLEN IN M DRV:3
+# cnt : 2
+# AWLEN IN M DRV:3
+# cnt : 3
+# AWLEN IN M DRV:1
+# cnt : 4
+# AWLEN IN M DRV:1
+# cnt : 5
+# AWLEN IN M DRV:1
+# cnt : 6
+# AWLEN IN M DRV:1
+# cnt : 7
+# AWLEN IN M DRV:3
+# cnt : 8
+# AWLEN IN M DRV:7
+# cnt : 9
+# AWLEN IN M DRV:1
+# cnt : 10
+# AWLEN IN M DRV:15
+# cnt : 11
+# AWLEN IN M DRV:1
+# cnt : 12
+# AWLEN IN M DRV:1
+# cnt : 13
+# AWLEN IN M DRV:3
+# cnt : 14
+# AWLEN IN M DRV:15
+# cnt : 15
+# AWLEN IN M DRV:1
+# cnt : 16
+# AWLEN IN M DRV:1
+# cnt : 17
+# AWLEN IN M DRV:3
+# cnt : 18
+# AWLEN IN M DRV:7
+# cnt : 19
+# AWLEN IN M DRV:1
+# cnt : 20
+# AWLEN IN M DRV:15
+# cnt : 21
+# AWLEN IN M DRV:1
+# cnt : 22
+# AWLEN IN M DRV:3
+# cnt : 23
+# AWLEN IN M DRV:1
+# cnt : 24
+# AWLEN IN M DRV:7
+# cnt : 25
+# AWLEN IN M DRV:1
+# cnt : 26
+# AWLEN IN M DRV:15
+# cnt : 27
+# AWLEN IN M DRV:1
+# cnt : 28
+# AWLEN IN M DRV:1
+# cnt : 29
+# AWLEN IN M DRV:1
+# cnt : 30
+# AWLEN IN M DRV:15
+# cnt : 31
+# AWLEN IN M DRV:3
+# cnt : 32
+# AWLEN IN M DRV:1
+# cnt : 33
+# AWLEN IN M DRV:15
+# cnt : 34
+# AWLEN IN M DRV:3
+# cnt : 35
+# AWLEN IN M DRV:15
+# cnt : 36
+# AWLEN IN M DRV:3
+# cnt : 37
+# AWLEN IN M DRV:3
+# cnt : 38
+# AWLEN IN M DRV:1
+# cnt : 39
+# AWLEN IN M DRV:3
+# cnt : 40
+# INIDE_SLAVE_MON_CTR=1
+# arid in s mon : 60203
+# m mon ar id : eb2b
+# INIDE_SLAVE_MON_CTR=2
+# arid in s mon : 59707
+# m mon ar id : e93b
+# abc : 1
+# ref model mem : 65535
+# abc : 2
+# ref model mem : 65543
+# abc : 3
+# ref model mem : 65551
+# abc : 4
+# ref model mem : 65559
+# xyz : 1
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 45 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#34_7fefec46508 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 2
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 45 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#34_7fefec46508 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 3
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 45 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#34_7fefec46508 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 4
+# AR ADDR IN SB : ffff
+# INIDE_SLAVE_MON_CTR=3
+# arid in s mon : 59859
+# xyz : 1
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 45 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 2
+# AR ADDR IN SB : ffff
+# AFFTER W CHANNEL
+# m mon ar id : e9d3
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 45: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 45 ns  Iteration: 8  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 45 ns  Iteration: 8  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 45 ns  Iteration: 8  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# s seqs arid : 60203
+# INIDE_SLAVE_SEQ_CTR=1
+# match arid : eb2b , rid : eb2b
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 45: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 45 ns  Iteration: 12  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# s seqs arid : 59859
+# INIDE_SLAVE_SEQ_CTR=2
+# match arid : e9d3 , rid : e9d3
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 45: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 3 , last:0 , valid : 1
+# INIDE_SLAVE_MON_CTR=4
+# arid in s mon : 10426
+# m mon ar id : 28ba
+# m mon rid : eb2b
+# rd data in s drv: 0 , len : 3 , last:0 , valid : 1
+# INIDE_SLAVE_MON_CTR=5
+# arid in s mon : 61524
+# m mon rid : eb2b
+# m mon ar id : f054
+# req wid : 48469 , bid:48469
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 65: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# rd data in s drv: 0 , len : 3 , last:0 , valid : 1
+# INIDE_SLAVE_MON_CTR=6
+# arid in s mon : 26459
+# xyz : 1
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 75 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 2
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 75 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 3
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 75 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 4
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 75 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 5
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 75 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 6
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 75 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 7
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 75 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 8
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 75 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 9
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 75 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 10
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 75 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 11
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 75 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 12
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 75 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 13
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 75 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 14
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 75 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 15
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 75 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 16
+# AR ADDR IN SB : ffff
+# m mon ar id : 675b
+# m mon rid : eb2b
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 75 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 75 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 75 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 75 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 75 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 75 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 75 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 75 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 75 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 75 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 75 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 75 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 75 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 75 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 75 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# s seqs arid : 26459
+# INIDE_SLAVE_SEQ_CTR=3
+# match arid : 675b , rid : 675b
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 75: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 3 , last:1 , valid : 1
+# abc : 1
+# ref model mem : 4294967295
+# abc : 2
+# ref model mem : 7
+# abc : 3
+# ref model mem : 15
+# abc : 4
+# ref model mem : 23
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 85 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#34_7fefec46508 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 1
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 85 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#34_7fefec46508 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 2
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 85 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#34_7fefec46508 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 3
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 85 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#34_7fefec46508 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 4
+# AR ADDR IN SB : ffffffff
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 85 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#34_7fefec46508 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 5
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 85 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#34_7fefec46508 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 6
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 85 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#34_7fefec46508 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 7
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 85 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#34_7fefec46508 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 8
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 85 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#34_7fefec46508 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 9
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 85 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#34_7fefec46508 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 10
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 85 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#34_7fefec46508 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 11
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 85 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#34_7fefec46508 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 12
+# AR ADDR IN SB : ffffffff
+# INIDE_SLAVE_MON_CTR=7
+# arid in s mon : 22357
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 85 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 1
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 85 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 2
+# AR ADDR IN SB : ffffffff
+# AFFTER W CHANNEL
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# -----------------------------------------------
+# Name            Type               Size  Value 
+# -----------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1358 
+#   AWID          integral           16    'h0   
+#   AWADDR        integral           32    'h0   
+#   AWLEN         integral           8     'd0   
+#   AWSIZE        integral           3     'd0   
+#   AWBURST       integral           2     'd0   
+#   WID           integral           16    'h0   
+#   WDATA         da(integral)       0     -     
+#   WSTRB         da(integral)       0     -     
+#   WLAST         integral           1     'd0   
+#   BID           integral           16    'h0   
+#   BRESP         integral           2     'd0   
+#   ARID          integral           16    'heb2b
+#   ARADDR        integral           32    'hffff
+#   ARLEN         integral           8     'd3   
+#   ARSIZE        integral           3     'd3   
+#   ARBURST       integral           2     2     
+#   RID           integral           16    'heb2b
+#   RDATA         da(integral)       4     -     
+#     [0]         integral           32    'h0   
+#     [1]         integral           32    'h0   
+#     [2]         integral           32    'h0   
+#     [3]         integral           32    'h0   
+#   RRESP         integral           2     'd0   
+#   RLAST         integral           1     'd0   
+#   burst_kind_e  burst_kind         2     FIXED 
+#   kind_e        trans_kind         2     READ  
+# -----------------------------------------------
+# RDATa IN SB : 0 0 0 0
+# m mon rid : eb2b
+# m mon ar id : 5755
+# UVM_INFO ../env/axi_sb.sv(82) @ 85: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 85: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 85: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 85 ns  Iteration: 8  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 85 ns  Iteration: 8  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 85 ns  Iteration: 8  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 85 ns  Iteration: 8  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# s seqs arid : 59707
+# INIDE_SLAVE_SEQ_CTR=4
+# match arid : e93b , rid : e93b
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 85: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 85 ns  Iteration: 12  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 85 ns  Iteration: 12  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 85 ns  Iteration: 12  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 85 ns  Iteration: 12  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 85 ns  Iteration: 12  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 85 ns  Iteration: 12  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 85 ns  Iteration: 12  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 85 ns  Iteration: 12  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# s seqs arid : 61524
+# INIDE_SLAVE_SEQ_CTR=5
+# match arid : f054 , rid : f054
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 85: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 85 ns  Iteration: 16  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 85 ns  Iteration: 16  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# s seqs arid : 22357
+# INIDE_SLAVE_SEQ_CTR=6
+# match arid : 5755 , rid : 5755
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 85: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 1 , last:0 , valid : 1
+# INIDE_SLAVE_MON_CTR=8
+# arid in s mon : 58966
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 95 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 1
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 95 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 2
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 95 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 3
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 95 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 4
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 95 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 5
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 95 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 6
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 95 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 7
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 95 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 8
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 95 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 9
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 95 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 10
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 95 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 11
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 95 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 12
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 95 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 13
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 95 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 14
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 95 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 15
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 95 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 16
+# AR ADDR IN SB : ffffffff
+# m mon ar id : e656
+# m mon rid : e9d3
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 95 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 95 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 95 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 95 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 95 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 95 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 95 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 95 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 95 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 95 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 95 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 95 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 95 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 95 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 95 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 95 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# s seqs arid : 58966
+# INIDE_SLAVE_SEQ_CTR=7
+# match arid : e656 , rid : e656
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 95: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 1 , last:1 , valid : 1
+# abc : 1
+# ref model mem : 65535
+# abc : 2
+# ref model mem : 65543
+# INIDE_SLAVE_MON_CTR=9
+# arid in s mon : 64759
+# AFFTER W CHANNEL
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# -----------------------------------------------
+# Name            Type               Size  Value 
+# -----------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1414 
+#   AWID          integral           16    'h0   
+#   AWADDR        integral           32    'h0   
+#   AWLEN         integral           8     'd0   
+#   AWSIZE        integral           3     'd0   
+#   AWBURST       integral           2     'd0   
+#   WID           integral           16    'h0   
+#   WDATA         da(integral)       0     -     
+#   WSTRB         da(integral)       0     -     
+#   WLAST         integral           1     'd0   
+#   BID           integral           16    'h0   
+#   BRESP         integral           2     'd0   
+#   ARID          integral           16    'he9d3
+#   ARADDR        integral           32    'hffff
+#   ARLEN         integral           8     'd1   
+#   ARSIZE        integral           3     'd3   
+#   ARBURST       integral           2     2     
+#   RID           integral           16    'he9d3
+#   RDATA         da(integral)       2     -     
+#     [0]         integral           32    'h0   
+#     [1]         integral           32    'h0   
+#   RRESP         integral           2     'd0   
+#   RLAST         integral           1     'd0   
+#   burst_kind_e  burst_kind         2     FIXED 
+#   kind_e        trans_kind         2     READ  
+# -----------------------------------------------
+# RDATa IN SB : 0 0
+# m mon rid : e9d3
+# m mon ar id : fcf7
+# req wid : 48924 , bid:48924
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 105: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# UVM_INFO ../env/axi_sb.sv(82) @ 105: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 105: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 105: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# INIDE_SLAVE_MON_CTR=10
+# arid in s mon : 43156
+# m mon ar id : a894
+# m mon rid : 675b
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# abc : 1
+# ref model mem : 0
+# abc : 2
+# ref model mem : 8
+# xyz : 1
+# xyz : 2
+# AR ADDR IN SB : 0
+# xyz : 3
+# xyz : 4
+# AR ADDR IN SB : 0
+# xyz : 5
+# xyz : 6
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 125 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#34_7fefec46508 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 7
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 125 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#34_7fefec46508 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 8
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 125 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#34_7fefec46508 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 9
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 125 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#34_7fefec46508 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 10
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 125 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#34_7fefec46508 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 11
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 125 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#34_7fefec46508 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 12
+# AR ADDR IN SB : 0
+# INIDE_SLAVE_MON_CTR=11
+# arid in s mon : 52439
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 125 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 1
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 125 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 2
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 125 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 3
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 125 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 4
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 125 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 5
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 125 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 6
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 125 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 7
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 125 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 8
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 125 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 9
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 125 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 10
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 125 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 11
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 125 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 12
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 125 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 13
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 125 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 14
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 125 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 15
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 125 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 16
+# AR ADDR IN SB : ffffffff
+# AFFTER W CHANNEL
+# m mon rid : 675b
+# m mon ar id : ccd7
+# req wid : 11091 , bid:11091
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 125: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 125: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# s seqs arid : 10426
+# INIDE_SLAVE_SEQ_CTR=8
+# match arid : 28ba , rid : 28ba
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 125: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 125 ns  Iteration: 12  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 125 ns  Iteration: 12  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 125 ns  Iteration: 12  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 125 ns  Iteration: 12  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 125 ns  Iteration: 12  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 125 ns  Iteration: 12  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# s seqs arid : 43156
+# INIDE_SLAVE_SEQ_CTR=9
+# match arid : a894 , rid : a894
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 125: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# s seqs arid : 64759
+# INIDE_SLAVE_SEQ_CTR=10
+# match arid : fcf7 , rid : fcf7
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 125: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# INIDE_SLAVE_MON_CTR=12
+# arid in s mon : 4905
+# xyz : 1
+# xyz : 2
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 135 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 3
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 135 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 4
+# AR ADDR IN SB : 0
+# m mon ar id : 1329
+# m mon rid : 675b
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 135 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 135 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 135 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 135 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 135 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 135 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 135 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 135 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 135 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 135 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 135 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 135 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 135 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 135 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 135 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 135 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# s seqs arid : 52439
+# INIDE_SLAVE_SEQ_CTR=11
+# match arid : ccd7 , rid : ccd7
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 135: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# INIDE_SLAVE_MON_CTR=13
+# arid in s mon : 35577
+# xyz : 1
+# xyz : 2
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 145 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 3
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 145 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 4
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 145 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 5
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 145 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 6
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 145 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 7
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 145 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 8
+# AR ADDR IN SB : 0
+# m mon rid : 675b
+# m mon ar id : 8af9
+# req wid : 42546 , bid:42546
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 145 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 145 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# s seqs arid : 4905
+# INIDE_SLAVE_SEQ_CTR=12
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 145: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# match arid : 1329 , rid : 1329
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 145: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# INIDE_SLAVE_MON_CTR=14
+# arid in s mon : 25219
+# xyz : 1
+# xyz : 2
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 155 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 3
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 155 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 4
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 155 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 5
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 155 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 6
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 155 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 7
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 155 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 8
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 155 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 9
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 155 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 10
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 155 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 11
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 155 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 12
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 155 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 13
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 155 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 14
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 155 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 15
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 155 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 16
+# AR ADDR IN SB : 0
+# m mon ar id : 6283
+# m mon rid : 675b
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 155 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 155 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 155 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 155 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 155 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 155 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# s seqs arid : 35577
+# INIDE_SLAVE_SEQ_CTR=13
+# match arid : 8af9 , rid : 8af9
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 155: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# INIDE_SLAVE_MON_CTR=15
+# arid in s mon : 47995
+# xyz : 1
+# xyz : 2
+# AR ADDR IN SB : 0
+# m mon rid : 675b
+# m mon ar id : bb7b
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 165 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 165 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 165 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 165 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 165 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 165 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 165 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 165 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 165 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 165 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 165 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 165 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 165 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 165 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# s seqs arid : 25219
+# INIDE_SLAVE_SEQ_CTR=14
+# match arid : 6283 , rid : 6283
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 165: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# INIDE_SLAVE_MON_CTR=16
+# arid in s mon : 51276
+# xyz : 1
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 175 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 2
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 175 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 3
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 175 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 4
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 175 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 5
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 175 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 6
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 175 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 7
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 175 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 8
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 175 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 9
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 175 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 10
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 175 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 11
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 175 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 12
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 175 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 13
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 175 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 14
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 175 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 15
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 175 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 16
+# AR ADDR IN SB : ffff
+# m mon ar id : c84c
+# m mon rid : 675b
+# s seqs arid : 47995
+# INIDE_SLAVE_SEQ_CTR=15
+# match arid : bb7b , rid : bb7b
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 175: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# INIDE_SLAVE_MON_CTR=17
+# arid in s mon : 44353
+# xyz : 1
+# xyz : 2
+# AR ADDR IN SB : 0
+# m mon rid : 675b
+# m mon ar id : ad41
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 185 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 185 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 185 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 185 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 185 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 185 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 185 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 185 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 185 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 185 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 185 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 185 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 185 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 185 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 185 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# s seqs arid : 51276
+# INIDE_SLAVE_SEQ_CTR=16
+# match arid : c84c , rid : c84c
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 185: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# INIDE_SLAVE_MON_CTR=18
+# arid in s mon : 34273
+# xyz : 1
+# xyz : 2
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 195 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 3
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 195 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 4
+# AR ADDR IN SB : 0
+# m mon ar id : 85e1
+# m mon rid : 675b
+# s seqs arid : 44353
+# INIDE_SLAVE_SEQ_CTR=17
+# match arid : ad41 , rid : ad41
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 195: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# abc : 1
+# ref model mem : 4294967295
+# abc : 2
+# ref model mem : 7
+# abc : 3
+# ref model mem : 15
+# abc : 4
+# ref model mem : 23
+# abc : 5
+# ref model mem : 31
+# abc : 6
+# ref model mem : 39
+# abc : 7
+# ref model mem : 47
+# abc : 8
+# ref model mem : 55
+# INIDE_SLAVE_MON_CTR=19
+# arid in s mon : 40878
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 205 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 1
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 205 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 2
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 205 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 3
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 205 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 4
+# AR ADDR IN SB : ffffffff
+# AFFTER W CHANNEL
+# m mon rid : 675b
+# m mon ar id : 9fae
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 205: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 205 ns  Iteration: 8  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 205 ns  Iteration: 8  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# s seqs arid : 34273
+# INIDE_SLAVE_SEQ_CTR=18
+# match arid : 85e1 , rid : 85e1
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 205: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 205 ns  Iteration: 12  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 205 ns  Iteration: 12  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 205 ns  Iteration: 12  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 205 ns  Iteration: 12  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# s seqs arid : 40878
+# INIDE_SLAVE_SEQ_CTR=19
+# match arid : 9fae , rid : 9fae
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 205: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# INIDE_SLAVE_MON_CTR=20
+# arid in s mon : 65033
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 215 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 1
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 215 ns  Iteration: 2  Process: /axi_s_agent_pkg::axi_s_mon #(32, 32)::monitor/#FORK#35_7fefec46530 File: ../env/axi_ref_model.sv Line: 90
+# xyz : 2
+# AR ADDR IN SB : ffffffff
+# m mon ar id : fe09
+# m mon rid : 675b
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 215 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# ** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+#    Time: 215 ns  Iteration: 3  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_7fefec26ef1 File: ../env/s_agent/axi_base_s_seqs.sv Line: 118
+# s seqs arid : 65033
+# INIDE_SLAVE_SEQ_CTR=20
+# match arid : fe09 , rid : fe09
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 215: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : 675b
+# req wid : 32817 , bid:32817
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 225: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : 675b
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : 675b
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : 675b
+# rd data in s drv: 0 , len : 15 , last:1 , valid : 1
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# -----------------------------------------------
+# Name            Type               Size  Value 
+# -----------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1507 
+#   AWID          integral           16    'h0   
+#   AWADDR        integral           32    'h0   
+#   AWLEN         integral           8     'd0   
+#   AWSIZE        integral           3     'd0   
+#   AWBURST       integral           2     'd0   
+#   WID           integral           16    'h0   
+#   WDATA         da(integral)       0     -     
+#   WSTRB         da(integral)       0     -     
+#   WLAST         integral           1     'd0   
+#   BID           integral           16    'h0   
+#   BRESP         integral           2     'd0   
+#   ARID          integral           16    'h675b
+#   ARADDR        integral           32    'hffff
+#   ARLEN         integral           8     'd15  
+#   ARSIZE        integral           3     'd3   
+#   ARBURST       integral           2     2     
+#   RID           integral           16    'h675b
+#   RDATA         da(integral)       16    -     
+#     [0]         integral           32    'h0   
+#     [1]         integral           32    'h0   
+#     [2]         integral           32    'h0   
+#     [3]         integral           32    'h0   
+#     [4]         integral           32    'h0   
+#     ...         ...                ...   ...   
+#     [11]        integral           32    'h0   
+#     [12]        integral           32    'h0   
+#     [13]        integral           32    'h0   
+#     [14]        integral           32    'h0   
+#     [15]        integral           32    'h0   
+#   RRESP         integral           2     'd0   
+#   RLAST         integral           1     'd0   
+#   burst_kind_e  burst_kind         2     FIXED 
+#   kind_e        trans_kind         2     READ  
+# -----------------------------------------------
+# RDATa IN SB : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+# m mon rid : 675b
+# UVM_INFO ../env/axi_sb.sv(82) @ 265: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 265: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# rd data in s drv: 0 , len : 3 , last:0 , valid : 1
+# m mon rid : e93b
+# rd data in s drv: 0 , len : 3 , last:0 , valid : 1
+# m mon rid : e93b
+# rd data in s drv: 0 , len : 3 , last:0 , valid : 1
+# m mon rid : e93b
+# rd data in s drv: 0 , len : 3 , last:1 , valid : 1
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1378     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'he93b    
+#   ARADDR        integral           32    'hffffffff
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd3       
+#   ARBURST       integral           2     2         
+#   RID           integral           16    'he93b    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'h0       
+#     [1]         integral           32    'h0       
+#     [2]         integral           32    'h0       
+#     [3]         integral           32    'h0       
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 0 0 0 0
+# m mon rid : e93b
+# UVM_INFO ../env/axi_sb.sv(82) @ 305: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 305: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# rd data in s drv: 0 , len : 7 , last:0 , valid : 1
+# m mon rid : f054
+# rd data in s drv: 0 , len : 7 , last:0 , valid : 1
+# m mon rid : f054
+# rd data in s drv: 0 , len : 7 , last:0 , valid : 1
+# m mon rid : f054
+# rd data in s drv: 0 , len : 7 , last:0 , valid : 1
+# m mon rid : f054
+# rd data in s drv: 0 , len : 7 , last:0 , valid : 1
+# m mon rid : f054
+# rd data in s drv: 0 , len : 7 , last:0 , valid : 1
+# abc : 1
+# ref model mem : 65535
+# abc : 2
+# ref model mem : 65543
+# abc : 3
+# ref model mem : 65551
+# abc : 4
+# ref model mem : 65559
+# abc : 5
+# ref model mem : 65567
+# abc : 6
+# ref model mem : 65575
+# abc : 7
+# ref model mem : 65583
+# abc : 8
+# ref model mem : 65591
+# abc : 9
+# ref model mem : 65599
+# abc : 10
+# ref model mem : 65607
+# abc : 11
+# ref model mem : 65615
+# abc : 12
+# ref model mem : 65623
+# abc : 13
+# ref model mem : 65631
+# abc : 14
+# ref model mem : 65639
+# abc : 15
+# ref model mem : 65647
+# abc : 16
+# ref model mem : 65655
+# AFFTER W CHANNEL
+# m mon rid : f054
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 365: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 7 , last:0 , valid : 1
+# m mon rid : f054
+# rd data in s drv: 0 , len : 7 , last:1 , valid : 1
+# abc : 1
+# ref model mem : 4294967295
+# abc : 2
+# ref model mem : 7
+# AFFTER W CHANNEL
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1479     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'hf054    
+#   ARADDR        integral           32    'hffffffff
+#   ARLEN         integral           8     'd7       
+#   ARSIZE        integral           3     'd3       
+#   ARBURST       integral           2     2         
+#   RID           integral           16    'hf054    
+#   RDATA         da(integral)       8     -         
+#     [0]         integral           32    'h0       
+#     [1]         integral           32    'h0       
+#     [2]         integral           32    'h0       
+#     [3]         integral           32    'h0       
+#     [4]         integral           32    'h0       
+#     [5]         integral           32    'h0       
+#     [6]         integral           32    'h0       
+#     [7]         integral           32    'h0       
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 0 0 0 0 0 0 0 0
+# m mon rid : f054
+# req wid : 64272 , bid:64272
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 385: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# UVM_INFO ../env/axi_sb.sv(82) @ 385: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 385: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 385: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 1 , last:0 , valid : 1
+# m mon rid : 5755
+# rd data in s drv: 0 , len : 1 , last:1 , valid : 1
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1551     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h5755    
+#   ARADDR        integral           32    'hffffffff
+#   ARLEN         integral           8     'd1       
+#   ARSIZE        integral           3     'd3       
+#   ARBURST       integral           2     2         
+#   RID           integral           16    'h5755    
+#   RDATA         da(integral)       2     -         
+#     [0]         integral           32    'h0       
+#     [1]         integral           32    'h0       
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 0 0
+# m mon rid : 5755
+# req wid : 48097 , bid:48097
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 405: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# UVM_INFO ../env/axi_sb.sv(82) @ 405: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 405: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : e656
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : e656
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : e656
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : e656
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : e656
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : e656
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : e656
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : e656
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : e656
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : e656
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : e656
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : e656
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : e656
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# abc : 1
+# ref model mem : 4294967295
+# abc : 2
+# ref model mem : 7
+# abc : 3
+# ref model mem : 15
+# abc : 4
+# ref model mem : 23
+# abc : 5
+# ref model mem : 31
+# abc : 6
+# ref model mem : 39
+# abc : 7
+# ref model mem : 47
+# abc : 8
+# ref model mem : 55
+# abc : 9
+# ref model mem : 63
+# abc : 10
+# ref model mem : 71
+# abc : 11
+# ref model mem : 79
+# abc : 12
+# ref model mem : 87
+# abc : 13
+# ref model mem : 95
+# abc : 14
+# ref model mem : 103
+# abc : 15
+# ref model mem : 111
+# abc : 16
+# ref model mem : 119
+# AFFTER W CHANNEL
+# m mon rid : e656
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 545: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : e656
+# rd data in s drv: 0 , len : 15 , last:1 , valid : 1
+# abc : 1
+# ref model mem : 0
+# abc : 2
+# ref model mem : 8
+# AFFTER W CHANNEL
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1583     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'he656    
+#   ARADDR        integral           32    'hffffffff
+#   ARLEN         integral           8     'd15      
+#   ARSIZE        integral           3     'd3       
+#   ARBURST       integral           2     2         
+#   RID           integral           16    'he656    
+#   RDATA         da(integral)       16    -         
+#     [0]         integral           32    'h0       
+#     [1]         integral           32    'h0       
+#     [2]         integral           32    'h0       
+#     [3]         integral           32    'h0       
+#     [4]         integral           32    'h0       
+#     ...         ...                ...   ...       
+#     [11]        integral           32    'h0       
+#     [12]        integral           32    'h0       
+#     [13]        integral           32    'h0       
+#     [14]        integral           32    'h0       
+#     [15]        integral           32    'h0       
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+# m mon rid : e656
+# req wid : 48149 , bid:48149
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 565: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# UVM_INFO ../env/axi_sb.sv(82) @ 565: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 565: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 565: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 1 , last:0 , valid : 1
+# m mon rid : 28ba
+# rd data in s drv: 55555555 , len : 1 , last:1 , valid : 1
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1443     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h28ba    
+#   ARADDR        integral           32    'h0       
+#   ARLEN         integral           8     'd1       
+#   ARSIZE        integral           3     'd3       
+#   ARBURST       integral           2     2         
+#   RID           integral           16    'h28ba    
+#   RDATA         da(integral)       2     -         
+#     [0]         integral           32    'h0       
+#     [1]         integral           32    'h55555555
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 0 1431655765
+# m mon rid : 28ba
+# req wid : 23496 , bid:23496
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 585: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# UVM_INFO ../env/axi_sb.sv(82) @ 585: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 585: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# rd data in s drv: 0 , len : 7 , last:0 , valid : 1
+# m mon rid : a894
+# rd data in s drv: 55555555 , len : 7 , last:0 , valid : 1
+# m mon rid : a894
+# rd data in s drv: 0 , len : 7 , last:0 , valid : 1
+# m mon rid : a894
+# rd data in s drv: 0 , len : 7 , last:0 , valid : 1
+# m mon rid : a894
+# rd data in s drv: 0 , len : 7 , last:0 , valid : 1
+# m mon rid : a894
+# rd data in s drv: 0 , len : 7 , last:0 , valid : 1
+# abc : 1
+# ref model mem : 0
+# abc : 2
+# ref model mem : 8
+# abc : 3
+# ref model mem : 16
+# abc : 4
+# ref model mem : 24
+# abc : 5
+# ref model mem : 32
+# abc : 6
+# ref model mem : 40
+# abc : 7
+# ref model mem : 48
+# abc : 8
+# ref model mem : 56
+# AFFTER W CHANNEL
+# m mon rid : a894
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 645: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 7 , last:0 , valid : 1
+# m mon rid : a894
+# rd data in s drv: 0 , len : 7 , last:1 , valid : 1
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1651     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'ha894    
+#   ARADDR        integral           32    'h0       
+#   ARLEN         integral           8     'd7       
+#   ARSIZE        integral           3     'd3       
+#   ARBURST       integral           2     2         
+#   RID           integral           16    'ha894    
+#   RDATA         da(integral)       8     -         
+#     [0]         integral           32    'h0       
+#     [1]         integral           32    'h55555555
+#     [2]         integral           32    'h0       
+#     [3]         integral           32    'h0       
+#     [4]         integral           32    'h0       
+#     [5]         integral           32    'h0       
+#     [6]         integral           32    'h0       
+#     [7]         integral           32    'h0       
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 0 1431655765 0 0 0 0 0 0
+# m mon rid : a894
+# req wid : 53607 , bid:53607
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 665: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# UVM_INFO ../env/axi_sb.sv(82) @ 665: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 665: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# rd data in s drv: 0 , len : 1 , last:0 , valid : 1
+# m mon rid : fcf7
+# rd data in s drv: 55555555 , len : 1 , last:1 , valid : 1
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1623     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'hfcf7    
+#   ARADDR        integral           32    'h0       
+#   ARLEN         integral           8     'd1       
+#   ARSIZE        integral           3     'd3       
+#   ARBURST       integral           2     2         
+#   RID           integral           16    'hfcf7    
+#   RDATA         da(integral)       2     -         
+#     [0]         integral           32    'h0       
+#     [1]         integral           32    'h55555555
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 0 1431655765
+# m mon rid : fcf7
+# UVM_INFO ../env/axi_sb.sv(82) @ 685: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 685: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : ccd7
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : ccd7
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : ccd7
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : ccd7
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : ccd7
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : ccd7
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : ccd7
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : ccd7
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : ccd7
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : ccd7
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : ccd7
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# abc : 1
+# ref model mem : 4294967295
+# abc : 2
+# ref model mem : 7
+# abc : 3
+# ref model mem : 15
+# abc : 4
+# ref model mem : 23
+# abc : 5
+# ref model mem : 31
+# abc : 6
+# ref model mem : 39
+# abc : 7
+# ref model mem : 47
+# abc : 8
+# ref model mem : 55
+# abc : 9
+# ref model mem : 63
+# abc : 10
+# ref model mem : 71
+# abc : 11
+# ref model mem : 79
+# abc : 12
+# ref model mem : 87
+# abc : 13
+# ref model mem : 95
+# abc : 14
+# ref model mem : 103
+# abc : 15
+# ref model mem : 111
+# abc : 16
+# ref model mem : 119
+# AFFTER W CHANNEL
+# m mon rid : ccd7
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 805: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : ccd7
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : ccd7
+# req wid : 17367 , bid:17367
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 825: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : ccd7
+# rd data in s drv: 0 , len : 15 , last:1 , valid : 1
+# abc : 1
+# ref model mem : 0
+# abc : 2
+# ref model mem : 8
+# abc : 3
+# ref model mem : 16
+# abc : 4
+# ref model mem : 24
+# AFFTER W CHANNEL
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1695     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'hccd7    
+#   ARADDR        integral           32    'hffffffff
+#   ARLEN         integral           8     'd15      
+#   ARSIZE        integral           3     'd3       
+#   ARBURST       integral           2     2         
+#   RID           integral           16    'hccd7    
+#   RDATA         da(integral)       16    -         
+#     [0]         integral           32    'h0       
+#     [1]         integral           32    'h0       
+#     [2]         integral           32    'h0       
+#     [3]         integral           32    'h0       
+#     [4]         integral           32    'h0       
+#     ...         ...                ...   ...       
+#     [11]        integral           32    'h0       
+#     [12]        integral           32    'h0       
+#     [13]        integral           32    'h0       
+#     [14]        integral           32    'h0       
+#     [15]        integral           32    'h0       
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+# m mon rid : ccd7
+# UVM_INFO ../env/axi_sb.sv(82) @ 845: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 845: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 845: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 3 , last:0 , valid : 1
+# m mon rid : 1329
+# rd data in s drv: 55555555 , len : 3 , last:0 , valid : 1
+# m mon rid : 1329
+# req wid : 23008 , bid:23008
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 865: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# rd data in s drv: 0 , len : 3 , last:0 , valid : 1
+# m mon rid : 1329
+# rd data in s drv: 0 , len : 3 , last:1 , valid : 1
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1723     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h1329    
+#   ARADDR        integral           32    'h0       
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd3       
+#   ARBURST       integral           2     2         
+#   RID           integral           16    'h1329    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'h0       
+#     [1]         integral           32    'h55555555
+#     [2]         integral           32    'h0       
+#     [3]         integral           32    'h0       
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 0 1431655765 0 0
+# m mon rid : 1329
+# UVM_INFO ../env/axi_sb.sv(82) @ 885: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 885: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# rd data in s drv: 0 , len : 7 , last:0 , valid : 1
+# m mon rid : 8af9
+# rd data in s drv: 55555555 , len : 7 , last:0 , valid : 1
+# m mon rid : 8af9
+# rd data in s drv: 0 , len : 7 , last:0 , valid : 1
+# m mon rid : 8af9
+# rd data in s drv: 0 , len : 7 , last:0 , valid : 1
+# abc : 1
+# ref model mem : 0
+# abc : 2
+# ref model mem : 8
+# abc : 3
+# ref model mem : 16
+# abc : 4
+# ref model mem : 24
+# abc : 5
+# ref model mem : 32
+# abc : 6
+# ref model mem : 40
+# abc : 7
+# ref model mem : 48
+# abc : 8
+# ref model mem : 56
+# AFFTER W CHANNEL
+# m mon rid : 8af9
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 925: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 7 , last:0 , valid : 1
+# m mon rid : 8af9
+# rd data in s drv: 0 , len : 7 , last:0 , valid : 1
+# m mon rid : 8af9
+# req wid : 32031 , bid:32031
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 945: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# rd data in s drv: 0 , len : 7 , last:0 , valid : 1
+# m mon rid : 8af9
+# rd data in s drv: 0 , len : 7 , last:1 , valid : 1
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1755     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h8af9    
+#   ARADDR        integral           32    'h0       
+#   ARLEN         integral           8     'd7       
+#   ARSIZE        integral           3     'd3       
+#   ARBURST       integral           2     2         
+#   RID           integral           16    'h8af9    
+#   RDATA         da(integral)       8     -         
+#     [0]         integral           32    'h0       
+#     [1]         integral           32    'h55555555
+#     [2]         integral           32    'h0       
+#     [3]         integral           32    'h0       
+#     [4]         integral           32    'h0       
+#     [5]         integral           32    'h0       
+#     [6]         integral           32    'h0       
+#     [7]         integral           32    'h0       
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 0 1431655765 0 0 0 0 0 0
+# m mon rid : 8af9
+# UVM_INFO ../env/axi_sb.sv(82) @ 965: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 965: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : 6283
+# rd data in s drv: 55555555 , len : 15 , last:0 , valid : 1
+# m mon rid : 6283
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : 6283
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : 6283
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : 6283
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : 6283
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : 6283
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : 6283
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : 6283
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : 6283
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : 6283
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# abc : 1
+# ref model mem : 0
+# abc : 2
+# ref model mem : 8
+# abc : 3
+# ref model mem : 16
+# abc : 4
+# ref model mem : 24
+# abc : 5
+# ref model mem : 32
+# abc : 6
+# ref model mem : 40
+# abc : 7
+# ref model mem : 48
+# abc : 8
+# ref model mem : 56
+# abc : 9
+# ref model mem : 64
+# abc : 10
+# ref model mem : 72
+# abc : 11
+# ref model mem : 80
+# abc : 12
+# ref model mem : 88
+# abc : 13
+# ref model mem : 96
+# abc : 14
+# ref model mem : 104
+# abc : 15
+# ref model mem : 112
+# abc : 16
+# ref model mem : 120
+# AFFTER W CHANNEL
+# m mon rid : 6283
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1085: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : 6283
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# abc : 1
+# ref model mem : 0
+# abc : 2
+# ref model mem : 8
+# AFFTER W CHANNEL
+# m mon rid : 6283
+# req wid : 12673 , bid:12673
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 1105: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1105: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : 6283
+# rd data in s drv: 0 , len : 15 , last:1 , valid : 1
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1775     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h6283    
+#   ARADDR        integral           32    'h0       
+#   ARLEN         integral           8     'd15      
+#   ARSIZE        integral           3     'd3       
+#   ARBURST       integral           2     2         
+#   RID           integral           16    'h6283    
+#   RDATA         da(integral)       16    -         
+#     [0]         integral           32    'h0       
+#     [1]         integral           32    'h55555555
+#     [2]         integral           32    'h0       
+#     [3]         integral           32    'h0       
+#     [4]         integral           32    'h0       
+#     ...         ...                ...   ...       
+#     [11]        integral           32    'h0       
+#     [12]        integral           32    'h0       
+#     [13]        integral           32    'h0       
+#     [14]        integral           32    'h0       
+#     [15]        integral           32    'h0       
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 0 1431655765 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+# m mon rid : 6283
+# req wid : 40425 , bid:40425
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 1125: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# UVM_INFO ../env/axi_sb.sv(82) @ 1125: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 1125: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# rd data in s drv: 0 , len : 1 , last:0 , valid : 1
+# m mon rid : bb7b
+# rd data in s drv: 55555555 , len : 1 , last:1 , valid : 1
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1803     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'hbb7b    
+#   ARADDR        integral           32    'h0       
+#   ARLEN         integral           8     'd1       
+#   ARSIZE        integral           3     'd3       
+#   ARBURST       integral           2     2         
+#   RID           integral           16    'hbb7b    
+#   RDATA         da(integral)       2     -         
+#     [0]         integral           32    'h0       
+#     [1]         integral           32    'h55555555
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 0 1431655765
+# m mon rid : bb7b
+# UVM_INFO ../env/axi_sb.sv(82) @ 1145: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 1145: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# rd data in s drv: ffffffff , len : 15 , last:0 , valid : 1
+# m mon rid : c84c
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : c84c
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : c84c
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : c84c
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : c84c
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : c84c
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : c84c
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : c84c
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : c84c
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : c84c
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : c84c
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# abc : 1
+# ref model mem : 65535
+# abc : 2
+# ref model mem : 65543
+# abc : 3
+# ref model mem : 65551
+# abc : 4
+# ref model mem : 65559
+# abc : 5
+# ref model mem : 65567
+# abc : 6
+# ref model mem : 65575
+# abc : 7
+# ref model mem : 65583
+# abc : 8
+# ref model mem : 65591
+# abc : 9
+# ref model mem : 65599
+# abc : 10
+# ref model mem : 65607
+# abc : 11
+# ref model mem : 65615
+# abc : 12
+# ref model mem : 65623
+# abc : 13
+# ref model mem : 65631
+# abc : 14
+# ref model mem : 65639
+# abc : 15
+# ref model mem : 65647
+# abc : 16
+# ref model mem : 65655
+# AFFTER W CHANNEL
+# m mon rid : c84c
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1265: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : c84c
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# abc : 1
+# ref model mem : 0
+# abc : 2
+# ref model mem : 8
+# AFFTER W CHANNEL
+# m mon rid : c84c
+# req wid : 34571 , bid:34571
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 1285: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1285: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 15 , last:0 , valid : 1
+# m mon rid : c84c
+# rd data in s drv: 0 , len : 15 , last:1 , valid : 1
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1823     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'hc84c    
+#   ARADDR        integral           32    'hffff    
+#   ARLEN         integral           8     'd15      
+#   ARSIZE        integral           3     'd3       
+#   ARBURST       integral           2     2         
+#   RID           integral           16    'hc84c    
+#   RDATA         da(integral)       16    -         
+#     [0]         integral           32    'hffffffff
+#     [1]         integral           32    'h0       
+#     [2]         integral           32    'h0       
+#     [3]         integral           32    'h0       
+#     [4]         integral           32    'h0       
+#     ...         ...                ...   ...       
+#     [11]        integral           32    'h0       
+#     [12]        integral           32    'h0       
+#     [13]        integral           32    'h0       
+#     [14]        integral           32    'h0       
+#     [15]        integral           32    'h0       
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 4294967295 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+# m mon rid : c84c
+# req wid : 3557 , bid:3557
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 1305: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# UVM_INFO ../env/axi_sb.sv(82) @ 1305: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 1305: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# rd data in s drv: 0 , len : 1 , last:0 , valid : 1
+# m mon rid : ad41
+# rd data in s drv: 55555555 , len : 1 , last:1 , valid : 1
+# abc : 1
+# ref model mem : 0
+# abc : 2
+# ref model mem : 8
+# abc : 3
+# ref model mem : 16
+# abc : 4
+# ref model mem : 24
+# AFFTER W CHANNEL
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1851     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'had41    
+#   ARADDR        integral           32    'h0       
+#   ARLEN         integral           8     'd1       
+#   ARSIZE        integral           3     'd3       
+#   ARBURST       integral           2     2         
+#   RID           integral           16    'had41    
+#   RDATA         da(integral)       2     -         
+#     [0]         integral           32    'h0       
+#     [1]         integral           32    'h55555555
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 0 1431655765
+# m mon rid : ad41
+# UVM_INFO ../env/axi_sb.sv(82) @ 1325: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 1325: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1325: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 3 , last:0 , valid : 1
+# m mon rid : 85e1
+# rd data in s drv: 55555555 , len : 3 , last:0 , valid : 1
+# m mon rid : 85e1
+# req wid : 13717 , bid:13717
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 1345: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# rd data in s drv: 0 , len : 3 , last:0 , valid : 1
+# m mon rid : 85e1
+# rd data in s drv: 0 , len : 3 , last:1 , valid : 1
+# abc : 1
+# ref model mem : 4294967295
+# abc : 2
+# ref model mem : 7
+# abc : 3
+# ref model mem : 15
+# abc : 4
+# ref model mem : 23
+# AFFTER W CHANNEL
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1871     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h85e1    
+#   ARADDR        integral           32    'h0       
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd3       
+#   ARBURST       integral           2     2         
+#   RID           integral           16    'h85e1    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'h0       
+#     [1]         integral           32    'h55555555
+#     [2]         integral           32    'h0       
+#     [3]         integral           32    'h0       
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 0 1431655765 0 0
+# m mon rid : 85e1
+# UVM_INFO ../env/axi_sb.sv(82) @ 1365: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 1365: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1365: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 3 , last:0 , valid : 1
+# m mon rid : 9fae
+# rd data in s drv: 0 , len : 3 , last:0 , valid : 1
+# abc : 1
+# ref model mem : 4294967295
+# abc : 2
+# ref model mem : 7
+# AFFTER W CHANNEL
+# m mon rid : 9fae
+# req wid : 8568 , bid:8568
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 1385: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# match arid : 0 , rid : 0
+# UVM_INFO ../env/s_agent/axi_s_drv.sv(31) @ 1385: uvm_test_top.env_h.s_uvc_h.s_agent_h[0].s_drv_h [ID MATCH] aaaaa
+# rd data in s drv: 0 , len : 3 , last:0 , valid : 1
+# m mon rid : 9fae
+# rd data in s drv: 0 , len : 3 , last:1 , valid : 1
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1903     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'h9fae    
+#   ARADDR        integral           32    'hffffffff
+#   ARLEN         integral           8     'd3       
+#   ARSIZE        integral           3     'd3       
+#   ARBURST       integral           2     2         
+#   RID           integral           16    'h9fae    
+#   RDATA         da(integral)       4     -         
+#     [0]         integral           32    'h0       
+#     [1]         integral           32    'h0       
+#     [2]         integral           32    'h0       
+#     [3]         integral           32    'h0       
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 0 0 0 0
+# m mon rid : 9fae
+# req wid : 44422 , bid:44422
+# UVM_INFO ../env/m_agent/axi_base_m_seqs.sv(26) @ 1405: uvm_test_top.env_h.m_uvc_h.m_agent_h[0].m_seqr_h@@vseqs_h.m_wseqs_h [IN V SEQS] Got B-channel response from driver
+# UVM_INFO ../env/axi_sb.sv(82) @ 1405: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 1405: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# rd data in s drv: 0 , len : 1 , last:0 , valid : 1
+# m mon rid : fe09
+# rd data in s drv: 0 , len : 1 , last:1 , valid : 1
+# req kind : READ
+# INSIDE BEORE SAMPLE
+# ---------------------------------------------------
+# Name            Type               Size  Value     
+# ---------------------------------------------------
+# axi_m_seq_item  uvm_sequence_item  -     @1923     
+#   AWID          integral           16    'h0       
+#   AWADDR        integral           32    'h0       
+#   AWLEN         integral           8     'd0       
+#   AWSIZE        integral           3     'd0       
+#   AWBURST       integral           2     'd0       
+#   WID           integral           16    'h0       
+#   WDATA         da(integral)       0     -         
+#   WSTRB         da(integral)       0     -         
+#   WLAST         integral           1     'd0       
+#   BID           integral           16    'h0       
+#   BRESP         integral           2     'd0       
+#   ARID          integral           16    'hfe09    
+#   ARADDR        integral           32    'hffffffff
+#   ARLEN         integral           8     'd1       
+#   ARSIZE        integral           3     'd3       
+#   ARBURST       integral           2     2         
+#   RID           integral           16    'hfe09    
+#   RDATA         da(integral)       2     -         
+#     [0]         integral           32    'h0       
+#     [1]         integral           32    'h0       
+#   RRESP         integral           2     'd0       
+#   RLAST         integral           1     'd0       
+#   burst_kind_e  burst_kind         2     FIXED     
+#   kind_e        trans_kind         2     READ      
+# ---------------------------------------------------
+# RDATa IN SB : 0 0
+# m mon rid : fe09
+# UVM_INFO ../env/axi_sb.sv(82) @ 1425: uvm_test_top.env_h.sb_h [after event in sb] aaaa
+# UVM_INFO ../env/axi_sb.sv(80) @ 1425: uvm_test_top.env_h.sb_h [before event in sb] aaaa
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 4405: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# 
+##############################################################
+#                                                            #
+#   PPPPPPPP    AAA     SSSSSS    SSSSSS                     #
+#   PP     PP  A   A   SS        SS                          #
+#   PPPPPPPP   AAAAA    SSSSS     SSSSS                      #
+#   PP         A   A        SS         SS                    #
+#   PP         A   A   SSSSSS    SSSSSS                      #
+#                                                            #
+##############################################################
+# 
+# UVM_INFO ../env/axi_sb.sv(131) @ 4405: uvm_test_top.env_h.sb_h [SCOREBOARD_SUMMARY] 
+# === FINAL RESULTS ===
+# Total Pass = 20
+# Total Fail = 0
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :  114
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Data in s seqr]     1
+# [ID MATCH]    40
+# [IN V SEQS]    20
+# [M MON RUN PHASE before]     1
+# [M MON read addr PHASE before]     1
+# [M MON read data PHASE before]     1
+# [M MON run PHASE after]     1
+# [M MON write addr PHASE before]     1
+# [M MON write data PHASE before]     1
+# [Questa UVM]     2
+# [RNTST]     1
+# [SCOREBOARD_SUMMARY]     1
+# [TEST_DONE]     1
+# [UVMTOP]     1
+# [after event in sb]    20
+# [before event in sb]    21
+# ** Note: $finish    : /tools/mentor/questa/2023.4/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 4405 ns  Iteration: 53  Instance: /axi_tb_top
+# Saving coverage database on exit...
+# End time: 12:46:54 on May 13,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 240

@@ -1,2 +1,2 @@
-var g_data = {"13":{"pr":"/axi_env_pkg","ty":2,"dui":5,"dun":"work.axi_env_pkg","cvgs":[{"h":["/axi_env_pkg/axi_coverage/write_cov",1,1,14],"cov":[155,128,92.82],"opts":{"goal":"100","merge_instance":"auto(true)"}},{"h":["/axi_env_pkg/axi_coverage/read_cov",1,1,30],"cov":[139,109,89.49],"opts":{"goal":"100","merge_instance":"auto(true)"}}]}};
+var g_data = {"13":{"pr":"/axi_env_pkg","ty":2,"dui":5,"dun":"work.axi_env_pkg","cvgs":[{"h":["/axi_env_pkg/axi_coverage/write_cov",1,1,14],"cov":[155,152,99.42],"opts":{"goal":"100","merge_instance":"auto(true)"}},{"h":["/axi_env_pkg/axi_coverage/read_cov",1,1,30],"cov":[138,124,96.04],"opts":{"goal":"100","merge_instance":"auto(true)"}}]}};
 processCovergroupsData(g_data);

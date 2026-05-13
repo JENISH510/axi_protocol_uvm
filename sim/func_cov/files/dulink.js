@@ -1,2 +1,2 @@
-var g_data = {"5":["work.axi_env_pkg",49.27,1],"4":["work.axi_m_agent_pkg",37.05,1],"2":["work.axi_m_inf",97.55,1],"3":["work.axi_s_agent_pkg",34.14,1],"1":["work.axi_s_inf",97.55,1],"7":["work.axi_tb_top",100.00,1],"6":["work.axi_test_pkg",22.42,1]};
+var g_data = {"5":["work.axi_env_pkg",50.92,1],"4":["work.axi_m_agent_pkg",37.05,1],"2":["work.axi_m_inf",97.26,1],"3":["work.axi_s_agent_pkg",34.14,1],"1":["work.axi_s_inf",97.26,1],"7":["work.axi_tb_top",100.00,1],"6":["work.axi_test_pkg",24.35,1]};
 processDuLinks(g_data);
