@@ -4,6 +4,7 @@
 class axi_m_drv #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends uvm_driver #(axi_m_seq_item #(ADDR_WIDTH,DATA_WIDTH));
 
     `uvm_component_param_utils(axi_m_drv #(ADDR_WIDTH,DATA_WIDTH))
+    `uvm_register_cb(axi_m_drv #(ADDR_WIDTH,DATA_WIDTH), axi_m_drv_cb #(ADDR_WIDTH,DATA_WIDTH))
 
     virtual axi_m_inf#(ADDR_WIDTH,DATA_WIDTH).MDRV_MP m_vif;
 
@@ -14,6 +15,7 @@ class axi_m_drv #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends uvm_driver #(axi_m_se
     bit allow_out_of_order;
     bit allow_interleaving;
     int unsigned max_outstanding = 8;
+    int unsigned transfer_count;
 
     axi_m_seq_item#(ADDR_WIDTH,DATA_WIDTH) wr_addr_q[$];
     axi_m_seq_item#(ADDR_WIDTH,DATA_WIDTH) wr_data_q[$];
@@ -71,17 +73,23 @@ class axi_m_drv #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends uvm_driver #(axi_m_se
         forever begin
             wait(wr_addr_q.size() > 0);
             wait(m_vif.m_drv_cb.ARESETn);
+            `uvm_do_callbacks(axi_m_drv #(ADDR_WIDTH,DATA_WIDTH), axi_m_drv_cb #(ADDR_WIDTH,DATA_WIDTH),
+                             before_transfer(m_vif, "AW", transfer_count))
             aw_ctr++;
             aw_ch = wr_addr_q.pop_front();
 
-            m_vif.m_drv_cb.AWVALID <= 1'b1;
             m_vif.m_drv_cb.AWID    <= aw_ch.AWID;
             m_vif.m_drv_cb.AWADDR  <= aw_ch.AWADDR;
             m_vif.m_drv_cb.AWLEN   <= aw_ch.AWLEN;
             m_vif.m_drv_cb.AWSIZE  <= aw_ch.AWSIZE;
             m_vif.m_drv_cb.AWBURST <= aw_ch.AWBURST;
+            `uvm_do_callbacks(axi_m_drv #(ADDR_WIDTH,DATA_WIDTH), axi_m_drv_cb #(ADDR_WIDTH,DATA_WIDTH),
+                             before_valid(m_vif, "AW"))
+            m_vif.m_drv_cb.AWVALID <= 1'b1;
 
             @(m_vif.m_drv_cb iff (m_vif.m_drv_cb.AWREADY));
+            `uvm_do_callbacks(axi_m_drv #(ADDR_WIDTH,DATA_WIDTH), axi_m_drv_cb #(ADDR_WIDTH,DATA_WIDTH),
+                             after_handshake(m_vif, "AW"))
 
             m_vif.m_drv_cb.AWVALID <= 0;
         end
@@ -96,6 +104,8 @@ class axi_m_drv #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends uvm_driver #(axi_m_se
         forever begin
             wait (wr_data_q.size() != 0);
             wait(m_vif.m_drv_cb.ARESETn);
+            `uvm_do_callbacks(axi_m_drv #(ADDR_WIDTH,DATA_WIDTH), axi_m_drv_cb #(ADDR_WIDTH,DATA_WIDTH),
+                             before_transfer(m_vif, "W", transfer_count))
             if (allow_interleaving) begin
                 int idx = $urandom_range(0, wr_data_q.size() - 1);
                 w_trans = wr_data_q[idx];
@@ -103,9 +113,13 @@ class axi_m_drv #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends uvm_driver #(axi_m_se
                 m_vif.m_drv_cb.WID    <= w_trans.AWID;
                 m_vif.m_drv_cb.WDATA  <= w_trans.WDATA[0];
                 m_vif.m_drv_cb.WSTRB  <= w_trans.WSTRB[0];
-                m_vif.m_drv_cb.WVALID <= 1'b1;
                 m_vif.m_drv_cb.WLAST  <= (w_trans.WDATA.size() == 1);
+                `uvm_do_callbacks(axi_m_drv #(ADDR_WIDTH,DATA_WIDTH), axi_m_drv_cb #(ADDR_WIDTH,DATA_WIDTH),
+                                 before_valid(m_vif, "W"))
+                m_vif.m_drv_cb.WVALID <= 1'b1;
                 @(m_vif.m_drv_cb iff m_vif.m_drv_cb.WREADY);
+                `uvm_do_callbacks(axi_m_drv #(ADDR_WIDTH,DATA_WIDTH), axi_m_drv_cb #(ADDR_WIDTH,DATA_WIDTH),
+                                 after_handshake(m_vif, "W"))
                 if (w_trans.WDATA.size() > 1) begin
                     w_trans.WDATA.pop_front();
                     w_trans.WSTRB.pop_front();
@@ -117,9 +131,13 @@ class axi_m_drv #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends uvm_driver #(axi_m_se
                     m_vif.m_drv_cb.WID    <= w_trans.AWID;
                     m_vif.m_drv_cb.WDATA  <= w_trans.WDATA[i];
                     m_vif.m_drv_cb.WSTRB  <= w_trans.WSTRB[i];
-                    m_vif.m_drv_cb.WVALID <= 1'b1;
                     m_vif.m_drv_cb.WLAST  <= (i == w_trans.AWLEN);
+                    `uvm_do_callbacks(axi_m_drv #(ADDR_WIDTH,DATA_WIDTH), axi_m_drv_cb #(ADDR_WIDTH,DATA_WIDTH),
+                                     before_valid(m_vif, "W"))
+                    m_vif.m_drv_cb.WVALID <= 1'b1;
                     @(m_vif.m_drv_cb iff m_vif.m_drv_cb.WREADY);
+                    `uvm_do_callbacks(axi_m_drv #(ADDR_WIDTH,DATA_WIDTH), axi_m_drv_cb #(ADDR_WIDTH,DATA_WIDTH),
+                                     after_handshake(m_vif, "W"))
                 end
             end
             m_vif.m_drv_cb.WVALID <= 1'b0;
@@ -133,6 +151,8 @@ class axi_m_drv #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends uvm_driver #(axi_m_se
         forever begin
             wait(wr_resp_q.size() > 0);
             wait(m_vif.m_drv_cb.ARESETn);
+            `uvm_do_callbacks(axi_m_drv #(ADDR_WIDTH,DATA_WIDTH), axi_m_drv_cb #(ADDR_WIDTH,DATA_WIDTH),
+                             before_transfer(m_vif, "B", transfer_count))
             m_vif.m_drv_cb.BREADY <= 1;
             @(m_vif.m_drv_cb iff (m_vif.m_drv_cb.BVALID));
             m_vif.m_drv_cb.BREADY <= 0;
@@ -163,16 +183,22 @@ class axi_m_drv #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends uvm_driver #(axi_m_se
         forever begin
             wait(rd_addr_q.size() > 0);
             wait(m_vif.m_drv_cb.ARESETn);
+            `uvm_do_callbacks(axi_m_drv #(ADDR_WIDTH,DATA_WIDTH), axi_m_drv_cb #(ADDR_WIDTH,DATA_WIDTH),
+                             before_transfer(m_vif, "AR", transfer_count))
             req_ar = rd_addr_q.pop_front();
 
-            m_vif.m_drv_cb.ARVALID   <= 1'b1;
             m_vif.m_drv_cb.ARID      <= req_ar.ARID;
             m_vif.m_drv_cb.ARADDR    <= req_ar.ARADDR;
             m_vif.m_drv_cb.ARLEN     <= req_ar.ARLEN;
             m_vif.m_drv_cb.ARSIZE    <= req_ar.ARSIZE;
             m_vif.m_drv_cb.ARBURST   <= req_ar.ARBURST;
+            `uvm_do_callbacks(axi_m_drv #(ADDR_WIDTH,DATA_WIDTH), axi_m_drv_cb #(ADDR_WIDTH,DATA_WIDTH),
+                             before_valid(m_vif, "AR"))
+            m_vif.m_drv_cb.ARVALID   <= 1'b1;
 
             @(m_vif.m_drv_cb iff (m_vif.m_drv_cb.ARREADY));
+            `uvm_do_callbacks(axi_m_drv #(ADDR_WIDTH,DATA_WIDTH), axi_m_drv_cb #(ADDR_WIDTH,DATA_WIDTH),
+                             after_handshake(m_vif, "AR"))
 
             m_vif.m_drv_cb.ARVALID  <= 1'b0;
         end

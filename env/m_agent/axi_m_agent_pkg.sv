@@ -11,6 +11,7 @@ package axi_m_agent_pkg;
    `include "uvm_macros.svh"
 
    `include "axi_m_agent_cfg.svh"
+   `include "axi_m_drv_cb.sv"
    `include "axi_m_seq_item.sv"
    `include "axi_m_seqr.sv"
    `include "axi_m_drv.sv"
@@ -22,4 +23,3 @@ package axi_m_agent_pkg;
 endpackage
 
 `endif
-

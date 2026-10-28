@@ -47,6 +47,7 @@ package axi_test_pkg;
     `include "axi_incr_cov_test.sv"
     `include "axi_ooo_interleave_m_wseqs.sv"
     `include "axi_ooo_interleave_test.sv"
+    `include "axi_driver_callback_test.sv"
 endpackage
 
 `endif

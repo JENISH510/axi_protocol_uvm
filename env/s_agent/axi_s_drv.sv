@@ -5,6 +5,7 @@ class axi_s_drv #(int ADDR_WIDTH=32,DATA_WIDTH=32)
   extends uvm_driver #(axi_s_seq_item #(ADDR_WIDTH,DATA_WIDTH));
 
     `uvm_component_param_utils(axi_s_drv #(ADDR_WIDTH,DATA_WIDTH))
+    `uvm_register_cb(axi_s_drv #(ADDR_WIDTH,DATA_WIDTH), axi_s_drv_cb #(ADDR_WIDTH,DATA_WIDTH))
 
     virtual axi_s_inf#(ADDR_WIDTH,DATA_WIDTH).SDRV_MP s_vif;
     
@@ -14,6 +15,7 @@ class axi_s_drv #(int ADDR_WIDTH=32,DATA_WIDTH=32)
     bit allow_out_of_order;
     bit allow_interleaving;
     int unsigned max_outstanding = 8;
+    int unsigned transfer_count;
 
 
     function new(string name="axi_s_drv",uvm_component parent);
@@ -64,23 +66,35 @@ class axi_s_drv #(int ADDR_WIDTH=32,DATA_WIDTH=32)
 
     // ---------------- READY SIGNALS ----------------
     task slave_write_addr_channel();
+        bit ready;
         forever begin
             @(s_vif.s_drv_cb);
-            s_vif.s_drv_cb.AWREADY <= s_vif.s_drv_cb.ARESETn;
+            ready = s_vif.s_drv_cb.ARESETn;
+            `uvm_do_callbacks(axi_s_drv #(ADDR_WIDTH,DATA_WIDTH), axi_s_drv_cb #(ADDR_WIDTH,DATA_WIDTH),
+                             get_ready(s_vif, "AW", ready))
+            s_vif.s_drv_cb.AWREADY <= ready;
         end
     endtask
 
     task slave_write_data_channel();
+        bit ready;
         forever begin
             @(s_vif.s_drv_cb);
-            s_vif.s_drv_cb.WREADY <= s_vif.s_drv_cb.ARESETn;
+            ready = s_vif.s_drv_cb.ARESETn;
+            `uvm_do_callbacks(axi_s_drv #(ADDR_WIDTH,DATA_WIDTH), axi_s_drv_cb #(ADDR_WIDTH,DATA_WIDTH),
+                             get_ready(s_vif, "W", ready))
+            s_vif.s_drv_cb.WREADY <= ready;
         end
     endtask
 
     task slave_read_addr_channel();
+        bit ready;
         forever begin
             @(s_vif.s_drv_cb);
-            s_vif.s_drv_cb.ARREADY <= s_vif.s_drv_cb.ARESETn;
+            ready = s_vif.s_drv_cb.ARESETn;
+            `uvm_do_callbacks(axi_s_drv #(ADDR_WIDTH,DATA_WIDTH), axi_s_drv_cb #(ADDR_WIDTH,DATA_WIDTH),
+                             get_ready(s_vif, "AR", ready))
+            s_vif.s_drv_cb.ARREADY <= ready;
         end
     endtask
 
@@ -93,6 +107,10 @@ class axi_s_drv #(int ADDR_WIDTH=32,DATA_WIDTH=32)
         forever begin
             wait(b_resp.size() > 0);
             wait(s_vif.s_drv_cb.ARESETn);
+            `uvm_do_callbacks(axi_s_drv #(ADDR_WIDTH,DATA_WIDTH), axi_s_drv_cb #(ADDR_WIDTH,DATA_WIDTH),
+                             before_transfer(s_vif, "B", transfer_count))
+            `uvm_do_callbacks(axi_s_drv #(ADDR_WIDTH,DATA_WIDTH), axi_s_drv_cb #(ADDR_WIDTH,DATA_WIDTH),
+                             before_response(s_vif, "B"))
             idx = allow_out_of_order ? $urandom_range(0, b_resp.size() - 1) : 0;
             trans = b_resp[idx];
             b_resp.delete(idx);
@@ -116,6 +134,10 @@ class axi_s_drv #(int ADDR_WIDTH=32,DATA_WIDTH=32)
         forever begin
             wait(r_data.size() != 0);
             wait(s_vif.s_drv_cb.ARESETn);
+            `uvm_do_callbacks(axi_s_drv #(ADDR_WIDTH,DATA_WIDTH), axi_s_drv_cb #(ADDR_WIDTH,DATA_WIDTH),
+                             before_transfer(s_vif, "R", transfer_count))
+            `uvm_do_callbacks(axi_s_drv #(ADDR_WIDTH,DATA_WIDTH), axi_s_drv_cb #(ADDR_WIDTH,DATA_WIDTH),
+                             before_response(s_vif, "R"))
             idx = allow_out_of_order ? $urandom_range(0, r_data.size() - 1) : 0;
             r_trans_h = r_data[idx];
             r_data.delete(idx);

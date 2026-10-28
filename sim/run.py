@@ -32,6 +32,12 @@ elif target == "ooo":
     print("Running: " + cmd)
     os.system(cmd)
 
+elif target in ("reset_cb", "ready_cb"):
+    cmd = 'vsim -voptargs=+acc axi_tb_top -c -do "run -all; exit" +UVM_TESTNAME=' + target
+    cmd = cmd.replace("reset_cb", "axi_reset_callback_test").replace("ready_cb", "axi_ready_toggle_callback_test")
+    print("Running: " + cmd)
+    os.system(cmd)
+
 elif target == "sim1":
     cmd = 'vsim -voptargs=+acc axi_tb_top -do "do wave.do; run -all; exit" +UVM_TESTNAME=' + uvm_testname
     print("Running: " + cmd)
