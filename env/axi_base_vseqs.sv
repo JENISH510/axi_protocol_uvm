@@ -3,12 +3,13 @@
 
 class axi_base_vseqs #(int ADDR_WIDTH=32, int DATA_WIDTH=32) extends uvm_sequence;
 
+    typedef axi_virtual_seqr #(ADDR_WIDTH, DATA_WIDTH) sequencer_type;
     `uvm_object_param_utils(axi_base_vseqs #(ADDR_WIDTH, DATA_WIDTH))
 
     // -------------------------------------------------------------------------
     // Declare p_sequencer — gives access to virtual sequencer's sub-handles
     // -------------------------------------------------------------------------
-    `uvm_declare_p_sequencer(axi_virtual_seqr #(ADDR_WIDTH, DATA_WIDTH))
+    `uvm_declare_p_sequencer(sequencer_type)
 
     axi_m_seqr #(ADDR_WIDTH,DATA_WIDTH) m_seqr_h;
     //axi_s_seqr #(32,32) s_seqr_h;

@@ -3,6 +3,9 @@
 
 class axi_base_m_seqs #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends uvm_sequence #(axi_m_seq_item #(ADDR_WIDTH,DATA_WIDTH));
 
+    typedef axi_m_seqr #(ADDR_WIDTH, DATA_WIDTH) sequencer_type;
+    `uvm_declare_p_sequencer(sequencer_type)
+
     rand int no_of_trans;
     constraint ITR_c {soft no_of_trans == 20;}
 

@@ -3,12 +3,16 @@
 
 class axi_base_test #(int ADDR_WIDTH=32, int DATA_WIDTH=32) extends uvm_test;
 
+    typedef axi_env #(ADDR_WIDTH,DATA_WIDTH) env_type;
+    typedef virtual axi_m_inf #(ADDR_WIDTH,DATA_WIDTH) m_vif_type;
+    typedef virtual axi_s_inf #(ADDR_WIDTH,DATA_WIDTH) s_vif_type;
+
     `uvm_component_param_utils(axi_base_test #(ADDR_WIDTH, DATA_WIDTH))
 
     axi_env #(ADDR_WIDTH,DATA_WIDTH) env_h;
     axi_env_cfg env_cfg_h; 
-    virtual axi_m_inf #(ADDR_WIDTH,DATA_WIDTH) m_vif;
-    virtual axi_s_inf #(ADDR_WIDTH,DATA_WIDTH) s_vif;
+    m_vif_type m_vif;
+    s_vif_type s_vif;
 
     //axi_base_m_seqs #(32,32) m_seq_h;
     axi_base_s_seqs #(ADDR_WIDTH,DATA_WIDTH) s_seq_h;
@@ -23,14 +27,14 @@ class axi_base_test #(int ADDR_WIDTH=32, int DATA_WIDTH=32) extends uvm_test;
 
         env_cfg_h.is_m_agt_active = UVM_ACTIVE;
         env_cfg_h.is_s_agt_active = UVM_ACTIVE;
-        if (!uvm_config_db#(virtual axi_m_inf#(ADDR_WIDTH,DATA_WIDTH))::get(this,"","m_vif",m_vif))
+        if (!uvm_config_db#(m_vif_type)::get(this,"","m_vif",m_vif))
             `uvm_fatal(get_full_name(), "Can't get master interface")
-        if (!uvm_config_db#(virtual axi_s_inf#(ADDR_WIDTH,DATA_WIDTH))::get(this,"","s_vif",s_vif))
+        if (!uvm_config_db#(s_vif_type)::get(this,"","s_vif",s_vif))
             `uvm_fatal(get_full_name(), "Can't get slave interface")
 
         uvm_config_db #(axi_env_cfg)::set(this,"*","env_cfg_h",env_cfg_h);
 
-        env_h = axi_env #(ADDR_WIDTH,DATA_WIDTH)::type_id::create("env_h",this);
+        env_h = env_type::type_id::create("env_h",this);
     endfunction
 
     function void end_of_elaboration_phase(uvm_phase phase);
