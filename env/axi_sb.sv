@@ -4,21 +4,21 @@
 `uvm_analysis_imp_decl(_m)
 `uvm_analysis_imp_decl(_ref)
 
-class axi_sb extends uvm_scoreboard;
+class axi_sb #(int ADDR_WIDTH=32, int DATA_WIDTH=32) extends uvm_scoreboard;
 
-    `uvm_component_utils(axi_sb)
+    `uvm_component_param_utils(axi_sb #(ADDR_WIDTH, DATA_WIDTH))
 
-    uvm_analysis_imp_m   #(axi_m_seq_item, axi_sb) anl_imp_m;
-    uvm_analysis_imp_ref #(axi_s_seq_item, axi_sb) anl_imp_ref;
+    uvm_analysis_imp_m   #(axi_m_seq_item #(ADDR_WIDTH,DATA_WIDTH), axi_sb #(ADDR_WIDTH,DATA_WIDTH)) anl_imp_m;
+    uvm_analysis_imp_ref #(axi_s_seq_item #(ADDR_WIDTH,DATA_WIDTH), axi_sb #(ADDR_WIDTH,DATA_WIDTH)) anl_imp_ref;
 
-    axi_s_seq_item exp_q[int][$];
-    axi_m_seq_item act_q[int][$];
+    axi_s_seq_item #(ADDR_WIDTH,DATA_WIDTH) exp_q[int][$];
+    axi_m_seq_item #(ADDR_WIDTH,DATA_WIDTH) act_q[int][$];
     int rid_q[$];
 
     event data_get;
     int pass, fail;
 
-    axi_coverage cov;
+    axi_coverage #(ADDR_WIDTH,DATA_WIDTH) cov;
 
     function new(string name = "axi_sb", uvm_component parent);
         super.new(name, parent);
@@ -34,7 +34,7 @@ class axi_sb extends uvm_scoreboard;
         join_none
     endtask
 
-    function void write_m(axi_m_seq_item req);
+    function void write_m(axi_m_seq_item #(ADDR_WIDTH,DATA_WIDTH) req);
         if (req.kind_e == axi_m_agent_pkg::WRITE) begin
             $display("req wid : %0d , bid:%0d",req.WID,req.BID);
             cov.write_func(req);
@@ -51,7 +51,7 @@ class axi_sb extends uvm_scoreboard;
         end
     endfunction
 
-    function void write_ref(axi_s_seq_item req);
+    function void write_ref(axi_s_seq_item #(ADDR_WIDTH,DATA_WIDTH) req);
         int ma,mi;
         if (req.kind_e == axi_s_agent_pkg::READ) begin
             cov.read_func(req);
@@ -72,8 +72,8 @@ class axi_sb extends uvm_scoreboard;
     endfunction
 
     task check_data();
-        axi_m_seq_item act;
-        axi_s_seq_item exp;
+        axi_m_seq_item #(ADDR_WIDTH,DATA_WIDTH) act;
+        axi_s_seq_item #(ADDR_WIDTH,DATA_WIDTH) exp;
         int rid;
 
         forever begin

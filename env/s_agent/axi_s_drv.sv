@@ -11,6 +11,9 @@ class axi_s_drv #(int ADDR_WIDTH=32,DATA_WIDTH=32)
     axi_s_seq_item #(ADDR_WIDTH,DATA_WIDTH) r_data[$];
     axi_s_seq_item #(ADDR_WIDTH,DATA_WIDTH) b_resp[$];
     int a,b;
+    bit allow_out_of_order;
+    bit allow_interleaving;
+    int unsigned max_outstanding = 8;
 
 
     function new(string name="axi_s_drv",uvm_component parent);
@@ -63,21 +66,21 @@ class axi_s_drv #(int ADDR_WIDTH=32,DATA_WIDTH=32)
     task slave_write_addr_channel();
         forever begin
             @(s_vif.s_drv_cb);
-            s_vif.s_drv_cb.AWREADY <= 1'b1;
+            s_vif.s_drv_cb.AWREADY <= s_vif.s_drv_cb.ARESETn;
         end
     endtask
 
     task slave_write_data_channel();
         forever begin
             @(s_vif.s_drv_cb);
-            s_vif.s_drv_cb.WREADY <= 1'b1;
+            s_vif.s_drv_cb.WREADY <= s_vif.s_drv_cb.ARESETn;
         end
     endtask
 
     task slave_read_addr_channel();
         forever begin
             @(s_vif.s_drv_cb);
-            s_vif.s_drv_cb.ARREADY <= 1'b1;
+            s_vif.s_drv_cb.ARREADY <= s_vif.s_drv_cb.ARESETn;
         end
     endtask
 
@@ -85,10 +88,14 @@ class axi_s_drv #(int ADDR_WIDTH=32,DATA_WIDTH=32)
     // ---------------- B CHANNEL ----------------
     task slave_bresp_channel();
         axi_s_seq_item #(ADDR_WIDTH,DATA_WIDTH) trans;
+        int idx;
 
         forever begin
             wait(b_resp.size() > 0);
-            trans = b_resp.pop_front();
+            wait(s_vif.s_drv_cb.ARESETn);
+            idx = allow_out_of_order ? $urandom_range(0, b_resp.size() - 1) : 0;
+            trans = b_resp[idx];
+            b_resp.delete(idx);
 
             @(s_vif.s_drv_cb);
             s_vif.s_drv_cb.BID    <= trans.AWID;
@@ -104,19 +111,36 @@ class axi_s_drv #(int ADDR_WIDTH=32,DATA_WIDTH=32)
     task slave_read_channel();
         axi_s_seq_item #(ADDR_WIDTH,DATA_WIDTH) r_trans_h;
         int r_data_cnt;
+        int idx;
         @(s_vif.s_drv_cb);
         forever begin
             wait(r_data.size() != 0);
-            r_trans_h = r_data.pop_front();
-            for (int i = 0; i <= r_trans_h.ARLEN; i++) begin
+            wait(s_vif.s_drv_cb.ARESETn);
+            idx = allow_out_of_order ? $urandom_range(0, r_data.size() - 1) : 0;
+            r_trans_h = r_data[idx];
+            r_data.delete(idx);
+            if (allow_interleaving) begin
                 s_vif.s_drv_cb.RID    <= r_trans_h.RID;
-                s_vif.s_drv_cb.RDATA  <= r_trans_h.RDATA[i];
+                s_vif.s_drv_cb.RDATA  <= r_trans_h.RDATA[0];
                 s_vif.s_drv_cb.RRESP  <= r_trans_h.RRESP;
                 s_vif.s_drv_cb.RVALID <= 1'b1;
-                s_vif.s_drv_cb.RLAST  <= (i == r_trans_h.ARLEN);
+                s_vif.s_drv_cb.RLAST  <= (r_trans_h.RDATA.size() == 1);
                 @(s_vif.s_drv_cb iff s_vif.s_drv_cb.RREADY);
+                if (r_trans_h.RDATA.size() > 1) begin
+                    r_trans_h.RDATA.pop_front();
+                    r_data.push_back(r_trans_h);
+                end
                 r_data_cnt++;
-                $display("rd data in s drv: %0h , len : %0d , last:%0d , valid : %0d",s_vif.s_drv_cb.RDATA,r_trans_h.ARLEN, s_vif.s_drv_cb.RLAST,s_vif.s_drv_cb.RVALID);
+            end else begin
+                for (int i = 0; i <= r_trans_h.ARLEN; i++) begin
+                    s_vif.s_drv_cb.RID    <= r_trans_h.RID;
+                    s_vif.s_drv_cb.RDATA  <= r_trans_h.RDATA[i];
+                    s_vif.s_drv_cb.RRESP  <= r_trans_h.RRESP;
+                    s_vif.s_drv_cb.RVALID <= 1'b1;
+                    s_vif.s_drv_cb.RLAST  <= (i == r_trans_h.ARLEN);
+                    @(s_vif.s_drv_cb iff s_vif.s_drv_cb.RREADY);
+                    r_data_cnt++;
+                end
             end
             s_vif.s_drv_cb.RVALID <= 1'b0;
             s_vif.s_drv_cb.RLAST  <= 1'b0;

@@ -10,6 +10,9 @@ comp1:
 sim:
 	vsim -voptargs=+acc axi_tb_top -c -do "run -all; exit" +UVM_TESTNAME=$(UVM_TESTNAME)
 
+ooo:
+	vsim -voptargs=+acc axi_tb_top -c -do "run -all; exit" +UVM_TESTNAME=axi_ooo_interleave_test
+
 sim1:
 	vsim -voptargs=+acc axi_tb_top -do "do wave.do; run -all; exit" +UVM_TESTNAME=$(UVM_TESTNAME)
 

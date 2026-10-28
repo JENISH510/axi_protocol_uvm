@@ -27,6 +27,11 @@ elif target == "sim":
     print("Running: " + cmd)
     os.system(cmd)
 
+elif target == "ooo":
+    cmd = 'vsim -voptargs=+acc axi_tb_top -c -do "run -all; exit" +UVM_TESTNAME=axi_ooo_interleave_test'
+    print("Running: " + cmd)
+    os.system(cmd)
+
 elif target == "sim1":
     cmd = 'vsim -voptargs=+acc axi_tb_top -do "do wave.do; run -all; exit" +UVM_TESTNAME=' + uvm_testname
     print("Running: " + cmd)

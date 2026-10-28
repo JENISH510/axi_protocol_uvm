@@ -1,14 +1,14 @@
 `ifndef AXI_REF_MODEL_SV
 `define AXI_REF_MODEL_SV
 
-class axi_ref_model extends uvm_component;
-    `uvm_component_utils(axi_ref_model)
+class axi_ref_model #(int ADDR_WIDTH=32, int DATA_WIDTH=32) extends uvm_component;
+    `uvm_component_param_utils(axi_ref_model #(ADDR_WIDTH, DATA_WIDTH))
 
-    axi_s_seq_item read_q[$];
-    axi_s_seq_item read, req;
+    axi_s_seq_item #(ADDR_WIDTH,DATA_WIDTH) read_q[$];
+    axi_s_seq_item #(ADDR_WIDTH,DATA_WIDTH) read, req;
 
-    uvm_analysis_imp #(axi_s_seq_item, axi_ref_model) mon_imp;
-    uvm_analysis_port#(axi_s_seq_item)                 sb_imp;
+    uvm_analysis_imp #(axi_s_seq_item #(ADDR_WIDTH,DATA_WIDTH), axi_ref_model #(ADDR_WIDTH,DATA_WIDTH)) mon_imp;
+    uvm_analysis_port#(axi_s_seq_item #(ADDR_WIDTH,DATA_WIDTH)) sb_imp;
 
     function new(string name="axi_ref_model", uvm_component parent);
         super.new(name, parent);
@@ -16,9 +16,9 @@ class axi_ref_model extends uvm_component;
         sb_imp  = new("sb_imp",  this);
     endfunction
 
-    bit [31:0] mem [int unsigned];
+    bit [DATA_WIDTH-1:0] mem [int unsigned];
 
-    function void write(axi_s_seq_item req);
+    function void write(axi_s_seq_item #(ADDR_WIDTH,DATA_WIDTH) req);
         int unsigned addr;
         int unsigned base_addr;
         int unsigned wrap_lower_limit;

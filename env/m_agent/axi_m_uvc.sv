@@ -28,6 +28,9 @@ class axi_m_uvc #(int ADDR_WIDTH=32, int DATA_WIDTH=32) extends uvm_agent;
             magt_cfg[i] = axi_m_agent_cfg#(ADDR_WIDTH,DATA_WIDTH)::type_id::create($sformatf("magt_cfg[%0d]", i));
             
             magt_cfg[i].is_active = m_agt_cfg.is_active;
+            magt_cfg[i].allow_out_of_order = m_agt_cfg.allow_out_of_order;
+            magt_cfg[i].allow_interleaving = m_agt_cfg.allow_interleaving;
+            magt_cfg[i].max_outstanding = m_agt_cfg.max_outstanding;
 
             m_agent_h[i] = axi_m_agent#(ADDR_WIDTH,DATA_WIDTH)::type_id::create($sformatf("m_agent_h[%0d]", i), this);
             

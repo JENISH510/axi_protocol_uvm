@@ -1,4 +1,4 @@
-module axi_tb_top;
+module axi_tb_top #(int ADDR_WIDTH=32, int DATA_WIDTH=32);
   // your original content
   import uvm_pkg::*;
     `include "uvm_macros.svh"
@@ -16,8 +16,16 @@ module axi_tb_top;
     //------------------------------------------------------------------
 
  
-    axi_m_inf m_inf(ACLK);
-    axi_s_inf s_inf(ACLK);
+    axi_m_inf #(ADDR_WIDTH,DATA_WIDTH) m_inf(ACLK);
+    axi_s_inf #(ADDR_WIDTH,DATA_WIDTH) s_inf(ACLK);
+
+    initial begin
+        m_inf.ARESETn = 1'b0;
+        s_inf.ARESETn = 1'b0;
+        repeat (5) @(posedge ACLK);
+        m_inf.ARESETn = 1'b1;
+        s_inf.ARESETn = 1'b1;
+    end
 
     //------------------------------------------------------------------
     //Clock Generation
@@ -95,8 +103,8 @@ module axi_tb_top;
     //------------------------------------------------------------------
 
     initial begin
-      uvm_config_db #(virtual axi_m_inf)::set(null,"*","m_vif",m_inf);
-        uvm_config_db #(virtual axi_s_inf)::set(null,"*","s_vif",s_inf);
+      uvm_config_db #(virtual axi_m_inf#(ADDR_WIDTH,DATA_WIDTH))::set(null,"*","m_vif",m_inf);
+        uvm_config_db #(virtual axi_s_inf#(ADDR_WIDTH,DATA_WIDTH))::set(null,"*","s_vif",s_inf);
 
       run_test("");
     end

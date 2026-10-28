@@ -4,46 +4,49 @@
 typedef enum bit[1:0]{FIXED, INCR, WRAP} burst_kind;
 typedef enum bit[1:0]{IDLE, WRITE, READ} trans_kind;
 
-class axi_m_seq_item #(int ADDR_WIDTH=32, DATA_WIDTH=32) extends uvm_sequence_item;
+class axi_m_seq_item #(int ADDR_WIDTH=32, DATA_WIDTH=32,
+                       int ID_WIDTH=`ID, LEN_WIDTH=`LEN,
+                       int SIZE_WIDTH=`SIZE, BURST_WIDTH=`BURST,
+                       int RESP_WIDTH=`RESP) extends uvm_sequence_item;
 
     //========================================================
     // WRITE ADDRESS CHANNEL (AW)
     //========================================================
-    randc bit [(`ID-1)        :0] AWID;
-    rand  bit [(`ADDR_WIDTH-1):0] AWADDR;
-    rand  bit [(`LEN-1)       :0] AWLEN;
-    rand  bit [(`SIZE-1)      :0] AWSIZE;
-    rand  bit [(`BURST-1)     :0] AWBURST;
+    randc bit [(ID_WIDTH-1):0] AWID;
+    rand  bit [(ADDR_WIDTH-1):0] AWADDR;
+    rand  bit [(LEN_WIDTH-1):0] AWLEN;
+    rand  bit [(SIZE_WIDTH-1):0] AWSIZE;
+    rand  bit [(BURST_WIDTH-1):0] AWBURST;
 
     //========================================================
     // WRITE DATA CHANNEL (W)
     //========================================================
-    rand  bit [(`ID-1)        :0] WID;
-    rand  bit [(`DATA_WIDTH-1):0] WDATA[$];
-    rand  bit [(`STRB_WIDTH-1):0] WSTRB[$];
+    rand  bit [(ID_WIDTH-1):0] WID;
+    rand  bit [(DATA_WIDTH-1):0] WDATA[$];
+    rand  bit [(DATA_WIDTH/8-1):0] WSTRB[$];
     rand  bit                     WLAST;
 
     //========================================================
     // WRITE RESPONSE CHANNEL (B)
     //========================================================
-    bit [(`ID-1)  :0] BID;
-    bit [(`RESP-1):0] BRESP;
+    bit [(ID_WIDTH-1):0] BID;
+    bit [(RESP_WIDTH-1):0] BRESP;
 
     //========================================================
     // READ ADDRESS CHANNEL (AR)
     //========================================================
-    randc bit [(`ID-1)        :0] ARID;
-    rand  bit [(`ADDR_WIDTH-1):0] ARADDR;
-    rand  bit [(`LEN-1)       :0] ARLEN;
-    rand  bit [(`SIZE-1)      :0] ARSIZE;
-    rand  bit [(`BURST-1)     :0] ARBURST;
+    randc bit [(ID_WIDTH-1):0] ARID;
+    rand  bit [(ADDR_WIDTH-1):0] ARADDR;
+    rand  bit [(LEN_WIDTH-1):0] ARLEN;
+    rand  bit [(SIZE_WIDTH-1):0] ARSIZE;
+    rand  bit [(BURST_WIDTH-1):0] ARBURST;
 
     //========================================================
     // READ DATA CHANNEL (R)
     //========================================================
-    bit [(`ID-1)        :0] RID;
-    bit [(`DATA_WIDTH-1):0] RDATA[$];
-    bit [(`RESP-1)      :0] RRESP;
+    bit [(ID_WIDTH-1):0] RID;
+    bit [(DATA_WIDTH-1):0] RDATA[$];
+    bit [(RESP_WIDTH-1):0] RRESP;
     bit                     RLAST;
 
     //========================================================
@@ -107,8 +110,8 @@ class axi_m_seq_item #(int ADDR_WIDTH=32, DATA_WIDTH=32) extends uvm_sequence_it
 
     // AWSIZE/ARSIZE max = 2 (4 bytes) for 32-bit bus
     constraint size_c {
-        AWSIZE inside {[0:3]};
-        ARSIZE inside {[0:3]};
+        AWSIZE inside {[0:$clog2(DATA_WIDTH/8)]};
+        ARSIZE inside {[0:$clog2(DATA_WIDTH/8)]};
     }
 
     // AWLEN/ARLEN per burst type + num_beats helpers
@@ -155,9 +158,9 @@ class axi_m_seq_item #(int ADDR_WIDTH=32, DATA_WIDTH=32) extends uvm_sequence_it
         solve AWADDR, beat_size before WSTRB;
         foreach (WSTRB[i]) {
             if (i == 0)
-                WSTRB[i] == (4'hf << (AWADDR % beat_size));
+                WSTRB[i] == ({DATA_WIDTH/8{1'b1}} << (AWADDR % beat_size));
             else
-                WSTRB[i] == 4'hf;
+                WSTRB[i] == {DATA_WIDTH/8{1'b1}};
         }
     }
             

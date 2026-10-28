@@ -38,6 +38,9 @@ class axi_m_agent #(int ADDR_WIDTH=32, int DATA_WIDTH=32) extends uvm_agent;
         if(m_agt_cfg.is_active == UVM_ACTIVE) begin
             m_drv_h.seq_item_port.connect(m_seqr_h.seq_item_export);
             m_drv_h.m_vif = m_vif;
+            m_drv_h.allow_out_of_order = m_agt_cfg.allow_out_of_order;
+            m_drv_h.allow_interleaving = m_agt_cfg.allow_interleaving;
+            m_drv_h.max_outstanding = m_agt_cfg.max_outstanding;
         end
         m_mon_h.m_vif = m_vif;
     endfunction

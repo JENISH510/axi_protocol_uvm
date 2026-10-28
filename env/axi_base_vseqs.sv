@@ -1,16 +1,16 @@
 `ifndef AXI_BASE_VSEQ_SV
 `define AXI_BASE_VSEQ_SV
 
-class axi_base_vseqs extends uvm_sequence;
+class axi_base_vseqs #(int ADDR_WIDTH=32, int DATA_WIDTH=32) extends uvm_sequence;
 
-    `uvm_object_utils(axi_base_vseqs)
+    `uvm_object_param_utils(axi_base_vseqs #(ADDR_WIDTH, DATA_WIDTH))
 
     // -------------------------------------------------------------------------
     // Declare p_sequencer — gives access to virtual sequencer's sub-handles
     // -------------------------------------------------------------------------
-    `uvm_declare_p_sequencer(axi_virtual_seqr)
+    `uvm_declare_p_sequencer(axi_virtual_seqr #(ADDR_WIDTH, DATA_WIDTH))
 
-    axi_m_seqr #(32,32) m_seqr_h;
+    axi_m_seqr #(ADDR_WIDTH,DATA_WIDTH) m_seqr_h;
     //axi_s_seqr #(32,32) s_seqr_h;
   //axi_m_seq_item #(32,32) req_s;
 

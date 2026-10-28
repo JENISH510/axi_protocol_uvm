@@ -1,20 +1,20 @@
 `ifndef AXI_ENV_SV
 `define AXI_ENV_SV
 
-class axi_env extends uvm_env;
+class axi_env #(int ADDR_WIDTH=32, int DATA_WIDTH=32) extends uvm_env;
 
-    `uvm_component_utils(axi_env)
+    `uvm_component_param_utils(axi_env #(ADDR_WIDTH, DATA_WIDTH))
 
-    axi_m_uvc #(32,32)       m_uvc_h;
-    axi_s_uvc #(32,32)       s_uvc_h;
-    axi_sb                   sb_h;
-    axi_ref_model            ref_model_h;
+    axi_m_uvc #(ADDR_WIDTH,DATA_WIDTH) m_uvc_h;
+    axi_s_uvc #(ADDR_WIDTH,DATA_WIDTH) s_uvc_h;
+    axi_sb #(ADDR_WIDTH,DATA_WIDTH) sb_h;
+    axi_ref_model #(ADDR_WIDTH,DATA_WIDTH) ref_model_h;
 
     axi_env_cfg              env_cfg_h;
-    axi_m_agent_cfg #(32,32) m_agent_cfg_h;
-    axi_s_agent_cfg #(32,32) s_agent_cfg_h;
+    axi_m_agent_cfg #(ADDR_WIDTH,DATA_WIDTH) m_agent_cfg_h;
+    axi_s_agent_cfg #(ADDR_WIDTH,DATA_WIDTH) s_agent_cfg_h;
 
-    axi_virtual_seqr         vseqr_h;
+    axi_virtual_seqr #(ADDR_WIDTH,DATA_WIDTH) vseqr_h;
 
     function new(string name="axi_env",uvm_component parent);
         super.new(name,parent);
@@ -26,21 +26,27 @@ class axi_env extends uvm_env;
         if(!uvm_config_db #(axi_env_cfg)::get(this,"","env_cfg_h",env_cfg_h))
             `uvm_fatal(get_full_name(), "Can't get data from config db")
         
-        m_agent_cfg_h = axi_m_agent_cfg #(32,32)::type_id::create("m_agent_cfg_h");
-        s_agent_cfg_h = axi_s_agent_cfg #(32,32)::type_id::create("s_agent_cfg_h"); 
+        m_agent_cfg_h = axi_m_agent_cfg #(ADDR_WIDTH,DATA_WIDTH)::type_id::create("m_agent_cfg_h");
+        s_agent_cfg_h = axi_s_agent_cfg #(ADDR_WIDTH,DATA_WIDTH)::type_id::create("s_agent_cfg_h"); 
 
         m_agent_cfg_h.is_active = env_cfg_h.is_m_agt_active;
         s_agent_cfg_h.is_active = env_cfg_h.is_s_agt_active;
+        m_agent_cfg_h.allow_out_of_order = env_cfg_h.allow_out_of_order;
+        m_agent_cfg_h.allow_interleaving = env_cfg_h.allow_interleaving;
+        m_agent_cfg_h.max_outstanding = env_cfg_h.max_outstanding;
+        s_agent_cfg_h.allow_out_of_order = env_cfg_h.allow_out_of_order;
+        s_agent_cfg_h.allow_interleaving = env_cfg_h.allow_interleaving;
+        s_agent_cfg_h.max_outstanding = env_cfg_h.max_outstanding;
       
-        uvm_config_db #(axi_m_agent_cfg#(32,32))::set(this,"m_uvc_h*","m_agent_cfg",m_agent_cfg_h);
-        uvm_config_db #(axi_s_agent_cfg#(32,32))::set(this,"s_uvc_h*","s_agent_cfg",s_agent_cfg_h);
+        uvm_config_db #(axi_m_agent_cfg#(ADDR_WIDTH,DATA_WIDTH))::set(this,"m_uvc_h*","m_agent_cfg",m_agent_cfg_h);
+        uvm_config_db #(axi_s_agent_cfg#(ADDR_WIDTH,DATA_WIDTH))::set(this,"s_uvc_h*","s_agent_cfg",s_agent_cfg_h);
 
-        m_uvc_h = axi_m_uvc #(32,32)::type_id::create("m_uvc_h",this);
-        s_uvc_h = axi_s_uvc #(32,32)::type_id::create("s_uvc_h",this);
+        m_uvc_h = axi_m_uvc #(ADDR_WIDTH,DATA_WIDTH)::type_id::create("m_uvc_h",this);
+        s_uvc_h = axi_s_uvc #(ADDR_WIDTH,DATA_WIDTH)::type_id::create("s_uvc_h",this);
         
-        sb_h = axi_sb::type_id::create("sb_h",this);
-        ref_model_h = axi_ref_model::type_id::create("ref_model_h", this);
-        vseqr_h = axi_virtual_seqr::type_id::create("vseqr_h",this);
+        sb_h = axi_sb #(ADDR_WIDTH,DATA_WIDTH)::type_id::create("sb_h",this);
+        ref_model_h = axi_ref_model #(ADDR_WIDTH,DATA_WIDTH)::type_id::create("ref_model_h", this);
+        vseqr_h = axi_virtual_seqr #(ADDR_WIDTH,DATA_WIDTH)::type_id::create("vseqr_h",this);
     endfunction
 
     function void connect_phase(uvm_phase phase);

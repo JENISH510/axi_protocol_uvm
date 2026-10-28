@@ -28,10 +28,13 @@ class axi_s_uvc #(int ADDR_WIDTH=32, int DATA_WIDTH=32) extends uvm_agent;
         sagt_cfg[i] = axi_s_agent_cfg#(ADDR_WIDTH,DATA_WIDTH)::type_id::create($sformatf("sagt_cfg[%0d]", i));
             
         sagt_cfg[i].is_active = s_agt_cfg.is_active;
+        sagt_cfg[i].allow_out_of_order = s_agt_cfg.allow_out_of_order;
+        sagt_cfg[i].allow_interleaving = s_agt_cfg.allow_interleaving;
+        sagt_cfg[i].max_outstanding = s_agt_cfg.max_outstanding;
 
         s_agent_h[i] = axi_s_agent#(ADDR_WIDTH,DATA_WIDTH)::type_id::create($sformatf("s_agent_h[%0d]", i), this);
             
-        uvm_config_db#(axi_s_agent_cfg#(ADDR_WIDTH,DATA_WIDTH))::set(this, $sformatf("m_agent_h[%0d]*", i), "s_agent_cfg", sagt_cfg[i]);
+        uvm_config_db#(axi_s_agent_cfg#(ADDR_WIDTH,DATA_WIDTH))::set(this, $sformatf("s_agent_h[%0d]*", i), "s_agent_cfg", sagt_cfg[i]);
         end
 
     endfunction

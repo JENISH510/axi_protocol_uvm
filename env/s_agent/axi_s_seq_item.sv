@@ -4,41 +4,44 @@
 typedef enum bit[1:0]{FIXED, INCR, WRAP} burst_kind;
 typedef enum bit[1:0]{IDLE, WRITE, READ} trans_kind;
 
-class axi_s_seq_item#(int ADDR_WIDTH=32,DATA_WIDTH=32) extends uvm_sequence_item;
+class axi_s_seq_item#(int ADDR_WIDTH=32, DATA_WIDTH=32,
+                      int ID_WIDTH=`ID, LEN_WIDTH=`LEN,
+                      int SIZE_WIDTH=`SIZE, BURST_WIDTH=`BURST,
+                      int RESP_WIDTH=`RESP) extends uvm_sequence_item;
 
 //----------------- WRITE ADDRESS -------------------//
     
-    bit[(`ID-1):0]                     AWID;
-    bit[(`ADDR_WIDTH-1):0]           AWADDR;
-    bit[(`LEN-1):0]                   AWLEN;
-    bit[(`SIZE-1):0]                 AWSIZE;
-    bit[(`BURST-1):0]               AWBURST;
+    bit[(ID_WIDTH-1):0] AWID;
+    bit[(ADDR_WIDTH-1):0] AWADDR;
+    bit[(LEN_WIDTH-1):0] AWLEN;
+    bit[(SIZE_WIDTH-1):0] AWSIZE;
+    bit[(BURST_WIDTH-1):0] AWBURST;
 
 //----------------- WRITE DATA ----------------------//
     
-    bit[(`ID-1):0]                      WID;
-    bit[(`DATA_WIDTH-1):0]         WDATA[$];
-    bit[(`STRB_WIDTH-1):0]         WSTRB[$];
+    bit[(ID_WIDTH-1):0] WID;
+    bit[(DATA_WIDTH-1):0] WDATA[$];
+    bit[(DATA_WIDTH/8-1):0] WSTRB[$];
     bit                               WLAST;
 
 //----------------- WRITE RESPONSE ------------------//
     
-    bit [(`ID-1):0]                     BID;
-    bit [(`RESP-1):0]                 BRESP;
+    bit [(ID_WIDTH-1):0] BID;
+    bit [(RESP_WIDTH-1):0] BRESP;
 
 //----------------- READ ADDRESS --------------------//
     
-    bit[(`ID-1):0]                     ARID;
-    bit[(`ADDR_WIDTH-1):0]           ARADDR;
-    bit[(`LEN-1):0]                   ARLEN;
-    bit[(`SIZE-1):0]                 ARSIZE;
-    bit[(`BURST-1):0]               ARBURST;
+    bit[(ID_WIDTH-1):0] ARID;
+    bit[(ADDR_WIDTH-1):0] ARADDR;
+    bit[(LEN_WIDTH-1):0] ARLEN;
+    bit[(SIZE_WIDTH-1):0] ARSIZE;
+    bit[(BURST_WIDTH-1):0] ARBURST;
 
 //----------------- READ DATA -----------------------//
     
-    bit [(`ID-1):0]                     RID;
-    bit [(`DATA_WIDTH-1):0]        RDATA[$];
-    bit [(`RESP-1):0]                 RRESP;
+    bit [(ID_WIDTH-1):0] RID;
+    bit [(DATA_WIDTH-1):0] RDATA[$];
+    bit [(RESP_WIDTH-1):0] RRESP;
     bit                               RLAST;
 
 //----------------- ENUM HANDLE ---------------------//
@@ -100,4 +103,3 @@ class axi_s_seq_item#(int ADDR_WIDTH=32,DATA_WIDTH=32) extends uvm_sequence_item
 endclass
 
 `endif
-

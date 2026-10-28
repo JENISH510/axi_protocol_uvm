@@ -1,14 +1,14 @@
 `ifndef AXI_COVERAGE_SV
 `define AXI_COVERAGE_SV
 
-class axi_coverage;
+class axi_coverage #(int ADDR_WIDTH=32, int DATA_WIDTH=32);
 
-    axi_m_seq_item m_trans;
-    axi_s_seq_item s_trans;
+    axi_m_seq_item #(ADDR_WIDTH,DATA_WIDTH) m_trans;
+    axi_s_seq_item #(ADDR_WIDTH,DATA_WIDTH) s_trans;
 
-    bit [31:0] current_wdata;
-    bit [31:0] current_rdata;
-    bit [3:0]  current_wstrb;
+    bit [DATA_WIDTH-1:0] current_wdata;
+    bit [DATA_WIDTH-1:0] current_rdata;
+    bit [DATA_WIDTH/8-1:0] current_wstrb;
 
     covergroup write_cov;
 
@@ -181,7 +181,7 @@ class axi_coverage;
         read_cov = new();
     endfunction
 
-    function void write_func(axi_m_seq_item req);
+    function void write_func(axi_m_seq_item #(ADDR_WIDTH,DATA_WIDTH) req);
         this.m_trans = req;
         foreach (req.WDATA[i]) begin
             current_wdata = req.WDATA[i];
@@ -190,7 +190,7 @@ class axi_coverage;
         end
     endfunction
 
-    function void read_func(axi_s_seq_item req);
+    function void read_func(axi_s_seq_item #(ADDR_WIDTH,DATA_WIDTH) req);
         this.s_trans = req;
         foreach (req.RDATA[i]) begin
             current_rdata = req.RDATA[i]; 

@@ -11,6 +11,9 @@ class axi_m_drv #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends uvm_driver #(axi_m_se
 
     int cnt;
     int aw_ctr;
+    bit allow_out_of_order;
+    bit allow_interleaving;
+    int unsigned max_outstanding = 8;
 
     axi_m_seq_item#(ADDR_WIDTH,DATA_WIDTH) wr_addr_q[$];
     axi_m_seq_item#(ADDR_WIDTH,DATA_WIDTH) wr_data_q[$];
@@ -25,6 +28,7 @@ class axi_m_drv #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends uvm_driver #(axi_m_se
     fork
         begin
             forever begin
+                wait (wr_addr_q.size() + rd_addr_q.size() < max_outstanding);
                 seq_item_port.get(req);
                 $display("AWLEN IN M DRV:%0d",req.AWLEN);
                 cnt++;
@@ -66,6 +70,7 @@ class axi_m_drv #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends uvm_driver #(axi_m_se
         @(m_vif.m_drv_cb);
         forever begin
             wait(wr_addr_q.size() > 0);
+            wait(m_vif.m_drv_cb.ARESETn);
             aw_ctr++;
             aw_ch = wr_addr_q.pop_front();
 
@@ -90,41 +95,60 @@ class axi_m_drv #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends uvm_driver #(axi_m_se
         @(m_vif.m_drv_cb);
         forever begin
             wait (wr_data_q.size() != 0);
-            w_trans = wr_data_q.pop_front();
-
-            for (int i = 0; i <= w_trans.AWLEN; i++) begin
+            wait(m_vif.m_drv_cb.ARESETn);
+            if (allow_interleaving) begin
+                int idx = $urandom_range(0, wr_data_q.size() - 1);
+                w_trans = wr_data_q[idx];
+                wr_data_q.delete(idx);
                 m_vif.m_drv_cb.WID    <= w_trans.AWID;
-                //$display("WID: %0d , AWID : %0d", m_vif.m_drv_cb.WID, w_trans.AWID);
-                m_vif.m_drv_cb.WDATA  <= w_trans.WDATA[i];
-                m_vif.m_drv_cb.WSTRB  <= w_trans.WSTRB[i];
+                m_vif.m_drv_cb.WDATA  <= w_trans.WDATA[0];
+                m_vif.m_drv_cb.WSTRB  <= w_trans.WSTRB[0];
                 m_vif.m_drv_cb.WVALID <= 1'b1;
-                m_vif.m_drv_cb.WLAST  <= (i == w_trans.AWLEN);
-
+                m_vif.m_drv_cb.WLAST  <= (w_trans.WDATA.size() == 1);
                 @(m_vif.m_drv_cb iff m_vif.m_drv_cb.WREADY);
-                //$display($time,"wlast : %0d",m_vif.m_drv_cb.WLAST);
+                if (w_trans.WDATA.size() > 1) begin
+                    w_trans.WDATA.pop_front();
+                    w_trans.WSTRB.pop_front();
+                    wr_data_q.push_back(w_trans);
+                end
+            end else begin
+                w_trans = wr_data_q.pop_front();
+                for (int i = 0; i <= w_trans.AWLEN; i++) begin
+                    m_vif.m_drv_cb.WID    <= w_trans.AWID;
+                    m_vif.m_drv_cb.WDATA  <= w_trans.WDATA[i];
+                    m_vif.m_drv_cb.WSTRB  <= w_trans.WSTRB[i];
+                    m_vif.m_drv_cb.WVALID <= 1'b1;
+                    m_vif.m_drv_cb.WLAST  <= (i == w_trans.AWLEN);
+                    @(m_vif.m_drv_cb iff m_vif.m_drv_cb.WREADY);
+                end
             end
-          if(wr_data_q.size() == 0)begin
-            //$display($time,"later wlast : %0d",m_vif.m_drv_cb.WLAST);
             m_vif.m_drv_cb.WVALID <= 1'b0;
             m_vif.m_drv_cb.WLAST <= 1'b0;
-          end
-            //m_vif.m_drv_cb.WDATA  <= 0;
-            $display("AFFTER W CHANNEL");
         end
     endtask
 
     task write_resp_channel;
         axi_m_seq_item#(ADDR_WIDTH,DATA_WIDTH) req_b, rsp;
+        int idx;
         forever begin
             wait(wr_resp_q.size() > 0);
-            req_b = wr_resp_q.pop_front();
-
+            wait(m_vif.m_drv_cb.ARESETn);
             m_vif.m_drv_cb.BREADY <= 1;
             @(m_vif.m_drv_cb iff (m_vif.m_drv_cb.BVALID));
             m_vif.m_drv_cb.BREADY <= 0;
 
+            idx = 0;
+            if (allow_out_of_order) begin
+                foreach (wr_resp_q[i])
+                    if (wr_resp_q[i].AWID == m_vif.m_drv_cb.BID)
+                        idx = i;
+            end
+            req_b = wr_resp_q[idx];
+            wr_resp_q.delete(idx);
             $cast(rsp, req_b.clone());
-            rsp.set_id_info(req_b); 
+            rsp.BID = m_vif.m_drv_cb.BID;
+            rsp.BRESP = m_vif.m_drv_cb.BRESP;
+            rsp.set_id_info(req_b);
             seq_item_port.put_response(rsp);
             
             `uvm_info("DRIVER", "Write response sent to sequence", UVM_HIGH)
@@ -138,6 +162,7 @@ class axi_m_drv #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends uvm_driver #(axi_m_se
         @(m_vif.m_drv_cb);
         forever begin
             wait(rd_addr_q.size() > 0);
+            wait(m_vif.m_drv_cb.ARESETn);
             req_ar = rd_addr_q.pop_front();
 
             m_vif.m_drv_cb.ARVALID   <= 1'b1;
@@ -158,7 +183,7 @@ class axi_m_drv #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends uvm_driver #(axi_m_se
         $display("Before R CHANNEL");
         forever begin
             @(m_vif.m_drv_cb);
-            m_vif.m_drv_cb.RREADY <= 1'b1;
+            m_vif.m_drv_cb.RREADY <= m_vif.m_drv_cb.ARESETn;
         end
         $display("AFFTER R CHANNEL");
     endtask
