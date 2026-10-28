@@ -27,7 +27,7 @@ class axi_incr_cov_m_wseqs #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends axi_base_m
             assert(m_seq_item_h.randomize() with {
                 kind_e       == axi_m_agent_pkg::WRITE;
                 burst_kind_e inside {axi_m_agent_pkg::FIXED, axi_m_agent_pkg::INCR};
-                AWSIZE       == 8'd3; 
+                AWSIZE       == $clog2(DATA_WIDTH/8); 
                 
                 foreach(WDATA[i])
                     WDATA[i] inside {32'h5555_5555, 32'h0000_0000, 32'hffff_ffff,32'hFFFE_FFFF};
@@ -53,14 +53,14 @@ class axi_incr_cov_m_wseqs #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends axi_base_m
                     kind_e       == axi_s_agent_pkg::READ;
                     burst_kind_e == axi_s_agent_pkg::FIXED;
                     ARLEN        == saved_len;
-                    ARSIZE       == 8'd3; 
+                    ARSIZE       == $clog2(DATA_WIDTH/8); 
                 });
             end else begin
                 assert(m_seq_item_h.randomize() with {
                     kind_e       == axi_s_agent_pkg::READ;
                     burst_kind_e == axi_s_agent_pkg::INCR;
                     ARLEN        == saved_len;
-                    ARSIZE       == 8'd3; 
+                    ARSIZE       == $clog2(DATA_WIDTH/8); 
                 });
             end
             

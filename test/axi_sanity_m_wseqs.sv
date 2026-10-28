@@ -30,7 +30,7 @@ class axi_sanity_m_wseqs #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends axi_base_m_s
                 //AWADDR inside {[0:1000]};
                 AWADDR       == 32'hFFFF_FFFF;
                 AWLEN        == 8'd3; 
-                AWSIZE       == 8'd3; 
+                AWSIZE       == $clog2(DATA_WIDTH/8);
             });
             finish_item(m_seq_item_h);
 
@@ -48,7 +48,7 @@ class axi_sanity_m_wseqs #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends axi_base_m_s
                 ARADDR       == 32'hFFFF_FFFF;
                 ARLEN        == 8'd3; 
                 //ARLEN        == saved_len;
-                ARSIZE       == 8'd3; 
+                ARSIZE       == $clog2(DATA_WIDTH/8);
             });
             finish_item(m_seq_item_h);
         end

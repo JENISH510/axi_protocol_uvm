@@ -56,12 +56,12 @@ class axi_s_mon#(int ADDR_WIDTH=32, DATA_WIDTH=32) extends uvm_monitor;
                 aw_trans.WSTRB = pending_w[aw_trans.AWID][0].WSTRB;
                 aw_trans.WID = aw_trans.AWID;
                 aw_trans.WLAST = pending_w[aw_trans.AWID][0].WLAST;
-                pending_w[aw_trans.AWID].pop_front();
+                void'(pending_w[aw_trans.AWID].pop_front());
                 if (pending_w[aw_trans.AWID].size() == 0)
                     pending_w.delete(aw_trans.AWID);
                 if (aw_trans.WLAST) begin
                     s_port.write(aw_trans);
-                    get_id[aw_trans.AWID].pop_front();
+                    void'(get_id[aw_trans.AWID].pop_front());
                     get_id.delete(aw_trans.AWID);
                 end
             end
@@ -95,7 +95,7 @@ class axi_s_mon#(int ADDR_WIDTH=32, DATA_WIDTH=32) extends uvm_monitor;
                 if (s_vif.s_mon_cb.WLAST) begin
                     $cast(w_trans_copy, w_trans.clone());  
                     s_port.write(w_trans_copy);
-                    get_id[wid].pop_front();
+                    void'(get_id[wid].pop_front());
                     if (get_id[wid].size() == 0)
                         get_id.delete(wid);
                 end

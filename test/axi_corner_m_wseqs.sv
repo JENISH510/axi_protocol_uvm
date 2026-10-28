@@ -41,7 +41,7 @@ class axi_corner_m_wseqs #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends axi_base_m_s
                 };
 
                 AWLEN inside {[0:255]};
-                AWSIZE == 3'd3;
+                AWSIZE == $clog2(DATA_WIDTH/8);
 
                 /*WDATA[0] inside {
                     32'hFFFF_FFFF,
@@ -71,7 +71,7 @@ class axi_corner_m_wseqs #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends axi_base_m_s
 
                 ARADDR == saved_addr;
                 ARLEN  == saved_len;
-                ARSIZE == 3'd3;
+                ARSIZE == $clog2(DATA_WIDTH/8);
             });
 
             finish_item(m_seq_item_h);

@@ -27,7 +27,7 @@ class axi_b2b_m_wseqs #(int ADDR_WIDTH = 32, DATA_WIDTH = 32) extends axi_base_m
                         burst_kind_e   == axi_m_agent_pkg::INCR;
                         AWADDR         == shared_addr;
                         AWLEN inside   {[0:100]};
-                        AWSIZE         == 8'd3;
+                        AWSIZE         == $clog2(DATA_WIDTH/8);
                     });
                     finish_item(wr_item);
                 end
@@ -40,7 +40,7 @@ class axi_b2b_m_wseqs #(int ADDR_WIDTH = 32, DATA_WIDTH = 32) extends axi_base_m
                         burst_kind_e   == axi_m_agent_pkg::INCR;
                         ARADDR         == shared_addr;
                         ARLEN inside   {[0:10]};
-                        ARSIZE         == 8'd3;
+                        ARSIZE         == $clog2(DATA_WIDTH/8);
                     });
                     finish_item(rd_item);
                 end

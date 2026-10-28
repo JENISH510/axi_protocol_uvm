@@ -28,7 +28,7 @@ class axi_coverage_m_wseqs #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends axi_base_m
                 //AWID         == 16'hffff;
                 AWADDR inside {32'h0000_0000,32'hFFFF_FFFF,[32'h0000_0001 : 32'h0000_FFFF],[32'h0001_0000 : 32'hEFFF_FFFF],[32'hF000_0000 : 32'hFFFE_FFFF]};
                 AWLEN  inside {[0:15]}; 
-                AWSIZE       == 8'd3; 
+                AWSIZE       == $clog2(DATA_WIDTH/8); 
                 
                 foreach(WDATA[i])
                     WDATA[i] inside {32'h5555_5555, 32'h0000_0000, 32'hffff_ffff/*,[32'h0000_0001 : 32'hFFFE_FFFF]*/};
@@ -49,7 +49,7 @@ class axi_coverage_m_wseqs #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends axi_base_m
                 ARADDR       == saved_addr;
                 //ARLEN        == 8'd3; 
                 ARLEN        == saved_len;
-                ARSIZE       == 8'd3; 
+                ARSIZE       == $clog2(DATA_WIDTH/8); 
             });
             finish_item(m_seq_item_h);
         end
@@ -59,4 +59,3 @@ class axi_coverage_m_wseqs #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends axi_base_m
 endclass
 
 `endif
-

@@ -32,7 +32,7 @@ class axi_wrap_cov_m_wseqs #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends axi_base_m
                 kind_e       == axi_m_agent_pkg::WRITE;
                 burst_kind_e == axi_m_agent_pkg::WRAP;
                 
-                AWSIZE       == 8'd3; 
+                AWSIZE       == $clog2(DATA_WIDTH/8); 
                 
                 foreach(WDATA[i])
                     WDATA[i] inside {32'h5555_5555, 32'h0000_0000, 32'hffff_ffff,32'hFFFE_FFFF};
@@ -52,7 +52,7 @@ class axi_wrap_cov_m_wseqs #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends axi_base_m
                 burst_kind_e == axi_s_agent_pkg::WRAP;
                 
                 ARLEN        == saved_len;
-                ARSIZE       == 8'd3; 
+                ARSIZE       == $clog2(DATA_WIDTH/8); 
             });
             
             m_seq_item_h.ARADDR = saved_addr;

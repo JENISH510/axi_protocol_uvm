@@ -55,7 +55,7 @@ class axi_m_mon#(int ADDR_WIDTH=32, DATA_WIDTH=32) extends uvm_monitor;
                 aw_trans.WSTRB = pending_w[aw_trans.AWID][0].WSTRB;
                 aw_trans.WID = aw_trans.AWID;
                 aw_trans.WLAST = pending_w[aw_trans.AWID][0].WLAST;
-                pending_w[aw_trans.AWID].pop_front();
+                void'(pending_w[aw_trans.AWID].pop_front());
                 if (pending_w[aw_trans.AWID].size() == 0)
                     pending_w.delete(aw_trans.AWID);
             end
@@ -106,7 +106,7 @@ class axi_m_mon#(int ADDR_WIDTH=32, DATA_WIDTH=32) extends uvm_monitor;
                 b_trans = get_id[bid][0];
                 b_trans.BID = bid;
                 m_port.write(b_trans); 
-                get_id[bid].pop_front();
+                void'(get_id[bid].pop_front());
                 if (get_id[bid].size() == 0)
                     get_id.delete(bid);
             end
@@ -148,7 +148,7 @@ class axi_m_mon#(int ADDR_WIDTH=32, DATA_WIDTH=32) extends uvm_monitor;
                 r_trans.RLAST = m_vif.m_mon_cb.RLAST;
                 if (m_vif.m_mon_cb.RLAST) begin
                     m_port.write(r_trans);
-                    get_arid[rid].pop_front();
+                    void'(get_arid[rid].pop_front());
                     if (get_arid[rid].size() == 0)
                         get_arid.delete(rid);
                 end

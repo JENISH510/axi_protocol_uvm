@@ -29,7 +29,7 @@ class axi_wrap_m_wseqs #(int ADDR_WIDTH=32, DATA_WIDTH=32) extends axi_base_m_se
                 //AWADDR inside {[0:2000]};
                 //AWLEN        == 8'd3;
                 AWLEN inside {1,3,7,15};
-                AWSIZE       == 8'd3;    
+                AWSIZE       == $clog2(DATA_WIDTH/8);    
             });
             finish_item(m_seq_item_h);
 
@@ -50,7 +50,7 @@ class axi_wrap_m_wseqs #(int ADDR_WIDTH=32, DATA_WIDTH=32) extends axi_base_m_se
                 ARADDR       == saved_addr;
                 //ARLEN        == 8'd3;     
                 ARLEN        == saved_len;
-                ARSIZE       == 8'd3;        
+                ARSIZE       == $clog2(DATA_WIDTH/8);        
             });
             //$display("ARID IN WRAP SEQS : %0h",m_seq_item_h.ARID);
             finish_item(m_seq_item_h);
