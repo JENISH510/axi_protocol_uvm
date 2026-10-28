@@ -1,7 +1,7 @@
 `ifndef AXI_DRIVER_CALLBACK_TEST_SV
 `define AXI_DRIVER_CALLBACK_TEST_SV
 
-class axi_reset_m_cb extends axi_m_drv_cb #(32,32);
+class axi_reset_m_cb extends axi_m_drv_cb_32;
     `uvm_object_utils(axi_reset_m_cb)
     virtual axi_s_inf#(32,32) s_vif;
     bit reset_done;
@@ -28,7 +28,7 @@ class axi_reset_m_cb extends axi_m_drv_cb #(32,32);
     endtask
 endclass
 
-class axi_ready_toggle_s_cb extends axi_s_drv_cb #(32,32);
+class axi_ready_toggle_s_cb extends axi_s_drv_cb_32;
     `uvm_object_utils(axi_ready_toggle_s_cb)
     int unsigned cycle;
 
@@ -46,7 +46,7 @@ class axi_ready_toggle_s_cb extends axi_s_drv_cb #(32,32);
     endtask
 endclass
 
-class axi_valid_wait_m_cb extends axi_m_drv_cb #(32,32);
+class axi_valid_wait_m_cb extends axi_m_drv_cb_32;
     `uvm_object_utils(axi_valid_wait_m_cb)
     int unsigned wait_count;
 
@@ -75,7 +75,7 @@ class axi_reset_callback_test extends axi_base_test;
         super.end_of_elaboration_phase(phase);
         reset_cb = axi_reset_m_cb::type_id::create("reset_cb");
         reset_cb.s_vif = s_vif;
-        uvm_callbacks#(axi_m_drv#(32,32), axi_m_drv_cb#(32,32))::add(
+        uvm_callbacks#(axi_m_drv_32, axi_m_drv_cb_32)::add(
             env_h.m_uvc_h.m_agent_h[0].m_drv_h, reset_cb);
     endfunction
 
@@ -102,9 +102,9 @@ class axi_ready_toggle_callback_test extends axi_base_test;
         super.end_of_elaboration_phase(phase);
         ready_cb = axi_ready_toggle_s_cb::type_id::create("ready_cb");
         valid_cb = axi_valid_wait_m_cb::type_id::create("valid_cb");
-        uvm_callbacks#(axi_s_drv#(32,32), axi_s_drv_cb#(32,32))::add(
+        uvm_callbacks#(axi_s_drv_32, axi_s_drv_cb_32)::add(
             env_h.s_uvc_h.s_agent_h[0].s_drv_h, ready_cb);
-        uvm_callbacks#(axi_m_drv#(32,32), axi_m_drv_cb#(32,32))::add(
+        uvm_callbacks#(axi_m_drv_32, axi_m_drv_cb_32)::add(
             env_h.m_uvc_h.m_agent_h[0].m_drv_h, valid_cb);
     endfunction
 

@@ -10,6 +10,11 @@ package axi_test_pkg;
     import axi_s_agent_pkg::*;  
     import axi_env_pkg::*;
 
+    typedef axi_m_drv_cb #(32,32) axi_m_drv_cb_32;
+    typedef axi_s_drv_cb #(32,32) axi_s_drv_cb_32;
+    typedef axi_m_drv #(32,32) axi_m_drv_32;
+    typedef axi_s_drv #(32,32) axi_s_drv_32;
+
     bit [3:0] shared_addr_q[$];   
     `include "axi_base_test.sv"
 
