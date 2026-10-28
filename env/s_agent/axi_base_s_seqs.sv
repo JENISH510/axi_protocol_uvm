@@ -49,7 +49,6 @@ class axi_base_s_seqs #(int ADDR_WIDTH = 32, DATA_WIDTH = 32)
                     case (req.AWBURST)
                         2'b00: begin
                             mem[addr] = req.WDATA[beat];
-                            addr += 1;
                         end
 
                         2'b01: begin
@@ -130,6 +129,8 @@ class axi_base_s_seqs #(int ADDR_WIDTH = 32, DATA_WIDTH = 32)
                     // $display("data check in s seqs : %p", read);
 
                     read.RID = captured_arid;
+                    read.RRESP = '0;
+                    read.RLAST = 1'b1;
 
                     $display("s seqs arid : %0d", captured_arid);
 

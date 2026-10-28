@@ -84,7 +84,7 @@ module axi_tb_top;
 
     assign m_inf.RID        = s_inf.RID;
     assign m_inf.RDATA      = s_inf.RDATA;
-    //assign m_inf.RSTRB      = s_inf.RSTRB;
+    assign m_inf.RRESP      = s_inf.RRESP;
     assign m_inf.RLAST      = s_inf.RLAST;
     assign m_inf.RVALID     = s_inf.RVALID;
 
@@ -102,4 +102,3 @@ module axi_tb_top;
     end
   
 endmodule
-

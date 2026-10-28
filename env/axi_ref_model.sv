@@ -36,7 +36,6 @@ class axi_ref_model extends uvm_component;
                 case(req.AWBURST)
                     2'b00: begin
                         mem[addr] = req.WDATA[i];
-                        addr += 1;
                     end
                     2'b01: begin
                         mem[addr] = req.WDATA[i];
@@ -92,6 +91,8 @@ class axi_ref_model extends uvm_component;
                             default: addr = base_addr;
                         endcase
                         read.RID = read.ARID;
+                        read.RRESP = '0;
+                        read.RLAST = 1'b1;
                         xyz++;
                         $display("xyz : %0d", xyz);
                     //$display("ref model r mem:%0p ",addr);

@@ -9,10 +9,10 @@ class axi_m_mon#(int ADDR_WIDTH=32, DATA_WIDTH=32) extends uvm_monitor;
 
     uvm_analysis_port#(axi_m_seq_item#(ADDR_WIDTH,DATA_WIDTH)) m_port;
 
-    axi_m_seq_item #(ADDR_WIDTH,DATA_WIDTH) get_id[int unsigned];
-    bit[ADDR_WIDTH-1:0] awid_q[$];
+    axi_m_seq_item #(ADDR_WIDTH,DATA_WIDTH) get_id[int unsigned][$];
+    axi_m_seq_item #(ADDR_WIDTH,DATA_WIDTH) pending_w[int unsigned][$];
 
-    axi_m_seq_item #(ADDR_WIDTH,DATA_WIDTH) get_arid[int unsigned];
+    axi_m_seq_item #(ADDR_WIDTH,DATA_WIDTH) get_arid[int unsigned][$];
 
     function new(string name="axi_m_mon",uvm_component parent);
         super.new(name,parent);
@@ -49,8 +49,16 @@ class axi_m_mon#(int ADDR_WIDTH=32, DATA_WIDTH=32) extends uvm_monitor;
             aw_trans.AWSIZE  = m_vif.m_mon_cb.AWSIZE;
             aw_trans.AWBURST = m_vif.m_mon_cb.AWBURST;
 
-            get_id[aw_trans.AWID] = aw_trans;
-            awid_q.push_back(aw_trans.AWID);
+            get_id[aw_trans.AWID].push_back(aw_trans);
+            if (pending_w.exists(aw_trans.AWID) && pending_w[aw_trans.AWID].size() != 0) begin
+                aw_trans.WDATA = pending_w[aw_trans.AWID][0].WDATA;
+                aw_trans.WSTRB = pending_w[aw_trans.AWID][0].WSTRB;
+                aw_trans.WID = aw_trans.AWID;
+                aw_trans.WLAST = pending_w[aw_trans.AWID][0].WLAST;
+                pending_w[aw_trans.AWID].pop_front();
+                if (pending_w[aw_trans.AWID].size() == 0)
+                    pending_w.delete(aw_trans.AWID);
+            end
         end
     endtask
 
@@ -61,17 +69,26 @@ class axi_m_mon#(int ADDR_WIDTH=32, DATA_WIDTH=32) extends uvm_monitor;
         forever begin
             @(m_vif.m_mon_cb iff (m_vif.m_mon_cb.WVALID && m_vif.m_mon_cb.WREADY));
 
-            wait (awid_q.size() != 0);
-            wid = awid_q[0];
+            wid = m_vif.m_mon_cb.WID;
 
-            if(get_id.exists(wid))begin
-                w_trans = get_id[wid];
+            if(get_id.exists(wid) && get_id[wid].size() != 0)begin
+                w_trans = get_id[wid][0];
                 w_trans.WID = wid; 
                 w_trans.WDATA.push_back(m_vif.m_mon_cb.WDATA);
                 w_trans.WSTRB.push_back(m_vif.m_mon_cb.WSTRB);
-
-                if (m_vif.m_mon_cb.WLAST) begin
-                    void'(awid_q.pop_front());
+            end else begin
+                w_trans = new();
+                w_trans.kind_e = WRITE;
+                w_trans.WID = wid;
+                w_trans.WDATA.push_back(m_vif.m_mon_cb.WDATA);
+                w_trans.WSTRB.push_back(m_vif.m_mon_cb.WSTRB);
+                w_trans.WLAST = m_vif.m_mon_cb.WLAST;
+                if (pending_w.exists(wid) && pending_w[wid].size() != 0) begin
+                    pending_w[wid][0].WDATA.push_back(w_trans.WDATA[0]);
+                    pending_w[wid][0].WSTRB.push_back(w_trans.WSTRB[0]);
+                    pending_w[wid][0].WLAST = w_trans.WLAST;
+                end else begin
+                    pending_w[wid].push_back(w_trans);
                 end
             end
         end
@@ -85,11 +102,13 @@ class axi_m_mon#(int ADDR_WIDTH=32, DATA_WIDTH=32) extends uvm_monitor;
             
             bid = m_vif.m_mon_cb.BID;
             
-            if(get_id.exists(bid)) begin
-                b_trans = get_id[bid];
+            if(get_id.exists(bid) && get_id[bid].size() != 0) begin
+                b_trans = get_id[bid][0];
                 b_trans.BID = bid;
                 m_port.write(b_trans); 
-                get_id.delete(bid);
+                get_id[bid].pop_front();
+                if (get_id[bid].size() == 0)
+                    get_id.delete(bid);
             end
         end
     endtask
@@ -107,7 +126,7 @@ class axi_m_mon#(int ADDR_WIDTH=32, DATA_WIDTH=32) extends uvm_monitor;
             ar_trans.ARSIZE  = m_vif.m_mon_cb.ARSIZE;
             ar_trans.ARBURST = m_vif.m_mon_cb.ARBURST;
 
-            get_arid[ar_trans.ARID] = ar_trans;
+            get_arid[ar_trans.ARID].push_back(ar_trans);
             $display("m mon ar id : %0h", ar_trans.ARID);
         end
     endtask
@@ -121,17 +140,19 @@ class axi_m_mon#(int ADDR_WIDTH=32, DATA_WIDTH=32) extends uvm_monitor;
         
             rid = m_vif.m_mon_cb.RID;
         
-            if(get_arid.exists(rid)) begin
-                r_trans = get_arid[rid];
+            if(get_arid.exists(rid) && get_arid[rid].size() != 0) begin
+                r_trans = get_arid[rid][0];
                 r_trans.RID = rid;
                 r_trans.RDATA.push_back(m_vif.m_mon_cb.RDATA);
                 r_trans.RRESP = m_vif.m_mon_cb.RRESP;
+                r_trans.RLAST = m_vif.m_mon_cb.RLAST;
                 if (m_vif.m_mon_cb.RLAST) begin
                     m_port.write(r_trans);
-                    get_arid.delete(rid);
+                    get_arid[rid].pop_front();
+                    if (get_arid[rid].size() == 0)
+                        get_arid.delete(rid);
                 end
             end
-            $display("m mon rid : %0h",r_trans.RID); 
         end
     endtask
 

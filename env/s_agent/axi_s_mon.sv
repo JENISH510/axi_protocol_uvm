@@ -9,8 +9,8 @@ class axi_s_mon#(int ADDR_WIDTH=32, DATA_WIDTH=32) extends uvm_monitor;
 
 	uvm_analysis_port#(axi_s_seq_item#(ADDR_WIDTH,DATA_WIDTH)) s_port;
 
-  	axi_s_seq_item #(ADDR_WIDTH,DATA_WIDTH) get_id[int unsigned];
-    bit[ADDR_WIDTH-1:0] awid_q[$];
+  	axi_s_seq_item #(ADDR_WIDTH, DATA_WIDTH) get_id[int unsigned][$];
+    axi_s_seq_item #(ADDR_WIDTH, DATA_WIDTH) pending_w[int unsigned][$];
 
 	function new(string name="axi_s_mon",uvm_component parent);
 		super.new(name,parent);
@@ -50,27 +50,40 @@ class axi_s_mon#(int ADDR_WIDTH=32, DATA_WIDTH=32) extends uvm_monitor;
             //$display("burst in s mon : %p",aw_trans.AWBURST);
 
             //$display("awid in s mon : %0h , awaddr : %0h",aw_trans.AWID,aw_trans.AWADDR);
-            get_id[aw_trans.AWID] = aw_trans;
-            awid_q.push_back(aw_trans.AWID);
+            get_id[aw_trans.AWID].push_back(aw_trans);
+            if (pending_w.exists(aw_trans.AWID) && pending_w[aw_trans.AWID].size() != 0) begin
+                aw_trans.WDATA = pending_w[aw_trans.AWID][0].WDATA;
+                aw_trans.WSTRB = pending_w[aw_trans.AWID][0].WSTRB;
+                aw_trans.WID = aw_trans.AWID;
+                aw_trans.WLAST = pending_w[aw_trans.AWID][0].WLAST;
+                pending_w[aw_trans.AWID].pop_front();
+                if (pending_w[aw_trans.AWID].size() == 0)
+                    pending_w.delete(aw_trans.AWID);
+                if (aw_trans.WLAST) begin
+                    s_port.write(aw_trans);
+                    get_id[aw_trans.AWID].pop_front();
+                    get_id.delete(aw_trans.AWID);
+                end
+            end
 		end
   	endtask
 
 	task write_data_channel();
 		axi_s_seq_item #(ADDR_WIDTH, DATA_WIDTH) w_trans;
 		axi_s_seq_item #(ADDR_WIDTH, DATA_WIDTH) w_trans_copy;
-        bit [31:0] mask, masked_data;
+        bit [DATA_WIDTH-1:0] mask, masked_data;
         int unsigned wid;
 
 		forever begin
 			@(s_vif.s_mon_cb iff (s_vif.s_mon_cb.WVALID && s_vif.s_mon_cb.WREADY));
 
-			wait (awid_q.size() != 0);
-			wid = awid_q[0];
+			wid = s_vif.s_mon_cb.WID;
 
-            if(get_id.exists(wid)) begin
-                w_trans = get_id[wid];
+            if(get_id.exists(wid) && get_id[wid].size() != 0) begin
+                w_trans = get_id[wid][0];
 
-                for(int i = 0; i < (32/8); i++) begin
+                mask = '0;
+                for(int i = 0; i < (DATA_WIDTH/8); i++) begin
                     mask[i*8 +: 8] = s_vif.s_mon_cb.WSTRB[i] ? 8'hff : 8'h00;
                 end
 
@@ -82,8 +95,26 @@ class axi_s_mon#(int ADDR_WIDTH=32, DATA_WIDTH=32) extends uvm_monitor;
                 if (s_vif.s_mon_cb.WLAST) begin
                     $cast(w_trans_copy, w_trans.clone());  
                     s_port.write(w_trans_copy);
-                    void'(awid_q.pop_front());
-                    get_id.delete(wid);
+                    get_id[wid].pop_front();
+                    if (get_id[wid].size() == 0)
+                        get_id.delete(wid);
+                end
+            end else begin
+                w_trans = new();
+                w_trans.kind_e = WRITE;
+                w_trans.WID = wid;
+                for(int i = 0; i < (DATA_WIDTH/8); i++) begin
+                    mask[i*8 +: 8] = s_vif.s_mon_cb.WSTRB[i] ? 8'hff : 8'h00;
+                end
+                w_trans.WDATA.push_back(s_vif.s_mon_cb.WDATA & mask);
+                w_trans.WSTRB.push_back(s_vif.s_mon_cb.WSTRB);
+                w_trans.WLAST = s_vif.s_mon_cb.WLAST;
+                if (pending_w.exists(wid) && pending_w[wid].size() != 0) begin
+                    pending_w[wid][0].WDATA.push_back(w_trans.WDATA[0]);
+                    pending_w[wid][0].WSTRB.push_back(w_trans.WSTRB[0]);
+                    pending_w[wid][0].WLAST = w_trans.WLAST;
+                end else begin
+                    pending_w[wid].push_back(w_trans);
                 end
             end
         end

@@ -67,7 +67,7 @@ class axi_sb extends uvm_scoreboard;
                 $display("mismatch id in sb : %0d",mi);
             end*/
             exp_q[req.RID].push_back(req);
-            // ->data_get;
+            ->data_get;
         end
     endfunction
 
@@ -77,11 +77,8 @@ class axi_sb extends uvm_scoreboard;
         int rid;
 
         forever begin
-            `uvm_info("before event in sb", "aaaa", UVM_MEDIUM)
             @(data_get);
-            `uvm_info("after event in sb", "aaaa", UVM_MEDIUM)
-
-            if (rid_q.size() > 0) begin
+            while (rid_q.size() > 0) begin
                 rid = rid_q.pop_front();
 
                 if (act_q.exists(rid) && act_q[rid].size() > 0 &&
@@ -90,7 +87,9 @@ class axi_sb extends uvm_scoreboard;
                     act = act_q[rid].pop_front();
                     exp = exp_q[rid].pop_front();
 
-                    if (act.RDATA == exp.RDATA) begin
+                    if (act.RDATA == exp.RDATA &&
+                        act.RRESP == exp.RRESP &&
+                        act.RLAST == exp.RLAST) begin
                         pass++;
                         /*`uvm_info("SB MATCH",
                                   $sformatf("ARID=%0d RID=%0d MATCH! RDATA=%0p (Passes: %0d)",
@@ -109,12 +108,19 @@ class axi_sb extends uvm_scoreboard;
 
                     if (exp_q[rid].size() == 0)
                         exp_q.delete(rid);
-                end
+                    end
+                    else begin
+                        rid_q.push_back(rid);
+                        break;
+                    end
             end
         end
     endtask
 
     function void report_phase(uvm_phase phase);
+        if (act_q.num() != 0 || exp_q.num() != 0 || rid_q.size() != 0)
+            fail++;
+
         if (pass > 0 && fail == 0) begin
             $display("");
             $display("##############################################################");
