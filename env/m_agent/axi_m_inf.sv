@@ -52,8 +52,7 @@ interface axi_m_inf #(int ADDR_WIDTH=32, DATA_WIDTH=32,
 
     clocking m_drv_cb @(posedge ACLK);
         default input #1 output #1;
-        input ARESETn,
-              AWREADY,
+        input AWREADY,
               WREADY,                                           
               BID,BRESP,BVALID,                                 
               ARREADY,                                          
@@ -88,7 +87,7 @@ interface axi_m_inf #(int ADDR_WIDTH=32, DATA_WIDTH=32,
 
     //Modports of Driver and Monitor
 
-    modport MDRV_MP (clocking m_drv_cb);
+    modport MDRV_MP (clocking m_drv_cb, input ARESETn);
     modport MMON_MP (clocking m_mon_cb);
 
     property p_stable_awvalid;

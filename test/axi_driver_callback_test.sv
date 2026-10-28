@@ -3,6 +3,7 @@
 
 class axi_reset_m_cb extends axi_m_drv_cb_32;
     `uvm_object_utils(axi_reset_m_cb)
+    virtual axi_m_inf#(32,32) m_vif;
     virtual axi_s_inf#(32,32) s_vif;
     bit reset_done;
 
@@ -18,13 +19,13 @@ class axi_reset_m_cb extends axi_m_drv_cb_32;
         transfer_count++;
         if (!reset_done && transfer_count > 3) begin
             reset_done = 1;
-            vif.m_drv_cb.ARESETn = 1'b0;
+            m_vif.ARESETn = 1'b0;
             s_vif.ARESETn = 1'b0;
             repeat (3) @(vif.m_drv_cb);
-            vif.m_drv_cb.ARESETn = 1'b1;
+            m_vif.ARESETn = 1'b1;
             s_vif.ARESETn = 1'b1;
         end
-        wait(vif.m_drv_cb.ARESETn);
+        wait(m_vif.ARESETn);
     endtask
 endclass
 
@@ -42,7 +43,7 @@ class axi_ready_toggle_s_cb extends axi_s_drv_cb_32;
         output bit ready
     );
         cycle++;
-        ready = vif.s_drv_cb.ARESETn && ((cycle % 3) != 0);
+        ready = vif.ARESETn && ((cycle % 3) != 0);
     endtask
 endclass
 
@@ -74,6 +75,7 @@ class axi_reset_callback_test extends axi_base_test;
     function void end_of_elaboration_phase(uvm_phase phase);
         super.end_of_elaboration_phase(phase);
         reset_cb = axi_reset_m_cb::type_id::create("reset_cb");
+        reset_cb.m_vif = m_vif;
         reset_cb.s_vif = s_vif;
         uvm_callbacks#(axi_m_drv_32, axi_m_drv_cb_32)::add(
             env_h.m_uvc_h.m_agent_h[0].m_drv_h, reset_cb);

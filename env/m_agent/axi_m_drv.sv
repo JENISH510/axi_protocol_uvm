@@ -74,7 +74,7 @@ class axi_m_drv #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends uvm_driver #(axi_m_se
         @(m_vif.m_drv_cb);
         forever begin
             wait(wr_addr_q.size() > 0);
-            wait(m_vif.m_drv_cb.ARESETn);
+            wait(m_vif.ARESETn);
             `uvm_do_callbacks(driver_type, callback_type,
                              before_transfer(m_vif, "AW", transfer_count))
             aw_ctr++;
@@ -105,7 +105,7 @@ class axi_m_drv #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends uvm_driver #(axi_m_se
         @(m_vif.m_drv_cb);
         forever begin
             wait (wr_data_q.size() != 0);
-            wait(m_vif.m_drv_cb.ARESETn);
+            wait(m_vif.ARESETn);
             `uvm_do_callbacks(driver_type, callback_type,
                              before_transfer(m_vif, "W", transfer_count))
             if (allow_interleaving) begin
@@ -152,7 +152,7 @@ class axi_m_drv #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends uvm_driver #(axi_m_se
         int idx;
         forever begin
             wait(wr_resp_q.size() > 0);
-            wait(m_vif.m_drv_cb.ARESETn);
+            wait(m_vif.ARESETn);
             `uvm_do_callbacks(driver_type, callback_type,
                              before_transfer(m_vif, "B", transfer_count))
             m_vif.m_drv_cb.BREADY <= 1;
@@ -184,7 +184,7 @@ class axi_m_drv #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends uvm_driver #(axi_m_se
         @(m_vif.m_drv_cb);
         forever begin
             wait(rd_addr_q.size() > 0);
-            wait(m_vif.m_drv_cb.ARESETn);
+            wait(m_vif.ARESETn);
             `uvm_do_callbacks(driver_type, callback_type,
                              before_transfer(m_vif, "AR", transfer_count))
             req_ar = rd_addr_q.pop_front();
@@ -211,7 +211,7 @@ class axi_m_drv #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends uvm_driver #(axi_m_se
         $display("Before R CHANNEL");
         forever begin
             @(m_vif.m_drv_cb);
-            m_vif.m_drv_cb.RREADY <= m_vif.m_drv_cb.ARESETn;
+            m_vif.m_drv_cb.RREADY <= m_vif.ARESETn;
         end
         $display("AFFTER R CHANNEL");
     endtask

@@ -71,7 +71,7 @@ class axi_s_drv #(int ADDR_WIDTH=32,DATA_WIDTH=32)
         bit ready;
         forever begin
             @(s_vif.s_drv_cb);
-            ready = s_vif.s_drv_cb.ARESETn;
+            ready = s_vif.ARESETn;
             `uvm_do_callbacks(driver_type, callback_type,
                              get_ready(s_vif, "AW", ready))
             s_vif.s_drv_cb.AWREADY <= ready;
@@ -82,7 +82,7 @@ class axi_s_drv #(int ADDR_WIDTH=32,DATA_WIDTH=32)
         bit ready;
         forever begin
             @(s_vif.s_drv_cb);
-            ready = s_vif.s_drv_cb.ARESETn;
+            ready = s_vif.ARESETn;
             `uvm_do_callbacks(driver_type, callback_type,
                              get_ready(s_vif, "W", ready))
             s_vif.s_drv_cb.WREADY <= ready;
@@ -93,7 +93,7 @@ class axi_s_drv #(int ADDR_WIDTH=32,DATA_WIDTH=32)
         bit ready;
         forever begin
             @(s_vif.s_drv_cb);
-            ready = s_vif.s_drv_cb.ARESETn;
+            ready = s_vif.ARESETn;
             `uvm_do_callbacks(driver_type, callback_type,
                              get_ready(s_vif, "AR", ready))
             s_vif.s_drv_cb.ARREADY <= ready;
@@ -108,7 +108,7 @@ class axi_s_drv #(int ADDR_WIDTH=32,DATA_WIDTH=32)
 
         forever begin
             wait(b_resp.size() > 0);
-            wait(s_vif.s_drv_cb.ARESETn);
+            wait(s_vif.ARESETn);
             `uvm_do_callbacks(driver_type, callback_type,
                              before_transfer(s_vif, "B", transfer_count))
             `uvm_do_callbacks(driver_type, callback_type,
@@ -135,7 +135,7 @@ class axi_s_drv #(int ADDR_WIDTH=32,DATA_WIDTH=32)
         @(s_vif.s_drv_cb);
         forever begin
             wait(r_data.size() != 0);
-            wait(s_vif.s_drv_cb.ARESETn);
+            wait(s_vif.ARESETn);
             `uvm_do_callbacks(driver_type, callback_type,
                              before_transfer(s_vif, "R", transfer_count))
             `uvm_do_callbacks(driver_type, callback_type,

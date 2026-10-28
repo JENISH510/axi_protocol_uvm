@@ -58,8 +58,7 @@ interface axi_s_inf #(int ADDR_WIDTH=32, DATA_WIDTH=32,
               ARID,ARADDR,ARLEN,ARSIZE,ARBURST,ARVALID,        
               RREADY; 
     
-        output ARESETn,
-               AWREADY,
+        output AWREADY,
                WREADY,                                           
                BID,BRESP,BVALID,                                 
                ARREADY,                                          
@@ -88,7 +87,7 @@ interface axi_s_inf #(int ADDR_WIDTH=32, DATA_WIDTH=32,
 
     //Modports of Driver and Monitor
 
-    modport SDRV_MP (clocking s_drv_cb);
+    modport SDRV_MP (clocking s_drv_cb, input ARESETn);
     modport SMON_MP (clocking s_mon_cb);
 
 endinterface

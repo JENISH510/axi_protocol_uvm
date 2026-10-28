@@ -14,7 +14,7 @@ class axi_m_drv_cb #(int ADDR_WIDTH=32, int DATA_WIDTH=32) extends uvm_callback;
         inout int unsigned transfer_count
     );
         transfer_count++;
-        wait(vif.m_drv_cb.ARESETn);
+        wait(vif.ARESETn);
     endtask
 
     virtual task before_valid(

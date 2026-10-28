@@ -14,7 +14,7 @@ class axi_s_drv_cb #(int ADDR_WIDTH=32, int DATA_WIDTH=32) extends uvm_callback;
         inout int unsigned transfer_count
     );
         transfer_count++;
-        wait(vif.s_drv_cb.ARESETn);
+        wait(vif.ARESETn);
     endtask
 
     virtual task get_ready(
@@ -22,14 +22,14 @@ class axi_s_drv_cb #(int ADDR_WIDTH=32, int DATA_WIDTH=32) extends uvm_callback;
         string channel,
         output bit ready
     );
-        ready = vif.s_drv_cb.ARESETn;
+        ready = vif.ARESETn;
     endtask
 
     virtual task before_response(
         virtual axi_s_inf#(ADDR_WIDTH,DATA_WIDTH).SDRV_MP vif,
         string channel
     );
-        wait(vif.s_drv_cb.ARESETn);
+        wait(vif.ARESETn);
     endtask
 endclass
 
