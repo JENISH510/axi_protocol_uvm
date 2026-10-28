@@ -104,8 +104,10 @@ class axi_base_s_seqs #(int ADDR_WIDTH = 32, DATA_WIDTH = 32)
                             end
 
                             2'b01: begin
-                                /*if (mem.exists(addr)) read.RDATA.push_back(mem[addr]);
-                                else*/                  read.RDATA.push_back('0);
+                                if (mem.exists(addr))
+                                    read.RDATA.push_back(mem[addr]);
+                                else
+                                    read.RDATA.push_back('0);
                                 addr += (1 << read.ARSIZE);
                             end
 
