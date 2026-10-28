@@ -1,6 +1,7 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
 add wave -noupdate /axi_tb_top/m_inf/ACLK
+add wave -noupdate /axi_tb_top/m_inf/ARESETn
 add wave -noupdate /axi_tb_top/m_inf/AWID
 add wave -noupdate /axi_tb_top/m_inf/AWADDR
 add wave -noupdate /axi_tb_top/m_inf/AWLEN
@@ -31,6 +32,20 @@ add wave -noupdate /axi_tb_top/m_inf/RLAST
 add wave -noupdate /axi_tb_top/m_inf/RRESP
 add wave -noupdate /axi_tb_top/m_inf/RVALID
 add wave -noupdate /axi_tb_top/m_inf/RREADY
+add wave -divider "Slave Interface"
+add wave -noupdate /axi_tb_top/s_inf/ARESETn
+add wave -noupdate /axi_tb_top/s_inf/AWVALID
+add wave -noupdate /axi_tb_top/s_inf/AWREADY
+add wave -noupdate /axi_tb_top/s_inf/WDATA
+add wave -noupdate /axi_tb_top/s_inf/WVALID
+add wave -noupdate /axi_tb_top/s_inf/WREADY
+add wave -noupdate /axi_tb_top/s_inf/BVALID
+add wave -noupdate /axi_tb_top/s_inf/BREADY
+add wave -noupdate /axi_tb_top/s_inf/ARVALID
+add wave -noupdate /axi_tb_top/s_inf/ARREADY
+add wave -noupdate /axi_tb_top/s_inf/RDATA
+add wave -noupdate /axi_tb_top/s_inf/RVALID
+add wave -noupdate /axi_tb_top/s_inf/RREADY
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {46 ns} 0}
 quietly wave cursor active 1

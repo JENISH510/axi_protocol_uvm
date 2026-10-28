@@ -19,6 +19,12 @@ reset_cb:
 ready_cb:
 	vsim -voptargs=+acc axi_tb_top -c -do "run -all; exit" +UVM_TESTNAME=axi_ready_toggle_callback_test
 
+reset_cb_wave:
+	vsim -voptargs=+acc axi_tb_top -do "do wave.do; run -all; exit" +UVM_TESTNAME=axi_reset_callback_test
+
+ready_cb_wave:
+	vsim -voptargs=+acc axi_tb_top -do "do wave.do; run -all; exit" +UVM_TESTNAME=axi_ready_toggle_callback_test
+
 sim1:
 	vsim -voptargs=+acc axi_tb_top -do "do wave.do; run -all; exit" +UVM_TESTNAME=$(UVM_TESTNAME)
 
