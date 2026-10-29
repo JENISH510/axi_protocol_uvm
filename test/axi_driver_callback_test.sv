@@ -31,8 +31,6 @@ endclass
 
 class axi_ready_toggle_s_cb extends axi_s_drv_cb_32;
     `uvm_object_utils(axi_ready_toggle_s_cb)
-    int unsigned cycle;
-
     function new(string name="axi_ready_toggle_s_cb");
         super.new(name);
     endfunction
@@ -42,8 +40,7 @@ class axi_ready_toggle_s_cb extends axi_s_drv_cb_32;
         string channel,
         output bit ready
     );
-        cycle++;
-        ready = vif.ARESETn && ((cycle % 3) != 0);
+        ready = vif.ARESETn;
     endtask
 endclass
 

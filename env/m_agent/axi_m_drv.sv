@@ -93,7 +93,8 @@ class axi_m_drv #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends uvm_driver #(axi_m_se
             `uvm_do_callbacks(driver_type, callback_type,
                              after_handshake(m_vif, "AW"))
 
-            m_vif.m_drv_cb.AWVALID <= 0;
+            if (wr_addr_q.size() == 0)
+                m_vif.m_drv_cb.AWVALID <= 0;
         end
         $display("AFFTER AW CHANNEL");
     endtask
@@ -142,8 +143,10 @@ class axi_m_drv #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends uvm_driver #(axi_m_se
                                      after_handshake(m_vif, "W"))
                 end
             end
-            m_vif.m_drv_cb.WVALID <= 1'b0;
-            m_vif.m_drv_cb.WLAST <= 1'b0;
+            if (wr_data_q.size() == 0) begin
+                m_vif.m_drv_cb.WVALID <= 1'b0;
+                m_vif.m_drv_cb.WLAST <= 1'b0;
+            end
         end
     endtask
 
@@ -157,7 +160,6 @@ class axi_m_drv #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends uvm_driver #(axi_m_se
                              before_transfer(m_vif, "B", transfer_count))
             m_vif.m_drv_cb.BREADY <= 1;
             @(m_vif.m_drv_cb iff (m_vif.m_drv_cb.BVALID));
-            m_vif.m_drv_cb.BREADY <= 0;
 
             idx = 0;
             if (allow_out_of_order) begin
@@ -202,7 +204,8 @@ class axi_m_drv #(int ADDR_WIDTH=32,DATA_WIDTH=32) extends uvm_driver #(axi_m_se
             `uvm_do_callbacks(driver_type, callback_type,
                              after_handshake(m_vif, "AR"))
 
-            m_vif.m_drv_cb.ARVALID  <= 1'b0;
+            if (rd_addr_q.size() == 0)
+                m_vif.m_drv_cb.ARVALID  <= 1'b0;
         end
         $display("AFFTER AR CHANNEL");
     endtask
